@@ -4,9 +4,9 @@ import Button from "../my-button";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between mb-10">
+    <header className="flex items-center bg-[rgba(0,0,0,.3)] drop-shadow-xl backdrop-blur-[5px] justify-between mb-10">
       <nav className="flex items-center gap-4">
-        <div className="flex items-center gap-2 bg-neutral-800 rounded-full px-4 py-2">
+        <div className="flex items-center gap-2  rounded-full px-4 py-2">
           <Image
             width={100}
             height={80}

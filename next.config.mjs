@@ -5,9 +5,10 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "tools-api.webcrumbs.org",
-        port: "",
-
-        search: "",
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
       },
     ],
   },
