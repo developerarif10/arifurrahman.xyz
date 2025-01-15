@@ -18,27 +18,27 @@ export default function Header() {
         </div>
         <ul className="flex items-center gap-6">
           <li>
-            <Link href="#" className="hover:underline">
+            <Link href="/about" className="hover:underline">
               About
             </Link>
           </li>
           <li>
-            <Link href="#" className="hover:underline">
+            <Link href="/projects" className="hover:underline">
               Projects
             </Link>
           </li>
           <li>
-            <Link href="#" className="hover:underline">
+            <Link href="/contributions" className="hover:underline">
               Contributions
             </Link>
           </li>
           <li>
-            <Link href="#" className="hover:underline">
+            <Link href="/blogs" className="hover:underline">
               Blogs
             </Link>
           </li>
           <li>
-            <Link href="#" className="hover:underline">
+            <Link href="/events" className="hover:underline">
               Events
             </Link>
           </li>

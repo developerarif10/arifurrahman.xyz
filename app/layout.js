@@ -1,3 +1,5 @@
+import Footer from "@/components/footer";
+import Header from "@/components/header/header";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -23,7 +25,11 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
         className={`${geistSans.className} ${geistMono.className} antialiased`}
       >
-        <section className="mx-52 my-10">{children}</section>
+        <section className="mx-52 my-10">
+          <Header />
+          {children}
+          <Footer />
+        </section>
       </body>
     </html>
   );

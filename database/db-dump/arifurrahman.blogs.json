@@ -1,0 +1,80 @@
+[
+  {
+    "title": "The Future of Front-End Development: Trends to Watch in 2025",
+    "sub_title": "Discover the technologies and practices shaping the next generation of web experiences.",
+    "thumbnail_url": "https://example.com/future-front-end.jpg",
+    "creation_time": "2025-01-15T12:00:00Z",
+    "update_time": "2025-01-15T12:00:00Z",
+    "authorname": "Expert React Dev",
+    "avatar": "https://example.com/avatar.jpg",
+    "read_time": "7 min",
+    "views": 1250,
+    "description": "As we step into 2025, the front-end development landscape is evolving rapidly. From new frameworks to enhanced tools, developers must stay ahead of the curve to build user-centric applications. In this blog, we explore emerging trends, including server components in React, AI-driven development tools, and the rise of edge rendering. Learn how these innovations can transform your projects and prepare you for a successful year ahead.",
+    "likes": 230
+  },
+  {
+    "title": "The Future of Front-End Development: Trends to Watch in 2025",
+    "sub_title": "Discover the technologies and practices shaping the next generation of web experiences.",
+    "thumbnail_url": "https://example.com/future-front-end.jpg",
+    "creation_time": "2025-01-15T12:00:00Z",
+    "update_time": "2025-01-15T12:00:00Z",
+    "authorname": "Expert React Dev",
+    "avatar": "https://i.pravatar.cc/40",
+    "read_time": "7 min",
+    "views": 1250,
+    "description": "As we step into 2025, the front-end development landscape is evolving rapidly. From new frameworks to enhanced tools, developers must stay ahead of the curve to build user-centric applications. In this blog, we explore emerging trends, including server components in React, AI-driven development tools, and the rise of edge rendering. Learn how these innovations can transform your projects and prepare you for a successful year ahead.",
+    "likes": 230
+  },
+  {
+    "title": "Unlocking the Power of Server Components in React",
+    "sub_title": "A deep dive into the revolutionary feature shaping React's future.",
+    "thumbnail_url": "https://example.com/react-server-components.jpg",
+    "creation_time": "2025-01-15T12:30:00Z",
+    "update_time": "2025-01-15T12:30:00Z",
+    "authorname": "Expert React Dev",
+    "avatar": "https://i.pravatar.cc/40",
+    "read_time": "6 min",
+    "views": 980,
+    "description": "React Server Components are changing the game by enabling developers to offload rendering logic to the server while keeping client-side interactivity intact. In this blog, we break down what server components are, how they work, and why they matter. Whether you're building high-performance applications or optimizing server-side rendering, this feature opens new doors for scalability and developer productivity.",
+    "likes": 180
+  },
+  {
+    "title": "The Future of Front-End Development: Trends to Watch in 2025",
+    "sub_title": "Discover the technologies and practices shaping the next generation of web experiences.",
+    "thumbnail_url": "https://example.com/future-front-end.jpg",
+    "creation_time": "2025-01-15T12:00:00Z",
+    "update_time": "2025-01-15T12:00:00Z",
+    "authorname": "Expert React Dev",
+    "avatar": "https://i.pravatar.cc/40",
+    "read_time": "7 min",
+    "views": 1250,
+    "description": "As we step into 2025, the front-end development landscape is evolving rapidly. From new frameworks to enhanced tools, developers must stay ahead of the curve to build user-centric applications. In this blog, we explore emerging trends, including server components in React, AI-driven development tools, and the rise of edge rendering. Learn how these innovations can transform your projects and prepare you for a successful year ahead.",
+    "likes": 230
+  },
+  {
+    "title": "Unlocking the Power of Server Components in React",
+    "sub_title": "A deep dive into the revolutionary feature shaping React's future.",
+    "thumbnail_url": "https://example.com/react-server-components.jpg",
+    "creation_time": "2025-01-15T12:30:00Z",
+    "update_time": "2025-01-15T12:30:00Z",
+    "authorname": "Expert React Dev",
+    "avatar": "https://i.pravatar.cc/40",
+    "read_time": "6 min",
+    "views": 980,
+    "description": "React Server Components are changing the game by enabling developers to offload rendering logic to the server while keeping client-side interactivity intact. In this blog, we break down what server components are, how they work, and why they matter. Whether you're building high-performance applications or optimizing server-side rendering, this feature opens new doors for scalability and developer productivity.",
+    "likes": 180
+  },
+  {
+    "title": "Mastering Tailwind CSS: Design Systems Made Easy",
+    "sub_title": "Streamline your development workflow with utility-first CSS.",
+    "thumbnail_url": "https://example.com/tailwind-css-design.jpg",
+    "creation_time": "2025-01-15T13:00:00Z",
+    "update_time": "2025-01-15T13:00:00Z",
+    "authorname": "Expert React Dev",
+    "avatar": "https://i.pravatar.cc/40",
+    "read_time": "5 min",
+    "views": 860,
+    "description": "Tailwind CSS has taken the front-end world by storm with its utility-first approach. This blog explains how Tailwind empowers developers to build consistent, responsive, and scalable designs with minimal CSS. From setting up a project to creating custom themes and leveraging plugins, we provide a step-by-step guide for mastering Tailwind CSS and implementing it in your projects.",
+    "likes": 150
+  }
+]
