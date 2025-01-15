@@ -1,47 +1,51 @@
-"use client";
-import { useState } from "react";
+// "use client";
+// import { useState } from "react";
 
-const BlogPage = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+import { getBlogs } from "@/queries/blogs";
 
-  const articles = [
-    {
-      title: "Top 5 courses and resources to learn Next JS in 2021",
-      views: 4793,
-    },
-    {
-      title: "How I built a blogging platform like Medium with Next.js",
-      views: 3531,
-    },
-    {
-      title:
-        "How to freelance and make money as a Freelance Web Developer - A practical guide.",
-      views: 2596,
-    },
-    {
-      title: "Free portfolio website template that gets you hired in 2021",
-      views: 5363,
-    },
-    { title: "Ace the Javascript Interview", views: 15733 },
-    {
-      title:
-        "Build your own Covid Resource and leads portal with the Twitter API and Next.js",
-      views: 2539,
-    },
-    {
-      title:
-        "How I built a blogging platform like Medium with Next.js and Firebase",
-      views: 3531,
-    },
-    {
-      title: "Top 5 courses and resources to learn Next JS in 2021",
-      views: 4793,
-    },
-  ];
+const BlogPage = async () => {
+  const blogs = await getBlogs();
+  console.log(blogs.title);
+  // const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredArticles = articles.filter((article) =>
-    article.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // const articles = [
+  //   {
+  //     title: "Top 5 courses and resources to learn Next JS in 2021",
+  //     views: 4793,
+  //   },
+  //   {
+  //     title: "How I built a blogging platform like Medium with Next.js",
+  //     views: 3531,
+  //   },
+  //   {
+  //     title:
+  //       "How to freelance and make money as a Freelance Web Developer - A practical guide.",
+  //     views: 2596,
+  //   },
+  //   {
+  //     title: "Free portfolio website template that gets you hired in 2021",
+  //     views: 5363,
+  //   },
+  //   { title: "Ace the Javascript Interview", views: 15733 },
+  //   {
+  //     title:
+  //       "Build your own Covid Resource and leads portal with the Twitter API and Next.js",
+  //     views: 2539,
+  //   },
+  //   {
+  //     title:
+  //       "How I built a blogging platform like Medium with Next.js and Firebase",
+  //     views: 3531,
+  //   },
+  //   {
+  //     title: "Top 5 courses and resources to learn Next JS in 2021",
+  //     views: 4793,
+  //   },
+  // ];
+
+  // const filteredArticles = articles.filter((article) =>
+  //   article.title.toLowerCase().includes(searchTerm.toLowerCase())
+  // );
 
   return (
     <div className="min-h-screen p-6">
@@ -57,25 +61,25 @@ const BlogPage = () => {
           type="text"
           placeholder="Search articles"
           className="w-full p-3 border border-gray-300 rounded-md mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          // value={searchTerm}
+          // onChange={(e) => setSearchTerm(e.target.value)}
         />
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Most Popular</h2>
-          {articles.slice(0, 2).map((article, index) => (
+          {blogs.map((blog, index) => (
             <div key={index} className="mb-4">
               <h3 className="text-lg font-medium bg-slate-900 p-2 cursor-pointer">
-                {article.title}
+                {blog.title}
               </h3>
               <p className="text-gray-500 text-sm">
-                {article.views.toLocaleString()} views
+                {blog.views.toLocaleString()} views
               </p>
             </div>
           ))}
         </div>
 
-        <div>
+        {/* <div>
           <h2 className="text-2xl font-semibold mb-4">All Posts</h2>
           {filteredArticles.length > 0 ? (
             filteredArticles.map((article, index) => (
@@ -91,7 +95,7 @@ const BlogPage = () => {
           ) : (
             <p className="text-gray-500">No articles found.</p>
           )}
-        </div>
+        </div> */}
       </div>
     </div>
   );
