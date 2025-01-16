@@ -15,7 +15,7 @@ async function dbConnect() {
   }
 
   if (!cached.promise) {
-    const opts = { dbName: "tutorConnect", bufferCommands: false };
+    const opts = { dbName: "arifurrahman", bufferCommands: false };
     cached.promise = mongoose.connect(MONGODB_CONNECTION_STRING, opts);
   }
 

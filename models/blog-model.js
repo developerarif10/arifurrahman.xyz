@@ -2,7 +2,12 @@ import mongoose, { Schema } from "mongoose";
 
 const blogSchema = new Schema({
   title: {
-    required: false,
+    required: true,
+    type: String,
+  },
+  slug: {
+    required: true,
+    // unique: true,
     type: String,
   },
   sub_title: {
@@ -36,9 +41,10 @@ const blogSchema = new Schema({
   views: {
     required: false,
     type: Number,
+    default: 0,
   },
   description: {
-    required: false,
+    required: true,
     type: String,
   },
   likes: {

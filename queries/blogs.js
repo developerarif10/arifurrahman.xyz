@@ -11,12 +11,15 @@ export const getBlogs = async () => {
   return replaceMongoIdInArray(blog);
 };
 
-export async function getBlogDetails(blog_slug) {
+export const getBlogDetails = async (slug) => {
   try {
     await dbConnect();
-    const blogs = await Blog.findById(blog_slug).lean();
+    const blogs = await Blog.findOne({ slug: slug }).lean();
+    if (!blogs) {
+      throw new Error("Blog not found!");
+    }
     return replaceMongoIdInObject(blogs);
   } catch (error) {
-    throw new Error(error);
+    throw new Error(error.message);
   }
-}
+};

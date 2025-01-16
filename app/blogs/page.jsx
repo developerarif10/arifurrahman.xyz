@@ -2,46 +2,11 @@
 // import { useState } from "react";
 
 import { getBlogs } from "@/queries/blogs";
+import Link from "next/link";
+import BlogGrid from "./_components/blog-grid";
 
 const BlogPage = async () => {
   const blogs = await getBlogs();
-  console.log(blogs.title);
-  // const [searchTerm, setSearchTerm] = useState("");
-
-  // const articles = [
-  //   {
-  //     title: "Top 5 courses and resources to learn Next JS in 2021",
-  //     views: 4793,
-  //   },
-  //   {
-  //     title: "How I built a blogging platform like Medium with Next.js",
-  //     views: 3531,
-  //   },
-  //   {
-  //     title:
-  //       "How to freelance and make money as a Freelance Web Developer - A practical guide.",
-  //     views: 2596,
-  //   },
-  //   {
-  //     title: "Free portfolio website template that gets you hired in 2021",
-  //     views: 5363,
-  //   },
-  //   { title: "Ace the Javascript Interview", views: 15733 },
-  //   {
-  //     title:
-  //       "Build your own Covid Resource and leads portal with the Twitter API and Next.js",
-  //     views: 2539,
-  //   },
-  //   {
-  //     title:
-  //       "How I built a blogging platform like Medium with Next.js and Firebase",
-  //     views: 3531,
-  //   },
-  //   {
-  //     title: "Top 5 courses and resources to learn Next JS in 2021",
-  //     views: 4793,
-  //   },
-  // ];
 
   // const filteredArticles = articles.filter((article) =>
   //   article.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -67,15 +32,10 @@ const BlogPage = async () => {
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Most Popular</h2>
-          {blogs.map((blog, index) => (
-            <div key={index} className="mb-4">
-              <h3 className="text-lg font-medium bg-slate-900 p-2 cursor-pointer">
-                {blog.title}
-              </h3>
-              <p className="text-gray-500 text-sm">
-                {blog.views.toLocaleString()} views
-              </p>
-            </div>
+          {blogs.map((blog) => (
+            <Link key={blog.id} href={`/blogs/${blog?.slug}`}>
+              <BlogGrid title={blog?.title} views={blog?.views} />
+            </Link>
           ))}
         </div>
 
