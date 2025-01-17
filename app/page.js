@@ -3,7 +3,7 @@ import { PulseBeamsSecond } from "@/components/pulse-beam";
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <h1 className="text-6xl font-title mb-4">
         <span className="font-bold">Arifur Rahman</span>
         <br />
@@ -35,6 +35,6 @@ export default function Home() {
       <section>
         <PulseBeamsSecond />
       </section>
-    </main>
+    </div>
   );
 }

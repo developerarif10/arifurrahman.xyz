@@ -25,9 +25,9 @@ export default function RootLayout({ children }) {
         suppressHydrationWarning
         className={`${geistSans.className} ${geistMono.className} antialiased`}
       >
-        <section className="mx-52 my-10">
+        <section className="lg:mx-32">
           <Header />
-          {children}
+          <main className="mx-5">{children}</main>
           <Footer />
         </section>
       </body>
