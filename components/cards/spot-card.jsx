@@ -15,6 +15,20 @@ export default function SpotCard() {
               maintain. Cutting edge websites with a pinch of magic, and a lot
               of love.
             </h3>
+            <div className="flex gap-1">
+              <div className="rounded-md border border-slate-300 py-0.5 px-2.5 text-center text-sm transition-all shadow-sm text-slate-600">
+                Nextjs
+              </div>
+              <div className="rounded-md border border-slate-300 py-0.5 px-2.5 text-center text-sm transition-all shadow-sm text-slate-600">
+                React
+              </div>
+              <div className="rounded-md border border-slate-300 py-0.5 px-2.5 text-center text-sm transition-all shadow-sm text-slate-600">
+                MongoDB
+              </div>
+              <div className="rounded-md border border-slate-300 py-0.5 px-2.5 text-center text-sm transition-all shadow-sm text-slate-600">
+                API
+              </div>
+            </div>
           </div>
         </div>
       </div>

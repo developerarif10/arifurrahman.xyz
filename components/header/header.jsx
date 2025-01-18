@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
+import { ModeToggle } from "../mode-toggle";
 import Button from "../my-button";
 import NavButton from "./navbar-btn";
 export default function Header() {
@@ -25,7 +26,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="hover:underline">
+                <Link href="/" className="hover:underline">
                   <NavButton>Projects</NavButton>
                 </Link>
               </li>
@@ -60,6 +61,7 @@ export default function Header() {
           <Button className="bg-neutral-700 hover:bg-neutral-600 text-neutral-50 rounded-md px-5 py-2">
             Download CV
           </Button>
+          <ModeToggle />
         </div>
       </div>
     </header>
