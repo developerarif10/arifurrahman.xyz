@@ -1,4 +1,5 @@
 import Card from "@/components/cards/card";
+import ContactCard from "@/components/cards/contact-card";
 import { PulseBeamsSecond } from "@/components/pulse-beam";
 
 export default function Home() {
@@ -35,6 +36,9 @@ export default function Home() {
       <section>
         <PulseBeamsSecond />
       </section>
+
+      {/* Modern Contact section */}
+      <ContactCard />
     </div>
   );
 }
