@@ -10,7 +10,7 @@ export default function GlobalError({ error, reset }) {
   }, [error]);
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+    <div className="flex min-h-screen flex-col items-center justify-center text-gray-800 dark:text-gray-200">
       <div className="p-8 text-center">
         <h1 className="text-4xl font-bold mb-4 text-red-600">
           Something went wrong!
@@ -34,9 +34,9 @@ export default function GlobalError({ error, reset }) {
           </Link>
         </div>
       </div>
-      <div className="mt-8 text-sm text-gray-500">
+      <div className="mt-8 text-sm text-gray-500 text-center">
         <p>Error details:</p>
-        <pre className="bg-gray-200 p-4 rounded dark:bg-gray-800">
+        <pre className="text-red-600 font-bold">
           {error.message || "No error details available."}
         </pre>
       </div>

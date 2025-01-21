@@ -1,12 +1,32 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { ModeToggle } from "../mode-toggle";
 
+export const navLinks = [
+  {
+    href: "/",
+    title: "Home",
+  },
+  {
+    href: "/about",
+    title: "About",
+  },
+  {
+    href: "/projects",
+    title: "Projects",
+  },
+  {
+    href: "/blogs",
+    title: "Blogs",
+  },
+];
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const pathname = usePathname();
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -83,31 +103,18 @@ export default function Navbar() {
         } md:block transition-all duration-300 basis-full grow`}
       >
         <div className="flex flex-col md:flex-row md:items-center md:justify-end gap-2 md:gap-3 mt-3 md:mt-0 py-2 md:py-0 md:ps-7">
-          <Link
-            className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-gray-800 font-medium text-gray-800 focus:outline-none dark:border-neutral-200 dark:text-neutral-200"
-            href="/"
-            aria-current="page"
-          >
-            Home
-          </Link>
-          <Link
-            className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200"
-            href="/about"
-          >
-            About
-          </Link>
-          <Link
-            className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200"
-            href="/blogs"
-          >
-            Blogs
-          </Link>
-          <Link
-            className="py-0.5 md:py-3 px-4 md:px-1 border-s-2 md:border-s-0 md:border-b-2 border-transparent text-gray-500 hover:text-gray-800 focus:outline-none dark:text-neutral-400 dark:hover:text-neutral-200"
-            href="#"
-          >
-            Projects
-          </Link>
+          {navLinks.map((link, index) => (
+            <Link
+              key={index}
+              className={`py-0.5 md:py-3 px-4 md:px-1 font-medium text-gray-800 relative group dark:text-neutral-200 ${
+                pathname === link.href ? "after:w-full" : "after:w-0"
+              } after:h-[2px] after:bg-gray-800 dark:after:bg-neutral-200 after:absolute after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full`}
+              href={link.href}
+            >
+              {link.title}
+            </Link>
+          ))}
+
           <div className="hidden lg:block">
             <ModeToggle />
           </div>

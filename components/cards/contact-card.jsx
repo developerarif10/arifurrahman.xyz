@@ -56,7 +56,7 @@ export default function ContactCard() {
         <div className="grid gap-4 sm:gap-6">
           {/* WhatsApp Button */}
           <Link
-            href="https://wa.me/01685366704"
+            href="https://wa.me/8801685366704"
             className={`group flex items-center gap-3 p-3 sm:p-4 rounded-xl transition-all duration-300 ${
               isDark
                 ? "bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/20"
