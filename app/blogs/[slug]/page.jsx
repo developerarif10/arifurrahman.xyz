@@ -1,5 +1,7 @@
 import { getBlogDetails } from "@/queries/blogs";
+import Image from "next/image";
 import { notFound } from "next/navigation";
+import BackButton from "../_components/back-button";
 
 const BlogDetailedPage = async ({ params }) => {
   const { slug } = await params;
@@ -12,10 +14,7 @@ const BlogDetailedPage = async ({ params }) => {
     <div className="min-h-screen text-white">
       <div className="max-w-4xl mx-auto p-6">
         {/* Back Button */}
-        <button className="mb-6 text-gray-400 hover:text-white transition">
-          &larr; Back
-        </button>
-
+        <BackButton />
         {/* Title Section */}
         <h1 className="text-4xl font-bold mb-2">{blog?.title}</h1>
         <div className="flex items-center justify-between text-gray-400 text-sm mb-6">
@@ -31,15 +30,16 @@ const BlogDetailedPage = async ({ params }) => {
         </div>
 
         {/* Featured Image */}
-        {blog?.thumbnailurl && (
-          <div className="mb-8">
-            <img
-              src={blog?.thumbnailurl}
-              alt={blog?.title}
-              className="rounded-lg w-full object-cover"
-            />
-          </div>
-        )}
+
+        <div className="mb-8">
+          <Image
+            src={`/blogs${blog?.thumbnail_url}`}
+            alt={blog?.title}
+            width={750}
+            height={350}
+            className="rounded-lg w-full object-cover"
+          />
+        </div>
 
         {/* Content Section */}
         <div

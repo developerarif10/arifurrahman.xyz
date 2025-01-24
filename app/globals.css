@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection {
+  background: white;
+  color: black;
+}
+
 :root {
   box-sizing: border-box;
 }
