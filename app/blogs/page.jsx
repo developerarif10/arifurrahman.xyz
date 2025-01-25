@@ -1,16 +1,10 @@
-// "use client";
-// import { useState } from "react";
-
 import { getBlogs } from "@/queries/blogs";
 import Link from "next/link";
 import BlogGrid from "./_components/blog-grid";
+import SearchInput from "./_components/search-blog";
 
 const BlogPage = async () => {
   const blogs = await getBlogs();
-
-  // const filteredArticles = articles.filter((article) =>
-  //   article.title.toLowerCase().includes(searchTerm.toLowerCase())
-  // );
 
   return (
     <div className="min-h-screen p-6">
@@ -22,17 +16,11 @@ const BlogPage = async () => {
           search below to filter by title.
         </p>
 
-        <input
-          type="text"
-          placeholder="Search articles"
-          className="w-full p-3 border border-gray-300 rounded-md mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          // value={searchTerm}
-          // onChange={(e) => setSearchTerm(e.target.value)}
-        />
+        <SearchInput blogs={blogs} />
 
         <div className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">Most Popular</h2>
-          {blogs.map((blog) => (
+          {blogs?.map((blog) => (
             <Link key={blog.id} href={`/blogs/${blog?.slug}`}>
               <BlogGrid title={blog?.title} views={blog?.views} />
             </Link>
