@@ -1,8 +1,16 @@
 import { SpotlightCard } from "../spotlight";
+import { BorderTrail } from "../ui/visibleCards";
 
 export default function SpotCard() {
   return (
     <SpotlightCard>
+      <BorderTrail
+        style={{
+          boxShadow:
+            "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)",
+        }}
+        size={100}
+      />
       <div className="relative h-full shadow-[0_8px_32px_0_rgba(_31,38,135,0.37_)] backdrop-blur-[_15.5px_] border rounded-[10px] border-solid border-[rgba(_255,255,255,0.18_)] p-6 pb-8 z-20 overflow-hidden">
         <div className="flex flex-col py-10 items-center">
           {/* Text */}
