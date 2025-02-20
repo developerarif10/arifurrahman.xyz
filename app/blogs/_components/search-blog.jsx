@@ -7,6 +7,8 @@ export default function SearchInput({ blogs }) {
   const filteredArticles = blogs?.filter((blog) =>
     blog?.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  // console.log(searchTerm);
   return (
     <input
       type="text"
