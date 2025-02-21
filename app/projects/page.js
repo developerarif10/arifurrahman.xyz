@@ -3,7 +3,7 @@ import ProjectCard from "./_components/project-card";
 
 export default function ProjectPage() {
   return (
-    <section className="">
+    <section>
       <div className="flex gap-3 flex-col">
         <h1 className="text-3xl font-bold">Project</h1>
         <p className="text-sm">
@@ -17,6 +17,8 @@ export default function ProjectPage() {
           <div className="container px-5 py-12 flex flex-wrap justify-center items-center">
             <div className="flex flex-wrap -m-4">
               <ProjectCard thumbnail={1} />
+              <ProjectCard thumbnail={2} />
+              <ProjectCard thumbnail={2} />
               <ProjectCard thumbnail={2} />
             </div>
           </div>

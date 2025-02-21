@@ -1,6 +1,7 @@
 import { ArrowUpRight, CodeXml } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import Chip from "./chip";
 
 export default function ProjectCard({ thumbnail }) {
   return (
@@ -13,13 +14,9 @@ export default function ProjectCard({ thumbnail }) {
           width={500}
           height={300}
         />
-        <div className="absolute bottom-0 left-0 right-0 h-1/5 bg-gradient-to-t from-black/80 to-transparent p-2 flex gap-2 items-end">
-          <span className="bg-white/10 text-white text-sm px-3 py-1 rounded-full">
-            React
-          </span>
-          <span className="bg-white/10 text-white text-sm px-3 py-1 rounded-full">
-            Next.js
-          </span>
+        <div className="absolute bottom-0 left-0 right-0 h-1/5  p-2 flex gap-2 items-end">
+          <Chip>React</Chip>
+          <Chip>Next.js</Chip>
         </div>
       </div>
       <div className="flex justify-between m-4">

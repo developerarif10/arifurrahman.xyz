@@ -1,12 +1,32 @@
 "use client";
+import { sendEmail } from "@/app/actions/sendEmail";
 import { ArrowRight, Code2, Mail, Send, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+
 export default function ContactCard() {
   const [isHovered, setIsHovered] = useState(false);
-  const [email, setEmail] = useState("");
   const [isDark, setIsDark] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [emailSent, setEmailSent] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (formData) => {
+    setIsLoading(true);
+    setError("");
+
+    const result = await sendEmail(formData);
+
+    if (result.success) {
+      setEmailSent(true);
+    } else {
+      setError(result.error || "Failed to send email.");
+    }
+
+    setIsLoading(false);
+  };
+
   return (
     <div className="w-full max-w-2xl space-y-8 sm:space-y-12 relative mx-auto">
       {/* Decorative elements */}
@@ -101,13 +121,13 @@ export default function ContactCard() {
           </Link>
 
           {/* Email Form */}
-          <form onSubmit={(e) => e.preventDefault()} className="w-full">
+          <form action={handleSubmit} className="w-full">
             <div className="relative flex items-center">
               <input
                 type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                name="email"
                 placeholder="your@email.com"
+                required
                 className={`w-full rounded-xl px-4 py-2.5 sm:py-3 pl-11 sm:pl-12 text-sm sm:text-base transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500/40 ${
                   isDark
                     ? "bg-slate-800/50 border border-slate-700 text-white placeholder:text-slate-500"
@@ -122,14 +142,29 @@ export default function ContactCard() {
               <div className="absolute right-2">
                 <button
                   type="submit"
-                  className="bg-indigo-500 hover:bg-indigo-600 text-white px-3 sm:px-4 py-1.5 rounded-lg flex items-center gap-2 transition-all duration-300 text-sm sm:text-base"
+                  disabled={isLoading}
+                  className="bg-indigo-500 hover:bg-indigo-600 text-white px-3 sm:px-4 py-1.5 rounded-lg flex items-center gap-2 transition-all duration-300 text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <span className="hidden sm:inline">Send</span>
-                  <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  {isLoading ? (
+                    "Sending..."
+                  ) : (
+                    <>
+                      <span className="hidden sm:inline">Send</span>
+                      <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                    </>
+                  )}
                 </button>
               </div>
             </div>
           </form>
+
+          {/* Feedback messages */}
+          {emailSent && (
+            <p className="text-green-500 text-sm text-center">
+              Email sent successfully!
+            </p>
+          )}
+          {error && <p className="text-red-500 text-sm text-center">{error}</p>}
         </div>
 
         {/* Footer text */}

@@ -1,4 +1,4 @@
-import Orb from "./orb";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -19,23 +19,13 @@ export default function Hero() {
           </p>
         </div>
         <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-          {/* <Image
+          <Image
             className="object-cover object-center rounded"
             alt="hero"
             src="/images/arifurrahman.webp"
             width={350}
             height={350}
-          /> */}
-
-          <div style={{ width: "100%", height: "600px", position: "relative" }}>
-            <Orb
-              hoverIntensity={0.5}
-              rotateOnHover={true}
-              hue={0}
-              forceHoverState={false}
-              imageSrc="/images/arifurrahman.webp"
-            />
-          </div>
+          />
         </div>
       </div>
     </section>
