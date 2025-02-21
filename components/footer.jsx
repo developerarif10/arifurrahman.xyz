@@ -1,3 +1,6 @@
+import { Instagram, Linkedin, Twitter } from "lucide-react";
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <section className="py-10 sm:pt-16 lg:pt-24">
@@ -148,10 +151,43 @@ export default function Footer() {
 
         <hr className="mt-16 mb-10 border-gray-800" />
 
-        <div className="flex flex-wrap items-center justify-between">
+        <div className="flex flex-wrap items-center justify-between flex-row-reverse">
           <p className="w-full mt-8 text-sm text-center text-gray-100 md:mt-0 md:w-auto md:order-2">
-            © Copyright 2021, All Rights Reserved by Postcraft
+            © 2025{" "}
+            <Link
+              target="_blank"
+              href="https://x.com/iamarifurrahman"
+              className="hover:underline hover:text-blue-600"
+            >
+              @developerarif
+            </Link>
+            . All rights reserved.
           </p>
+          <div>
+            <ul className="flex gap-4">
+              <li className="hover:text-blue-600">
+                <Link target="_blank" href="https://x.com/iamarifurrahman">
+                  <Twitter size={20} />
+                </Link>
+              </li>
+              <li className="hover:text-blue-600">
+                <Link
+                  target="_blank"
+                  href="https://www.linkedin.com/in/arifurrahmanrafi"
+                >
+                  <Linkedin size={20} />
+                </Link>
+              </li>
+              <li className="hover:text-blue-600">
+                <Link
+                  target="_blank"
+                  href="https://instagram.com/arifurrahman_rafi/"
+                >
+                  <Instagram />
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

@@ -1,48 +1,70 @@
-import { ArrowUpRight, CodeXml } from "lucide-react";
+import { ArrowUpRight, Github } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import Chip from "./chip";
+import ProjectButton from "./project-btn";
 
-export default function ProjectCard({ thumbnail }) {
+const avatars = [
+  "/logo/nextjs.svg",
+  "/logo/reactjs.svg",
+  "/logo/nodejs.svg",
+  "/logo/tailwindcss.svg",
+];
+
+const ProjectCard = () => {
   return (
-    <div className="p-3 lg:w-1/2 md:w-full">
-      <div className="relative">
-        <Image
-          src={`/projects/project-${thumbnail}.webp`}
-          alt={`project ${thumbnail}`}
-          className="w-full h-48 md:h-72 object-cover group-hover:scale-105 transition-transform duration-300 rounded-xl"
-          width={500}
-          height={300}
-        />
-        <div className="absolute bottom-0 left-0 right-0 h-1/5  p-2 flex gap-2 items-end">
-          <Chip>React</Chip>
-          <Chip>Next.js</Chip>
+    <div className="max-w-md mx-auto bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+      <Image
+        src="/projects/project-1.webp"
+        alt="Project Thumbnail"
+        width={380}
+        height={250}
+        className="w-full h-56 object-cover"
+      />
+      <div className="p-6 space-y-4">
+        <div className="flex justify-between items-center">
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+            RedComrade
+          </h2>
+          <div className="flex items-center -space-x-3">
+            {avatars.map((src, index) => (
+              <img
+                key={index}
+                src={src}
+                alt={`Avatar ${index}`}
+                className="w-8 h-8 rounded-full border-2 bg-white dark:bg-black border-gray-200 dark:border-gray-700 object-cover"
+              />
+            ))}
+            <div className="w-8 h-8 flex items-center justify-center bg-gray-200 dark:bg-gray-700 text-black dark:text-white text-xs font-semibold rounded-full border-2 border-gray-200 dark:border-gray-700">
+              +3
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="flex justify-between m-4">
-        <div>
-          <h2 className=" text-lg title-font font-medium">Svgl.app</h2>
-          <p className="leading-relaxed text-base">Contributor</p>
+        <p className="text-gray-600 dark:text-gray-400">
+          Website to listen to sound combinations to relax and become more
+          productive in your tasks.
+        </p>
+        <div className="flex flex-wrap gap-2">
+          {["Next.js", "React.js", "Node.js", "Framer"].map((tech, index) => (
+            <span
+              key={index}
+              className="px-3 py-1 text-sm font-medium bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-full"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
-        <div className="flex gap-2">
-          <Link
-            target="_blank"
-            href="#"
-            aria-label="Preview"
-            className="box-border text-[rgba(243,243,243,0.596)] flex h-[46px] w-[46px] items-center justify-center bg-[rgba(20,20,20,0.61)] duration-[0.3s] transition-[color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter] ease-in-out leading-[24px] p-[12px] rounded-[12px] border-[0.666667px] border-solid border-[rgba(243,243,243,0.063)]"
-          >
-            <CodeXml />
-          </Link>
-          <Link
-            target="_blank"
-            href="#"
-            aria-label="Preview"
-            className="box-border text-[rgba(243,243,243,0.596)] flex h-[46px] w-[46px] items-center justify-center bg-[rgba(20,20,20,0.61)] duration-[0.3s] transition-[color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter,-webkit-backdrop-filter] ease-in-out leading-[24px] p-[12px] rounded-[12px] border-[0.666667px] border-solid border-[rgba(243,243,243,0.063)]"
-          >
-            <ArrowUpRight />
-          </Link>
+        <div className="flex justify-between mt-4">
+          <ProjectButton>
+            SOURCE
+            <Github size={20} />
+          </ProjectButton>
+          <ProjectButton>
+            WEBSITE
+            <ArrowUpRight size={20} />
+          </ProjectButton>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default ProjectCard;
