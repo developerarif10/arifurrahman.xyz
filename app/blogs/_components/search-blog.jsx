@@ -20,17 +20,17 @@ export default function SearchInput({ blogs }) {
       />
       <div>
         <h2 className="text-2xl font-semibold mb-4">All Posts</h2>
+        <h2 className="mb-8 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
+          2025
+        </h2>
         {filteredArticles.length > 0 ? (
           filteredArticles.map((article, index) => (
             <div key={index} className="mb-4">
-              <h2 className="mb-8 text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
-                {article?.creation_time.slice(0, 4)}
-              </h2>
               <BlogGrid article={article} blogs={blogs} />
             </div>
           ))
         ) : (
-          <p className="text-gray-500">No articles found.</p>
+          <p className="text-red-500">No articles found!</p>
         )}
       </div>
     </>

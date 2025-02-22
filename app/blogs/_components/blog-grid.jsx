@@ -5,13 +5,14 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function BlogGrid({ article }) {
+  console.log(article?.thumbnail_url);
   return (
     <div className="mx-auto max-w-4xl px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="mb-16"
+        className="mb-8"
       >
         <div className="space-y-8">
           <motion.article
@@ -25,7 +26,7 @@ export default function BlogGrid({ article }) {
             >
               <div className="aspect-video w-full overflow-hidden rounded-lg sm:w-48 lg:w-64">
                 <Image
-                  src={article?.thumbnail_url}
+                  src={`/blogs${article?.thumbnail_url}`}
                   alt={article?.title}
                   width={256}
                   height={144}
