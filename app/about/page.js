@@ -4,10 +4,12 @@ import WorkExperience from "./_components/work-experience";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-background/80 px-4 py-16">
-      <AboutMe />
-      <WorkExperience />
-      <EducationSection />
+    <div className="min-h-screen p-6">
+      <div className="max-w-4xl mx-auto">
+        <AboutMe />
+        <WorkExperience />
+        <EducationSection />
+      </div>
     </div>
   );
 }

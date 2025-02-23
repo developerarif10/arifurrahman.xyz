@@ -31,9 +31,9 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <section className="lg:mx-32">
+          <section>
             <Header />
-            <main className="mx-5">{children}</main>
+            <main>{children}</main>
             <Footer />
           </section>
         </ThemeProvider>
