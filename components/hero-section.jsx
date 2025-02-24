@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { TextLoop } from "./ui/text-loop";
 
 export default function Home() {
   return (
@@ -161,14 +162,43 @@ export default function Home() {
                 transition={{ duration: 1 }}
                 className="flex flex-col justify-center space-y-6"
               >
-                <h2 className="text-[2.5rem] font-bold leading-tight tracking-tight text-blue-400 sm:text-5xl md:text-6xl lg:text-7xl">
-                  Before they
-                  <br />
-                  sold out
-                </h2>
-                <h3 className="text-2xl font-semibold text-white sm:text-3xl md:text-4xl">
-                  Arifur Rahman
-                </h3>
+                <p className="inline-flex whitespace-pre-wrap text-sm">
+                  Beautiful templates for{" "}
+                  <TextLoop
+                    className="overflow-y-clip"
+                    transition={{
+                      type: "spring",
+                      stiffness: 900,
+                      damping: 80,
+                      mass: 10,
+                    }}
+                    variants={{
+                      initial: {
+                        y: 20,
+                        rotateX: 90,
+                        opacity: 0,
+                        filter: "blur(4px)",
+                      },
+                      animate: {
+                        y: 0,
+                        rotateX: 0,
+                        opacity: 1,
+                        filter: "blur(0px)",
+                      },
+                      exit: {
+                        y: -20,
+                        rotateX: -90,
+                        opacity: 0,
+                        filter: "blur(4px)",
+                      },
+                    }}
+                  >
+                    <span>Founders</span>
+                    <span>Developers</span>
+                    <span>Designers</span>
+                    <span>Design Engineers</span>
+                  </TextLoop>
+                </p>
                 <p className="max-w-xl font-mono text-lg text-gray-400">
                   Meet Arifur Rahman, the self-proclaimed code wizard who can
                   turn caffeine into beautiful websites. His passion for
