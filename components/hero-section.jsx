@@ -1,7 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { ShinyButton } from "./my-components/shiny-button";
 import { TextLoop } from "./ui/text-loop";
-
 export default function Home() {
   return (
     <div className="min-h-screen ">
@@ -133,19 +135,16 @@ export default function Home() {
             {/* <div className="absolute bottom-0 right-0 w-48 h-48 bg-purple-600/20 rounded-full blur-2xl animate-pulse"></div> */}
 
             {/* Left Content Section */}
-            <div className="md:w-1/2 text-center md:text-left z-10 mb-8 md:mb-0">
+            <div className="md:w-1/2 text-center md:text-left p-4 z-10 mb-8 md:mb-0">
               <div className="relative inline-block mb-4">
-                <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-                  Hi, I&apos;m{" "}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
-                    Arifur Rahman
-                  </span>
+                <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-2 text-black dark:text-white">
+                  Arifur Rahman
                 </h1>
                 {/* <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600"></div> */}
               </div>
 
-              <h2 className="text-2xl md:text-xl text-gray-300 mb-6 font-medium">
-                I&apos;m a{" "}
+              <p className=" text-zinc-600 dark:text-zinc-300 mb-6 font-medium">
+                I&apos;m a
                 <TextLoop
                   className="overflow-y-clip"
                   transition={{
@@ -159,57 +158,60 @@ export default function Home() {
                       y: 20,
                       rotateX: 90,
                       opacity: 0,
-                      filter: "blur(4px)",
                     },
                     animate: {
                       y: 0,
                       rotateX: 0,
                       opacity: 1,
-                      filter: "blur(0px)",
                     },
                     exit: {
                       y: -20,
                       rotateX: -90,
                       opacity: 0,
-                      filter: "blur(4px)",
                     },
                   }}
                 >
-                  <span>React Front-end Web developer</span>
-                  <span>Nextjs developer</span>
-                  <span>Wordpress Expert</span>
-                  <span>Tech Enthusiast</span>
+                  <span className="inline-block px-2 py-0 font-bold bg-[#90e0ef] dark:bg-[#003566] dark:text-white mx-1">
+                    React Specialist.
+                  </span>
+                  <span className="inline-block px-2 py-0 font-bold bg-[#90e0ef] dark:bg-[#003566] dark:text-white  mx-1">
+                    Next.js Expert.
+                  </span>
+                  <span className="inline-block px-2 py-0 font-bold bg-[#90e0ef] dark:bg-[#003566] dark:text-white  mx-1">
+                    Wordpress Specialist.
+                  </span>
+                  <span className="inline-block px-2 py-0 font-bold bg-[#90e0ef] dark:bg-[#003566] dark:text-white  mx-1">
+                    Tech Enthusiast.
+                  </span>
                 </TextLoop>
-              </h2>
-
-              <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-                Transforming ideas into elegant, performant digital solutions
-                with a passion for innovative design and clean code.
+                Developing intuitive, high-performance web applications with
+                innovation, efficiency, and seamless user interfaces
               </p>
 
+              {/* <p className="text-lg text-gray-400 mb-8 leading-relaxed">
+                Developing intuitive, high-performance web applications with
+                innovation, efficiency, and seamless user interfaces
+              </p> */}
+
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
-                <a
-                  href="#projects"
-                  className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full transition duration-300 ease-in-out transform hover:scale-105 text-center"
-                >
-                  View Projects
-                </a>
-                <a
-                  href="#contact"
-                  className="px-6 py-3 border-2 border-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 rounded-full transition duration-300 ease-in-out transform hover:scale-105 text-center"
-                >
-                  Contact Me
-                </a>
+                <Link href="/projects">
+                  <ShinyButton type="button">View Projects</ShinyButton>
+                </Link>
+                <Link href="#contacts">
+                  <ShinyButton type="button">Contact Me</ShinyButton>
+                </Link>
               </div>
             </div>
-
             {/* Right Image Section */}
             <div className="md:w-1/2 flex justify-center relative">
               <div className="w-64 h-64 md:w-96 md:h-96 relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-600/30 rounded-full animate-blob"></div>
-                <img
+                <Image
                   src="/images/arifurrahman.webp"
                   alt="Arifur Rahman profile pic"
+                  width={300}
+                  height={300}
+                  priority
                   className="absolute inset-0 w-full h-full object-cover rounded-full shadow-2xl z-10 transform transition duration-500 hover:scale-105"
                 />
               </div>

@@ -28,7 +28,10 @@ export default function ContactCard() {
   };
 
   return (
-    <div className="w-full max-w-2xl space-y-8 sm:space-y-12 relative mx-auto">
+    <div
+      id="contacts"
+      className="w-full max-w-2xl space-y-8 sm:space-y-12 relative mx-auto"
+    >
       {/* Decorative elements */}
       <div
         className={`absolute -top-20 -left-20 w-32 sm:w-40 h-32 sm:h-40 rounded-full blur-3xl transition-colors duration-300 ${
