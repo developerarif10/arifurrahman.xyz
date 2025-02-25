@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { TextLoop } from "./ui/text-loop";
 
@@ -87,34 +86,6 @@ export default function Home() {
               />
             ))}
           </motion.div>
-
-          {/* Floating Particles */}
-          {[...Array(8)].map((_, i) => (
-            <motion.div
-              key={`particle-${i}`}
-              initial={{
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
-                scale: 0,
-                opacity: 0,
-              }}
-              animate={{
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
-                scale: [0, 1, 1, 0],
-                opacity: [0, 0.8, 0.8, 0],
-              }}
-              transition={{
-                duration: 5 + Math.random() * 5,
-                repeat: Number.POSITIVE_INFINITY,
-                repeatType: "loop",
-                delay: i * 0.5,
-              }}
-              className={`absolute h-2 w-2 rounded-full ${
-                i % 2 ? "bg-cyan-400" : "bg-violet-400"
-              }`}
-            />
-          ))}
         </div>
 
         {/* Enhanced Animated Background */}
@@ -153,75 +124,95 @@ export default function Home() {
         </div>
 
         {/* Content with specified classes */}
-        <div className="min-h-screen p-6">
-          <div className="relative z-[3] mx-auto max-w-4xl">
-            <div className="grid gap-8 lg:grid-cols-2">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
-                className="flex flex-col justify-center space-y-6"
-              >
-                <p className="inline-flex whitespace-pre-wrap text-sm">
-                  Beautiful templates for{" "}
-                  <TextLoop
-                    className="overflow-y-clip"
-                    transition={{
-                      type: "spring",
-                      stiffness: 900,
-                      damping: 80,
-                      mass: 10,
-                    }}
-                    variants={{
-                      initial: {
-                        y: 20,
-                        rotateX: 90,
-                        opacity: 0,
-                        filter: "blur(4px)",
-                      },
-                      animate: {
-                        y: 0,
-                        rotateX: 0,
-                        opacity: 1,
-                        filter: "blur(0px)",
-                      },
-                      exit: {
-                        y: -20,
-                        rotateX: -90,
-                        opacity: 0,
-                        filter: "blur(4px)",
-                      },
-                    }}
-                  >
-                    <span>Founders</span>
-                    <span>Developers</span>
-                    <span>Designers</span>
-                    <span>Design Engineers</span>
-                  </TextLoop>
-                </p>
-                <p className="max-w-xl font-mono text-lg text-gray-400">
-                  Meet Arifur Rahman, the self-proclaimed code wizard who can
-                  turn caffeine into beautiful websites. His passion for
-                  building clean and functional designs is only rivaled by his
-                  passion for finding the perfect GIF to express his excitement.
-                </p>
-              </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1 }}
-                className="relative flex items-center justify-center lg:justify-end"
-              >
-                <div className="relative h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] md:h-[450px] md:w-[450px]">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500/10 to-purple-500/10" />
-                  <img
-                    src="/images/arifurrahman.webp"
-                    alt="Profile"
-                    className="absolute inset-0 h-full w-full rounded-full object-cover"
-                  />
-                </div>
-              </motion.div>
+        <div className="min-h-screen mx-auto max-w-5xl text-white flex items-center justify-center p-4 overflow-hidden">
+          <div className="container mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between relative">
+            {/* Decorative geometric elements */}
+
+            {/* <div className="absolute top-0 left-0 w-32 h-32 bg-blue-600/20 rounded-full blur-2xl animate-pulse"></div> */}
+            {/* <div className="absolute bottom-0 right-0 w-48 h-48 bg-purple-600/20 rounded-full blur-2xl animate-pulse"></div> */}
+
+            {/* Left Content Section */}
+            <div className="md:w-1/2 text-center md:text-left z-10 mb-8 md:mb-0">
+              <div className="relative inline-block mb-4">
+                <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
+                  Hi, I&apos;m{" "}
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-600">
+                    Arifur Rahman
+                  </span>
+                </h1>
+                {/* <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600"></div> */}
+              </div>
+
+              <h2 className="text-2xl md:text-xl text-gray-300 mb-6 font-medium">
+                I&apos;m a{" "}
+                <TextLoop
+                  className="overflow-y-clip"
+                  transition={{
+                    type: "spring",
+                    stiffness: 900,
+                    damping: 80,
+                    mass: 10,
+                  }}
+                  variants={{
+                    initial: {
+                      y: 20,
+                      rotateX: 90,
+                      opacity: 0,
+                      filter: "blur(4px)",
+                    },
+                    animate: {
+                      y: 0,
+                      rotateX: 0,
+                      opacity: 1,
+                      filter: "blur(0px)",
+                    },
+                    exit: {
+                      y: -20,
+                      rotateX: -90,
+                      opacity: 0,
+                      filter: "blur(4px)",
+                    },
+                  }}
+                >
+                  <span>React Front-end Web developer</span>
+                  <span>Nextjs developer</span>
+                  <span>Wordpress Expert</span>
+                  <span>Tech Enthusiast</span>
+                </TextLoop>
+              </h2>
+
+              <p className="text-lg text-gray-400 mb-8 leading-relaxed">
+                Transforming ideas into elegant, performant digital solutions
+                with a passion for innovative design and clean code.
+              </p>
+
+              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                <a
+                  href="#projects"
+                  className="px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full transition duration-300 ease-in-out transform hover:scale-105 text-center"
+                >
+                  View Projects
+                </a>
+                <a
+                  href="#contact"
+                  className="px-6 py-3 border-2 border-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 rounded-full transition duration-300 ease-in-out transform hover:scale-105 text-center"
+                >
+                  Contact Me
+                </a>
+              </div>
+            </div>
+
+            {/* Right Image Section */}
+            <div className="md:w-1/2 flex justify-center relative">
+              <div className="w-64 h-64 md:w-96 md:h-96 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 to-purple-600/30 rounded-full animate-blob"></div>
+                <img
+                  src="/images/arifurrahman.webp"
+                  alt="Arifur Rahman profile pic"
+                  className="absolute inset-0 w-full h-full object-cover rounded-full shadow-2xl z-10 transform transition duration-500 hover:scale-105"
+                />
+              </div>
             </div>
           </div>
         </div>
