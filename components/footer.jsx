@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <hr className="mt-16 mb-10 border-gray-800" />
 
-        <div className="flex flex-wrap items-center justify-between flex-row-reverse">
+        <div className="flex flex-wrap items-center gap-1 md:justify-between justify-center flex-row-reverse">
           <p className="w-full mt-8 text-sm text-center dark:text-gray-100 md:mt-0 md:w-auto md:order-2">
             © 2025{" "}
             <Link

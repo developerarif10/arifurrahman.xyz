@@ -107,8 +107,10 @@ export default function Navbar() {
             <Link
               key={index}
               className={`py-0.5 md:py-3 px-4 md:px-1 font-medium text-gray-800 relative group dark:text-neutral-200 ${
-                pathname === link.href ? "after:w-full" : "after:w-0"
-              } after:h-[2px] after:bg-gray-800 dark:after:bg-neutral-200 after:absolute after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full`}
+                pathname === link.href
+                  ? "after:w-[80px] sm:after:w-full"
+                  : "after:w-0"
+              } after:h-[2px] after:bg-gray-800 dark:after:bg-neutral-200 after:absolute after:left-0 after:bottom-0 after:transition-all after:duration-300 sm:hover:after:w-full`}
               href={link.href}
             >
               {link.title}

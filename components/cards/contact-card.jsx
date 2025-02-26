@@ -39,7 +39,7 @@ export default function ContactCard() {
         }`}
       ></div>
       <div
-        className={`absolute -bottom-20 -right-20 w-32 sm:w-40 h-32 sm:h-40 rounded-full blur-3xl transition-colors duration-300 ${
+        className={`absolute lg:block hidden -bottom-20 -right-20 w-32 sm:w-40 h-32 sm:h-40 rounded-full blur-3xl transition-colors duration-300 ${
           isDark ? "bg-violet-500/10" : "bg-violet-500/20"
         }`}
       ></div>
