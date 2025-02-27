@@ -3,11 +3,11 @@ import { Badge } from "../ui/badge";
 import { BorderTrail } from "../ui/visibleCards";
 
 export default function SpotCard({
-  number = "1",
-  title = "UI Design",
-  subtitle = "Aesthetic, Usability, Consistency",
-  tags = ["Figma", "Photoshop", "Canva"],
-  accentColor = "from-purple-500/20 to-indigo-500/20",
+  number,
+  title,
+  subtitle,
+  tags,
+  accentColor,
 }) {
   return (
     <SpotlightCard className="transform transition-all duration-300 hover:scale-[1.02]">
@@ -23,7 +23,7 @@ export default function SpotCard({
       >
         <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
 
-        <div className="flex flex-col items-start relative z-10">
+        <div className="flex gap-10 items-start relative z-10">
           {/* Number Circle with pulse effect */}
           <div className="relative mb-6">
             <div className="absolute inset-0 rounded-full bg-white/10 blur-md animate-pulse"></div>
@@ -36,21 +36,20 @@ export default function SpotCard({
           <div className="mb-5">
             <h2 className="text-4xl font-bold text-white mb-3">{title}</h2>
             <p className="text-xl text-white/70">{subtitle}</p>
-          </div>
+            {/* Divider */}
+            <div className="w-16 h-1 bg-gradient-to-r from-white/60 to-white/20 rounded-full my-5"></div>
 
-          {/* Divider */}
-          <div className="w-16 h-1 bg-gradient-to-r from-white/60 to-white/20 rounded-full mb-5"></div>
-
-          {/* Badges */}
-          <div className="flex flex-wrap gap-2 mt-1">
-            {tags.map((tag, index) => (
-              <Badge
-                key={index}
-                className="bg-[#2A2A2A] hover:bg-[#333333] text-base px-4 py-1.5 rounded-full text-white/90 shadow-md border border-white/5 transition-all duration-300 hover:scale-105"
-              >
-                {tag}
-              </Badge>
-            ))}
+            {/* Badges */}
+            <div className="flex flex-wrap gap-2 mt-1">
+              {tags.map((tag, index) => (
+                <Badge
+                  key={index}
+                  className="bg-[#2A2A2A] hover:bg-[#333333] text-base px-4 py-1.5 rounded-full text-white/90 shadow-md border border-white/5 transition-all duration-300 hover:scale-105"
+                >
+                  {tag}
+                </Badge>
+              ))}
+            </div>
           </div>
         </div>
       </div>

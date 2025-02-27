@@ -4,7 +4,7 @@ import ProjectCard from "./_components/project-card";
 
 export default function ProjectPage() {
   return (
-    <div className="min-h-screen p-6">
+    <div className="min-h-screen px-6 py-20">
       <div className="max-w-4xl mx-auto">
         <div className="flex gap-3 flex-col">
           <h1 className="text-4xl font-bold tracking-tight">Project</h1>

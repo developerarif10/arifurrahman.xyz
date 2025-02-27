@@ -35,17 +35,17 @@ export default function Card() {
   ];
 
   return (
-    <section className="px-4 md:px-6 py-8 md:py-12">
-      <div className="flex flex-col mb-10 md:mb-16 text-center">
+    <section className="px-4 py-8 md:py-12">
+      <div className="flex flex-col mb-10 md:mb-16">
         <h1 className="font-bold text-3xl md:text-5xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
           Services
         </h1>
-        <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto">
+        <p className="text-base md:text-lg text-gray-300">
           I offer a comprehensive range of services to ensure that projects run
           as smoothly as possible
         </p>
       </div>
-      <Spotlight className="max-w-md mx-auto grid gap-8 items-start group">
+      <Spotlight className="sm:max-w-xl mx-auto grid gap-5 items-start group">
         {cardsData.map((card, index) => (
           <SpotCard
             key={index}
