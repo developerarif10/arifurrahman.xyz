@@ -2,34 +2,55 @@ import { SpotlightCard } from "../spotlight";
 import { Badge } from "../ui/badge";
 import { BorderTrail } from "../ui/visibleCards";
 
-export default function SpotCard() {
+export default function SpotCard({
+  number = "1",
+  title = "UI Design",
+  subtitle = "Aesthetic, Usability, Consistency",
+  tags = ["Figma", "Photoshop", "Canva"],
+  accentColor = "from-purple-500/20 to-indigo-500/20",
+}) {
   return (
-    <SpotlightCard>
+    <SpotlightCard className="transform transition-all duration-300 hover:scale-[1.02]">
       <BorderTrail
         style={{
           boxShadow:
-            "0px 0px 60px 30px rgb(255 255 255 / 50%), 0 0 100px 60px rgb(0 0 0 / 50%), 0 0 140px 90px rgb(0 0 0 / 50%)",
+            "0px 0px 60px 30px rgb(255 255 255 / 20%), 0 0 100px 60px rgb(0 0 0 / 30%), 0 0 140px 90px rgb(0 0 0 / 20%)",
         }}
         size={100}
       />
-      <div className="relative h-full shadow-[0_8px_32px_0_rgba(_31,38,135,0.37_)] backdrop-blur-[_15.5px_] border rounded-[10px] border-solid border-[rgba(_255,255,255,0.18_)] p-6 pb-8 z-20 overflow-hidden">
-        <div className="flex flex-col py-10 items-center">
-          {/* Text */}
-          <div className="flex gap-4 flex-col">
-            <h2 className="text-xl text-slate-200 font-bold mb-1">
-              Amazing Integration
-            </h2>
-            <h3>
-              Building modern applications that scale well and are easy to
-              maintain. Cutting edge websites with a pinch of magic, and a lot
-              of love.
-            </h3>
-            <div className="flex gap-1">
-              <Badge>Nextjs</Badge>
-              <Badge>React</Badge>
-              <Badge>MongoDB</Badge>
-              <Badge>API</Badge>
+      <div
+        className={`relative h-full shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] backdrop-blur-[15.5px] border rounded-xl border-solid border-[rgba(255,255,255,0.12)] p-8 z-20 overflow-hidden bg-[#1A1A1A]/90 bg-gradient-to-br ${accentColor}`}
+      >
+        <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+
+        <div className="flex flex-col items-start relative z-10">
+          {/* Number Circle with pulse effect */}
+          <div className="relative mb-6">
+            <div className="absolute inset-0 rounded-full bg-white/10 blur-md animate-pulse"></div>
+            <div className="flex justify-center items-center w-20 h-20 rounded-full bg-gradient-to-br from-[#333333] to-[#222222] shadow-lg text-white text-4xl font-bold relative border border-white/10">
+              {number}
             </div>
+          </div>
+
+          {/* Title and Subtitle */}
+          <div className="mb-5">
+            <h2 className="text-4xl font-bold text-white mb-3">{title}</h2>
+            <p className="text-xl text-white/70">{subtitle}</p>
+          </div>
+
+          {/* Divider */}
+          <div className="w-16 h-1 bg-gradient-to-r from-white/60 to-white/20 rounded-full mb-5"></div>
+
+          {/* Badges */}
+          <div className="flex flex-wrap gap-2 mt-1">
+            {tags.map((tag, index) => (
+              <Badge
+                key={index}
+                className="bg-[#2A2A2A] hover:bg-[#333333] text-base px-4 py-1.5 rounded-full text-white/90 shadow-md border border-white/5 transition-all duration-300 hover:scale-105"
+              >
+                {tag}
+              </Badge>
+            ))}
           </div>
         </div>
       </div>
