@@ -3,8 +3,59 @@ import ProjectButton from "./_components/project-btn";
 import ProjectCard from "./_components/project-card";
 
 export default function ProjectPage() {
+  const projectData = [
+    {
+      thumbnail: 1,
+      title: "TutorConnect",
+      subTitle:
+        "Website to listen to sound combinations to relax and become more productive in your tasks.",
+      avatars: [
+        "/logo/nextjs.svg",
+        "/logo/reactjs.svg",
+        "/logo/nodejs.svg",
+        "/logo/tailwindcss.svg",
+      ],
+      thumbnaiUrl: "/projects/project_3.jpeg",
+      techStack: ["Next.js", "React.js", "Node.js", "Framer"],
+      githubUrl: "https://github.com/developerarif10/tutorconnect",
+      projectUrl: "https://tutorconnects.vercel.app/",
+    },
+    {
+      thumbnail: 2,
+      title: "RedComrade",
+      subTitle:
+        "Website to listen to sound combinations to relax and become more productive in your tasks.",
+      avatars: [
+        "/logo/nextjs.svg",
+        "/logo/reactjs.svg",
+        "/logo/nodejs.svg",
+        "/logo/tailwindcss.svg",
+      ],
+      thumbnaiUrl: "/projects/project_2.jpeg",
+      techStack: ["Next.js", "React.js", "Node.js"],
+      githubUrl: "https://github.com/developerarif10/redcomrade",
+      projectUrl: "https://redcomrade.vercel.app/",
+    },
+
+    {
+      thumbnail: 3,
+      title: "Resource Vault",
+      subTitle:
+        "Website to listen to sound combinations to relax and become more productive in your tasks.",
+      avatars: [
+        "/logo/nextjs.svg",
+        "/logo/reactjs.svg",
+        "/logo/nodejs.svg",
+        "/logo/tailwindcss.svg",
+      ],
+      thumbnaiUrl: "/projects/project_3.jpeg",
+      techStack: ["Next.js", "React.js", "Node.js"],
+      githubUrl: "https://github.com/developerarif10/resourcevault",
+      projectUrl: "https://resourcevault.vercel.app/",
+    },
+  ];
   return (
-    <div className="min-h-screen px-6 py-20">
+    <div className="min-h-screen px-6 pt-20">
       <div className="max-w-4xl mx-auto">
         <div className="flex gap-3 flex-col">
           <h1 className="text-4xl font-bold tracking-tight">Project</h1>
@@ -18,10 +69,9 @@ export default function ProjectPage() {
             <h1 className="text-2xl font-semibold">Full Stack Projects</h1>
             <div className="container py-12 flex flex-wrap justify-center items-center">
               <div className="flex flex-wrap -m-4 gap-y-8">
-                <ProjectCard thumbnail={1} />
-                <ProjectCard thumbnail={2} />
-                <ProjectCard thumbnail={2} />
-                <ProjectCard thumbnail={2} />
+                {projectData?.map((content) => (
+                  <ProjectCard key={content?.thumbnail} content={content} />
+                ))}
               </div>
             </div>
             <div className="flex justify-center items-center text-center">

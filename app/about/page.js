@@ -4,7 +4,7 @@ import WorkExperience from "./_components/work-experience";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen px-6 py-20">
+    <div className="min-h-screen px-6 pt-20">
       <div className="max-w-4xl mx-auto">
         <AboutMe />
         <WorkExperience />

@@ -33,11 +33,11 @@ export default function SpotCard({
           </div>
 
           {/* Title and Subtitle */}
-          <div className="mb-5">
-            <h2 className="text-4xl font-bold text-white mb-3">{title}</h2>
-            <p className="text-xl text-white/70">{subtitle}</p>
+          <div className="mb-5 text-black">
+            <h2 className="text-4xl font-bold  mb-3">{title}</h2>
+            <p className="text-xl">{subtitle}</p>
             {/* Divider */}
-            <div className="w-16 h-1 bg-gradient-to-r from-white/60 to-white/20 rounded-full my-5"></div>
+            <div className="w-16 h-1 bg-gradient-to-r from-black/60 to-black/20 rounded-full my-5"></div>
 
             {/* Badges */}
             <div className="flex flex-wrap gap-2 mt-1">

@@ -3,11 +3,11 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <section className="py-10">
-      <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
-        <hr className="mt-16 mb-10 border-gray-800" />
+    <footer className="px-4 sm:px-6 mb-5 lg:px-8 max-w-4xl mx-auto">
+      <div className="flex flex-col">
+        <hr className="my-10 border-gray-800" />
 
-        <div className="flex flex-wrap items-center gap-1 md:justify-between justify-center flex-row-reverse">
+        <div className="flex flex-wrap items-center gap-5 pb-4 md:justify-between justify-center flex-row-reverse">
           <p className="w-full mt-8 text-sm text-center dark:text-gray-100 md:mt-0 md:w-auto md:order-2">
             © 2025{" "}
             <Link
@@ -46,6 +46,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }

@@ -63,8 +63,8 @@ const ReviewCard = ({ image, name, title, quote }) => {
 
 export default function TesitomonialPage() {
   return (
-    <>
-      <div className=" mb-12">
+    <div>
+      <div className="mb-12">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
           Voices of my Satisfied clients
         </h2>
@@ -99,11 +99,7 @@ export default function TesitomonialPage() {
 
         {/* Enhanced bottom gradient with your specific color */}
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-[hsl(215,27.9%,16.9%)] via-[hsl(215,27.9%,16.9%)/0.9] to-transparent"></div>
-
-        {/* Side gradients with your specific color
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-[hsl(215,27.9%,16.9%)] to-transparent"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-[hsl(215,27.9%,16.9%)] to-transparent"></div> */}
       </div>
-    </>
+    </div>
   );
 }
