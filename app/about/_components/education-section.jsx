@@ -17,6 +17,7 @@ import {
   GraduationCap,
   MapPin,
 } from "lucide-react";
+import Link from "next/link";
 
 export default function EducationSection() {
   const education = [
@@ -30,34 +31,36 @@ export default function EducationSection() {
       description:
         "Focused on software engineering and web development technologies.",
       achievements: [
-        "Dean's List for Academic Excellence",
-        "Best Project Award - Final Year",
-        "Technical Club Lead",
+        "Enhancing my expertise in the business and financial sectors",
+        "Develop practical skills by participating  business case competitions related to marketing, or entrepreneurship",
       ],
       courses: [
-        "Advanced Web Technologies",
-        "Data Structures & Algorithms",
-        "Database Management",
-        "Software Engineering",
-        "Computer Networks",
-        "Mobile App Development",
+        "Principles of Management",
+        "Financial Accounting",
+        "Marketing Management",
+        "Business Finance",
+        "Human Resource Management",
+        "Business Economics (Micro & Macro)",
       ],
       inProgress: true,
     },
     {
       id: 2,
-      degree: "Web Development Bootcamp",
-      institution: "Tech Academy",
+      degree: "Reactive Accelerator",
+      institution: "Learn with Sumit",
       location: "Online",
-      period: "2019 - 2020",
+      period: "December 2023 - July 2024",
       description: "Intensive program covering full-stack web development.",
-      achievements: ["Top Performer Award", "Built 5 full-stack projects"],
+      achievements: ["Star Performer Award", "Built 9 full-stack projects"],
       courses: [
-        "Frontend Development",
-        "Backend Development",
-        "Database Design",
-        "API Development",
-        "DevOps Basics",
+        "Advanced JavaScript",
+        "React.js",
+        "Next.js",
+        "Tailwind CSS",
+        "Server Component",
+        "MongoDB",
+        "Node.js",
+        "SSR",
       ],
     },
   ];
@@ -139,7 +142,7 @@ export default function EducationSection() {
                       <div>
                         <h4 className="font-semibold mb-2 flex items-center gap-2">
                           <BookOpen className="w-4 h-4 text-primary" />
-                          Key Courses
+                          Key {edu?.inProgress === true ? "Courses" : "Topics"}
                         </h4>
                         <div className="flex flex-wrap gap-2">
                           {edu.courses.map((course, i) => (
@@ -164,10 +167,22 @@ export default function EducationSection() {
                     </div>
                   </div>
                   <div className="mt-6 flex justify-end">
-                    <Button variant="ghost" disabled className="gap-2">
-                      View Certificate
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
+                    {edu?.inProgress === true ? (
+                      <Button variant="ghost" disabled className="gap-2">
+                        View Certificate
+                        <ExternalLink className="w-4 h-4" />
+                      </Button>
+                    ) : (
+                      <Link
+                        href="https://learnwithsumit.com/certificates/verify/LWSCTXN-JVNQI2Y3"
+                        target="_blank"
+                      >
+                        <Button variant="ghost" className="gap-2">
+                          View Certificate
+                          <ExternalLink className="w-4 h-4" />
+                        </Button>
+                      </Link>
+                    )}
                   </div>
                 </CardContent>
               </Card>

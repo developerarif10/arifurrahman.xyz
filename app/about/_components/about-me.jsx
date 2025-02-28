@@ -7,6 +7,8 @@ import { BorderTrail } from "@/components/ui/visibleCards";
 import { motion } from "framer-motion";
 import { Code2, Download, ExternalLink, GraduationCap } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function AboutMe() {
   const skills = [
@@ -21,6 +23,19 @@ export default function AboutMe() {
     "WordPress",
     "Prisma",
   ];
+
+  const [downloaded, setDownloaded] = useState(false);
+  const handleDownload = () => {
+    if (!downloaded) {
+      setDownloaded(true);
+      const link = document.createElement("a");
+      link.href = "/others/ArifurRahman_cv.pdf";
+      link.download = "ArifurRahman_CV.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
 
   return (
     <motion.div
@@ -83,14 +98,23 @@ export default function AboutMe() {
           </Card>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="gap-2">
+            <Button
+              className="gap-2"
+              onClick={handleDownload}
+              disabled={downloaded}
+            >
               <Download className="w-4 h-4" />
-              Download CV
+              {downloaded ? "Downloaded" : "Download CV"}
             </Button>
-            <Button variant="outline" className="gap-2">
-              <ExternalLink className="w-4 h-4" />
-              View Full Resume
-            </Button>
+            <Link
+              href="https://rxresu.me/arifurrahman6778/web-developer"
+              target="_blank"
+            >
+              <Button variant="outline" className="gap-2">
+                <ExternalLink className="w-4 h-4" />
+                View Full Resume
+              </Button>
+            </Link>
           </div>
         </div>
 

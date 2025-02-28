@@ -125,7 +125,7 @@ export default function Home() {
 
       {/* Content with specified classes */}
 
-      <div className="min-h-screen mx-auto max-w-5xl text-white flex items-center justify-center p-4 overflow-hidden">
+      <div className="min-h-screen mx-auto max-w-5xl text-white flex items-center justify-center p-4 py-20 overflow-hidden">
         <div className="container mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between relative">
           {/* Decorative geometric elements */}
 

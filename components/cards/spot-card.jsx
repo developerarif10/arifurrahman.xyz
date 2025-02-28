@@ -27,15 +27,15 @@ export default function SpotCard({
           {/* Number Circle with pulse effect */}
           <div className="relative mb-6">
             <div className="absolute inset-0 rounded-full bg-white/10 blur-md animate-pulse"></div>
-            <div className="flex justify-center items-center w-20 h-20 rounded-full bg-gradient-to-br from-[#333333] to-[#222222] shadow-lg text-white text-4xl font-bold relative border border-white/10">
+            <div className="flex justify-center items-center md:w-20 md:h-20 rounded-full bg-gradient-to-br from-[#333333] to-[#222222] shadow-lg text-white px-2 text-xl md:text-4xl font-bold relative border border-white/10">
               {number}
             </div>
           </div>
 
           {/* Title and Subtitle */}
           <div className="mb-5 text-black">
-            <h2 className="text-4xl font-bold  mb-3">{title}</h2>
-            <p className="text-xl">{subtitle}</p>
+            <h2 className="text-2xl md:text-4xl font-bold  mb-3">{title}</h2>
+            <p className="text-lg md:text-xl">{subtitle}</p>
             {/* Divider */}
             <div className="w-16 h-1 bg-gradient-to-r from-black/60 to-black/20 rounded-full my-5"></div>
 
@@ -44,7 +44,7 @@ export default function SpotCard({
               {tags.map((tag, index) => (
                 <Badge
                   key={index}
-                  className="bg-[#2A2A2A] hover:bg-[#333333] text-base px-4 py-1.5 rounded-full text-white/90 shadow-md border border-white/5 transition-all duration-300 hover:scale-105"
+                  className="bg-[#2A2A2A] hover:bg-[#333333] text-base px:2 md:px-4 py-1.5 rounded-full text-white/90 shadow-md border border-white/5 transition-all duration-300 hover:scale-105"
                 >
                   {tag}
                 </Badge>

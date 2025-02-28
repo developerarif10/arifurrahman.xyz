@@ -15,7 +15,7 @@ export default function ProjectPage() {
         "/logo/nodejs.svg",
         "/logo/tailwindcss.svg",
       ],
-      thumbnaiUrl: "/projects/project_3.jpeg",
+      thumbnaiUrl: "/projects/project_1.jpeg",
       techStack: ["Next.js", "React.js", "Node.js", "Framer"],
       githubUrl: "https://github.com/developerarif10/tutorconnect",
       projectUrl: "https://tutorconnects.vercel.app/",

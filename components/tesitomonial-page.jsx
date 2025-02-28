@@ -65,7 +65,7 @@ export default function TesitomonialPage() {
   return (
     <div>
       <div className="mb-12">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+        <h2 className="font-bold text-3xl md:text-5xl md:mb-4 box-border bg-clip-text text-[rgba(255,255,255,0)] tracking-[-2.24px] bg-[linear-gradient(355deg,rgb(0,0,0)_20.37%,rgb(100,100,100)_81.25%)] leading-[64.4px]">
           Voices of my Satisfied clients
         </h2>
       </div>

@@ -36,34 +36,35 @@ export default function WorkExperience() {
     },
     {
       id: 2,
-      role: "Internet Technical Support",
-      company: "BrSuper Internet",
+      role: "Junior Front-end Developer",
+      company: "Freedom IT Institutions",
       type: "Full-time",
-      period: "Jul 2024 - Present",
+      period: "Jun 2021 - Jul 2022",
       description:
-        "Technical support for clients with internet problems and internal projects.",
+        "create and maintain efficient, user-friendly web applications while supporting internal projects and improving the overall digital experience for clients.",
       responsibilities: [
-        "Providing remote technical support",
-        "Developing internal tools",
-        "Network troubleshooting",
-        "Customer service excellence",
+        "Developed and maintained responsive web applications using HTML, CSS, JavaScript, and React.",
+        "Collaborated with designers to implement user-friendly UI/UX components.",
+        "Optimized website performance and fixed front-end bugs for better functionality.",
+        "Assisted in building internal web tools to enhance company operations.",
+        "Provided technical support for web-related issues and improvements.",
       ],
     },
-    {
-      id: 3,
-      role: "Computer Lab Monitor",
-      company: "Instituto Mix de Profissões",
-      type: "Part-time",
-      period: "Jun 2023 - Jul 2024",
-      description:
-        "Supporting students and maintaining computer lab infrastructure.",
-      responsibilities: [
-        "Assisting students with technical issues",
-        "Maintaining computer systems",
-        "Teaching basic computing skills",
-        "Managing lab resources",
-      ],
-    },
+    // {
+    //   id: 3,
+    //   role: "Computer Lab Monitor",
+    //   company: "Instituto Mix de Profissões",
+    //   type: "Part-time",
+    //   period: "Jun 2023 - Jul 2024",
+    //   description:
+    //     "Supporting students and maintaining computer lab infrastructure.",
+    //   responsibilities: [
+    //     "Assisting students with technical issues",
+    //     "Maintaining computer systems",
+    //     "Teaching basic computing skills",
+    //     "Managing lab resources",
+    //   ],
+    // },
   ];
 
   return (

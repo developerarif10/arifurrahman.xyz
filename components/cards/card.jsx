@@ -37,7 +37,9 @@ export default function Card() {
   return (
     <section className="px-4 py-8 md:py-12">
       <div className="flex flex-col mb-10 md:mb-16">
-        <h1 className="font-bold text-3xl md:text-5xl mb-4">Services</h1>
+        <h1 className="font-bold text-3xl md:text-5xl md:mb-4 box-border bg-clip-text text-[rgba(255,255,255,0)] tracking-[-2.24px] bg-[linear-gradient(355deg,rgb(0,0,0)_20.37%,rgb(100,100,100)_81.25%)] leading-[64.4px]">
+          Services
+        </h1>
         <p className="text-base md:text-lg">
           I offer a comprehensive range of services to ensure that projects run
           as smoothly as possible
