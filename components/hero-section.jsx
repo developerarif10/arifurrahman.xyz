@@ -137,8 +137,10 @@ export default function Home() {
             {/* Left Content Section */}
             <div className="md:w-1/2 text-center md:text-left p-4 z-10 mb-8 md:mb-0">
               <div className="relative inline-block mb-4">
-                <h1 className="font-bold text-3xl md:text-5xl tracking-tight mb-2 text-black dark:text-white">
-                  Arifur Rahman
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
+                    Arifur Rahman
+                  </span>
                 </h1>
                 {/* <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600"></div> */}
               </div>
