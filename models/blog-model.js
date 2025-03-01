@@ -47,6 +47,10 @@ const blogSchema = new Schema({
     required: true,
     type: String,
   },
+  content: {
+    required: true,
+    type: String,
+  },
   likes: {
     required: false,
     type: Number,

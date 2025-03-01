@@ -142,3 +142,19 @@ using view transitions api */
     mask-size: 350vmax;
   }
 }
+
+/* Blog details page react-markdown css */
+.article-content h2 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.article-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.article-content hr {
+  margin: 15px 0;
+}

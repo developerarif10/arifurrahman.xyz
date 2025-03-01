@@ -1,8 +1,8 @@
 import { getBlogDetails } from "@/queries/blogs";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
 import BackButton from "../_components/back-button";
-
 const BlogDetailedPage = async ({ params }) => {
   const { slug } = await params;
   const blog = await getBlogDetails(slug);
@@ -11,8 +11,8 @@ const BlogDetailedPage = async ({ params }) => {
   }
 
   return (
-    <div className="min-h-screen text-white">
-      <div className="max-w-4xl mx-auto p-6">
+    <div className="min-h-screen px-6 pt-20">
+      <div className="max-w-4xl mx-auto">
         {/* Back Button */}
         <BackButton />
         {/* Title Section */}
@@ -25,7 +25,7 @@ const BlogDetailedPage = async ({ params }) => {
             </p>
           </div>
           <div>
-            <p>{blog?.views?.toLocaleString()} views</p>
+            <p>{blog?.read_time} read</p>
           </div>
         </div>
 
@@ -42,10 +42,16 @@ const BlogDetailedPage = async ({ params }) => {
         </div>
 
         {/* Content Section */}
-        <div
-          className="prose prose-invert max-w-none"
-          dangerouslySetInnerHTML={{ __html: blog?.description }}
-        />
+
+        {/* <ReactMarkdown>
+          <div
+            className="prose prose-invert max-w-none"
+            dangerouslySetInnerHTML={{ __html: blog?.content }}
+          />
+        </ReactMarkdown> */}
+        <div className="article-content">
+          <ReactMarkdown>{blog?.content}</ReactMarkdown>
+        </div>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import { TextShimmerWave } from "@/components/ui/text-shimmer-wave";
 
 export default function loading() {
   return (
-    <div className="min-h-screen p-6">
+    <div className="min-h-screen px-6 pt-20">
       <div className="max-w-4xl mx-auto">
         <TextShimmerWave
           className="[--base-color:#0D74CE] [--base-gradient-color:#5EB1EF]"
