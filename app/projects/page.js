@@ -8,7 +8,7 @@ export default function ProjectPage() {
       thumbnail: 1,
       title: "TutorConnect",
       subTitle:
-        "Website to listen to sound combinations to relax and become more productive in your tasks.",
+        "A modern e-learning platform that connects students with quality courses, offering an interactive and seamless learning experience.",
       avatars: [
         "/logo/nextjs.svg",
         "/logo/reactjs.svg",
@@ -24,7 +24,7 @@ export default function ProjectPage() {
       thumbnail: 2,
       title: "RedComrade",
       subTitle:
-        "Website to listen to sound combinations to relax and become more productive in your tasks.",
+        "A blood donation management system that helps users find the nearest blood donors across Bangladesh with ease.",
       avatars: [
         "/logo/nextjs.svg",
         "/logo/reactjs.svg",
@@ -41,7 +41,7 @@ export default function ProjectPage() {
       thumbnail: 3,
       title: "Resource Vault",
       subTitle:
-        "Website to listen to sound combinations to relax and become more productive in your tasks.",
+        "A platform to discover and organize useful websites by tags and search, with detailed insights for each resource.",
       avatars: [
         "/logo/nextjs.svg",
         "/logo/reactjs.svg",
