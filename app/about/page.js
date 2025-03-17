@@ -1,5 +1,6 @@
 import AboutMe from "./_components/about-me";
 import EducationSection from "./_components/education-section";
+import Recommendation from "./_components/recommendation";
 import WorkExperience from "./_components/work-experience";
 
 export default function AboutPage() {
@@ -9,6 +10,7 @@ export default function AboutPage() {
         <AboutMe />
         <WorkExperience />
         <EducationSection />
+        <Recommendation />
       </div>
     </div>
   );
