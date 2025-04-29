@@ -1,5 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import Link from "next/link";
 import ClipPathImage from "./ClipPathImage";
 import { InteractiveGridPattern } from "./magicui/interactive-grid-pattern";
@@ -10,7 +11,13 @@ export default function Home() {
   return (
     <section className="relative overflow-hidden">
       <div className="relative h-[100vh] w-full overflow-hidden">
-        <img src="/images/bg.svg" className="absolute" alt="" />
+        <Image
+          src="/images/bg.svg"
+          fill
+          className="absolute w-full h-full object-cover object-center"
+          alt="overlay-bg"
+          priority
+        />
         <div className="min-h-screen mx-auto max-w-5xl text-white flex items-center justify-center p-4 py-20 overflow-hidden">
           <div className="container mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between relative">
             {/* Left Content Section */}
