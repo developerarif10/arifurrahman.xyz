@@ -1,6 +1,7 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header/header";
 import { ThemeProvider } from "@/providers/theme-provider";
+import { ReactLenis } from "lenis/react";
 import { Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
@@ -17,20 +18,22 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${sourceSansPro.className} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <section>
-            <Header />
-            <main>{children}</main>
-            <Footer />
-          </section>
-        </ThemeProvider>
-      </body>
+      <ReactLenis root>
+        <body className={`${sourceSansPro.className} antialiased`}>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <section>
+              <Header />
+              <main>{children}</main>
+              <Footer />
+            </section>
+          </ThemeProvider>
+        </body>
+      </ReactLenis>
     </html>
   );
 }
