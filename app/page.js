@@ -12,7 +12,6 @@ export default function Home() {
       <ReactLenis root>
         <Hero />
 
-        {/* Render Multiple Cards */}
         <div className="min-h-screen p-6">
           <div className="max-w-4xl mx-auto">
             <CardSpotlightDemo />
