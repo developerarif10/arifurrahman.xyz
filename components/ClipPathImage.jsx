@@ -14,7 +14,7 @@ function ClipPathImage() {
       </svg>
 
       {/* Image with clip path applied */}
-      <figure style={{ clipPath: "url(#clip-another3)" }} className=" z-50">
+      <figure style={{ clipPath: "url(#clip-another3)" }} className=" z-10">
         <img
           src="/images/hero_arifurrahman.jpg"
           alt="Hero Image"

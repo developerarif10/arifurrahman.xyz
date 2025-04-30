@@ -66,9 +66,11 @@ export default function CardSpotlightDemo() {
 
       <div className="flex gap-4 flex-wrap justify-center items-center">
         {spotCardContent.map((spotCard, index) => (
-          <CardSpotlight className="w-96 h-96 bg-gradient-to-br from-gray-900 to-black">
+          <CardSpotlight
+            key={index}
+            className="w-96 h-96 bg-gradient-to-br from-gray-900 to-black"
+          >
             <ServiceSpotCard
-              key={index}
               title={spotCard.title}
               subTitle={spotCard.subTitle}
               stepTitle={spotCard.stepTitle}
