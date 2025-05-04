@@ -3,6 +3,7 @@
 import CardSpotlightDemo from "@/components/card-spotlight";
 import ContactCard from "@/components/cards/contact-card";
 import Hero from "@/components/hero-section";
+import SkillGravity from "@/components/skill-gravity";
 import TesitomonialPage from "@/components/tesitomonial-page";
 import { ReactLenis } from "lenis/react";
 
@@ -11,7 +12,6 @@ export default function Home() {
     <>
       <ReactLenis root>
         <Hero />
-
         <div className="min-h-screen p-6">
           <div className="max-w-4xl mx-auto">
             <CardSpotlightDemo />
@@ -19,6 +19,7 @@ export default function Home() {
             <ContactCard />
           </div>
         </div>
+        <SkillGravity />
       </ReactLenis>
     </>
   );
