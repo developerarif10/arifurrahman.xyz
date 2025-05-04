@@ -1,5 +1,5 @@
 "use client";
-import { sendEmail } from "@/app/actions/sendEmail";
+import emailjs from "emailjs-com";
 import { ArrowRight, Code2, Mail, Send, Sparkles } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,18 +10,33 @@ export default function ContactCard() {
   const [isDark, setIsDark] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [emailSent, setEmailSent] = useState(false);
+  const [input, setInput] = useState();
   const [error, setError] = useState("");
 
   const handleSubmit = async (formData) => {
     setIsLoading(true);
     setError("");
+    setEmailSent(false);
 
-    const result = await sendEmail(formData);
+    try {
+      const result = await emailjs.send(
+        "service_cfsg9sa",
+        "template_668cd4s",
+        {
+          from_email: formData.get("email"),
+        },
+        "g2J3c4xTCdvf2mAMq"
+      );
 
-    if (result.success) {
-      setEmailSent(true);
-    } else {
-      setError(result.error || "Failed to send email.");
+      if (result.status === 200) {
+        setEmailSent(true);
+        setInput("");
+      } else {
+        setError("Failed to send email. Please try again later.");
+      }
+    } catch (err) {
+      console.error(err);
+      setError("An error occurred. Please try again.");
     }
 
     setIsLoading(false);
@@ -124,12 +139,20 @@ export default function ContactCard() {
           </Link>
 
           {/* Email Form */}
-          <form action={handleSubmit} className="w-full">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.target);
+              handleSubmit(formData);
+            }}
+            className="w-full"
+          >
             <div className="relative flex items-center">
               <input
                 type="email"
                 name="email"
                 placeholder="your@email.com"
+                value={input}
                 required
                 className={`w-full rounded-xl px-4 py-2.5 sm:py-3 pl-11 sm:pl-12 text-sm sm:text-base transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500/40 ${
                   isDark
