@@ -7,7 +7,7 @@ export default function SkillGravity() {
         Skills
       </div>
       <p className="pt-4 text-base sm:text-xl md:text-2xl text-foreground dark:text-muted w-full text-center">
-        My tech stacks:
+        Tech Stacks
       </p>
       <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full">
         <MatterBody

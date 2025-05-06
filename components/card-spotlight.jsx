@@ -56,7 +56,7 @@ export default function CardSpotlightDemo() {
         <h1 className="font-bold text-3xl md:text-5xl md:mb-4 box-border bg-clip-text text-[rgba(255,255,255,0)] tracking-[-2.24px] bg-[linear-gradient(355deg,rgb(0,0,0)_20.37%,rgb(100,100,100)_81.25%)] leading-[64.4px]">
           Creating Digital Solutions
         </h1>
-        <p className="text-base md:text-lg">
+        <p className="text-base text-[#969698] md:text-lg">
           I specialize in designing visually striking interfaces and developing
           high-performance applications that not only look great but also
           deliver real business value. Every project is built with precision,

@@ -1,5 +1,5 @@
-import { cn } from "@/lib/utils";
 import { Marquee } from "./testimonial";
+import TransparentCard from "./transparent-card";
 
 const reviews = [
   {
@@ -28,14 +28,11 @@ const secondRow = reviews.slice(Math.ceil(reviews.length / 2));
 
 const ReviewCard = ({ image, name, title, quote }) => {
   return (
-    <figure
-      className={cn(
-        "relative h-full w-36 sm:w-48 md:w-56 lg:w-64 cursor-pointer overflow-hidden rounded-xl border p-4 transition-all duration-300 hover:scale-105",
-        // light styles
-        "border-gray-950/[.1] bg-white/80 backdrop-blur-sm hover:bg-gray-950/[.05] hover:shadow-lg",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-800/80 dark:backdrop-blur-sm dark:hover:bg-gray-700/90 dark:hover:shadow-lg dark:hover:shadow-gray-900/30"
-      )}
+    <TransparentCard
+      className="w-full"
+      borderRadius="1rem"
+      padding="1.5rem"
+      lightBlueColor="rgba(96, 165, 250, 0.25)"
     >
       <div className="flex flex-row items-center gap-2">
         <img
@@ -57,7 +54,7 @@ const ReviewCard = ({ image, name, title, quote }) => {
       <blockquote className="mt-3 text-sm text-gray-700 dark:text-gray-300">
         {quote}
       </blockquote>
-    </figure>
+    </TransparentCard>
   );
 };
 
