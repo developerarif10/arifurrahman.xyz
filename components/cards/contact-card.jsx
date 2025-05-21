@@ -155,7 +155,7 @@ export default function ContactCard() {
                   placeholder="your@email.com"
                   value={input}
                   required
-                  className={`w-full rounded-xl px-4 py-2.5 sm:py-3 pl-11 sm:pl-12 text-sm sm:text-base transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500/40 ${
+                  className={`w-full rounded-xl px-4 py-2.5 sm:py-3 pl-11 sm:pl-12 text-sm sm:text-base transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-500/40 bg-[#222630]  outline-none text-white  border-2  border-solid focus:border-[#596A95] border-[#2B3040] ${
                     isDark
                       ? "bg-slate-800/50 border border-slate-700 text-white placeholder:text-slate-500"
                       : "bg-white border border-slate-200 text-slate-900 placeholder:text-slate-400"

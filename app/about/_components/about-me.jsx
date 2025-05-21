@@ -1,8 +1,9 @@
 "use client";
 
+import TransparentCard from "@/components/transparent-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import { BorderTrail } from "@/components/ui/visibleCards";
 import { motion } from "framer-motion";
 import { Code2, Download, ExternalLink, GraduationCap } from "lucide-react";
@@ -61,7 +62,12 @@ export default function AboutMe() {
             </p>
           </div>
 
-          <Card className="border-none bg-primary/5">
+          <TransparentCard
+            className="w-full"
+            borderRadius="1rem"
+            padding="0rem"
+            lightBlueColor="rgba(96, 165, 250, 0.25)"
+          >
             <CardContent className="p-6 space-y-4">
               <div className="flex items-center gap-2">
                 <Code2 className="w-5 h-5 text-primary" />
@@ -81,9 +87,14 @@ export default function AboutMe() {
                 ))}
               </div>
             </CardContent>
-          </Card>
+          </TransparentCard>
 
-          <Card className="border-none bg-primary/5">
+          <TransparentCard
+            className="w-full"
+            borderRadius="1rem"
+            padding="0rem"
+            lightBlueColor="rgba(96, 165, 250, 0.25)"
+          >
             <CardContent className="p-6 space-y-4">
               <div className="flex items-center gap-2">
                 <GraduationCap className="w-5 h-5 text-primary" />
@@ -95,7 +106,7 @@ export default function AboutMe() {
                 writing blog posts for personal projects.
               </p>
             </CardContent>
-          </Card>
+          </TransparentCard>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
