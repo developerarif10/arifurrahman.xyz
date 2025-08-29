@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://arifurr.vercel.app
+
+# Sitemaps
+Sitemap: https://arifurr.vercel.app/sitemap.xml

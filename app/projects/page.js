@@ -57,7 +57,7 @@ export default function ProjectPage() {
       thumbnail: 4,
       title: "BanglaBazaar",
       subTitle:
-        "A platform to discover and organize useful websites by tags and search, with detailed insights for each resource.",
+        "BanglaBazaar is a platform for buying and selling products in Bangladesh. BanglaBazaar – Your Ultimate Online Shopping Experience! Browse, Cart & Checkout with Ease",
       avatars: [
         "/logo/nextjs.svg",
         "/logo/reactjs.svg",
@@ -67,7 +67,7 @@ export default function ProjectPage() {
       thumbnaiUrl: "/projects/project_4.png",
       techStack: ["Next.js", "React.js", "Node.js", "TailwindCSS"],
       githubUrl: "https://github.com/developerarif10/banglabazaar",
-      projectUrl: "https://resourcevault.vercel.app/",
+      projectUrl: "https://banglabazaar.vercel.app/",
     },
   ];
   return (

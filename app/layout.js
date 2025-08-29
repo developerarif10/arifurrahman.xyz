@@ -19,6 +19,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ReactLenis root>
+        <meta
+          name="google-site-verification"
+          content="BC_JK1EkbjpDyqeFZY2W_J72-JACHfgQSI0ECviJz8I"
+        />
         <body className={`${sourceSansPro.className} antialiased`}>
           <ThemeProvider
             attribute="class"
