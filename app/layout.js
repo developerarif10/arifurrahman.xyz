@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ReactLenis root>
+        <meta name="apple-mobile-web-app-title" content="fdsf" />
         <meta
           name="google-site-verification"
           content="BC_JK1EkbjpDyqeFZY2W_J72-JACHfgQSI0ECviJz8I"
