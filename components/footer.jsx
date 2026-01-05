@@ -1,6 +1,6 @@
 "use client";
 
-import { Globe, Instagram, Twitter } from "lucide-react"; // Added Icons
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"; // Added Icons
 import Image from "next/image";
 import Link from "next/link";
 
@@ -59,17 +59,16 @@ export default function Footer() {
             </h3>
             <div className="flex gap-6 lg:justify-end">
               <Link href="#" className="hover:opacity-80 transition-opacity">
-                <Twitter className="w-8 h-8 fill-white" />
+                <Facebook className="w-8 h-8 fill-white" />
               </Link>
               <Link href="#" className="hover:opacity-80 transition-opacity">
                 <Instagram className="w-8 h-8" />
               </Link>
-              <Link href="#" className="hover:opacity-80 transition-opacity">
-                 {/* Behance Icon Placeholder or Lucide equivalent */}
-                 <div className="w-8 h-8 border-2 border-white rounded-md flex items-center justify-center font-bold text-xs">Be</div>
+               <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Linkedin className="w-8 h-8" />
               </Link>
-               <Link href="https://arifurrahman.xyz" className="hover:opacity-80 transition-opacity">
-                <Globe className="w-8 h-8" />
+                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Twitter   className="w-8 h-8" />
               </Link>
             </div>
           </div>
@@ -84,7 +83,7 @@ export default function Footer() {
             © Copyright {currentYear}. All Rights Reserved by <span className="underline decoration-white/50 underline-offset-4">Arifur Rahman</span>
           </p>
 
-          <div className="flex items-center gap-3">
+          <Link href="https://github.com/developerarif" className="flex items-center gap-3">
              <span className="opacity-80">Created by</span>
              <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
                 <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center text-[10px] font-bold text-black border border-white/20">
@@ -92,7 +91,7 @@ export default function Footer() {
                 </div>
                 <span>Arifur Rahman</span>
              </div>
-          </div>
+          </Link>
         </div>
       </div>
     </footer>
