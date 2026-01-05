@@ -2,6 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Bulever";
+  src: url("/fonts/Aeonik-Regular.woff") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lay Grotesk";
+  src: url("/fonts/Aeonik-Regular.woff") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --primary-gray-dark: #171717;
+  --primary-gray-light: #929292;
+  --white: #f5f5f5;
+  --black: #171717;
+  --black2: #212121;
+  --colorful1: #eaffb0;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f5f5f5] text-[#171717] dark:bg-[#171717] dark:text-[#f5f5f5];
+    font-family: "Lay Grotesk", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Bulever", sans-serif;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Cursor */
+.custom-cursor {
+  mix-blend-mode: difference;
+}
+
 ::selection {
   background: #bde0fe;
   color: black;

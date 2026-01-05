@@ -1,108 +1,63 @@
 "use client";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
-import Link from "next/link";
-import ClipPathImage from "./ClipPathImage";
-import { InteractiveGridPattern } from "./magicui/interactive-grid-pattern";
-import { ShinyButton } from "./my-components/shiny-button";
-import { TextLoop } from "./ui/text-loop";
+import HeroHeader from "./hero-header";
 
-export default function Home() {
+export default function HeroSection() {
   return (
-    <section className="relative overflow-hidden">
-      <div className="relative h-[100vh] w-full overflow-hidden">
-        <Image
-          src="/images/bg.svg"
-          fill
-          className="absolute w-full h-full object-cover object-center"
-          alt="overlay-bg"
-          priority
-        />
-        <div className="min-h-screen mx-auto max-w-5xl text-white flex items-center justify-center p-4 py-20 overflow-hidden">
-          <div className="container mx-auto max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between relative">
-            {/* Left Content Section */}
-            <div className="md:w-1/2 text-center md:text-left p-4 z-10 mb-8 md:mb-0">
-              <div className="relative inline-block mb-4">
-                <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-600">
-                    Arifur Rahman
-                  </span>
-                </h1>
-                {/* <div className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600"></div> */}
-              </div>
+    <section className="relative min-h-screen w-full bg-white dark:bg-neutral-950 overflow-hidden flex flex-col">
+      <HeroHeader />
+      
+      <div className="flex-1 flex flex-col justify-center px-6 md:px-12 pt-24 pb-12">
+        {/* Large Text */}
+        <div className="w-full mb-8 md:mb-12">
+          <h1 className="font-bebas text-[18vw] md:text-[14vw] leading-[0.8] text-black dark:text-white text-center md:text-left tracking-tighter">
+            WEBSITE DEVELOPER
+          </h1>
+        </div>
 
-              <p className=" text-zinc-600 dark:text-zinc-300 mb-6 font-medium">
-                I&apos;m a
-                <TextLoop
-                  className="overflow-y-clip"
-                  transition={{
-                    type: "spring",
-                    stiffness: 900,
-                    damping: 80,
-                    mass: 10,
-                  }}
-                  variants={{
-                    initial: {
-                      y: 20,
-                      rotateX: 90,
-                      opacity: 0,
-                    },
-                    animate: {
-                      y: 0,
-                      rotateX: 0,
-                      opacity: 1,
-                    },
-                    exit: {
-                      y: -20,
-                      rotateX: -90,
-                      opacity: 0,
-                    },
-                  }}
-                >
-                  <span className="inline-block px-2 py-0 font-bold bg-[#90e0ef] dark:bg-[#003566] dark:text-white mx-1">
-                    React Specialist.
-                  </span>
-                  <span className="inline-block px-2 py-0 font-bold bg-[#90e0ef] dark:bg-[#003566] dark:text-white  mx-1">
-                    Next.js Expert.
-                  </span>
-                  <span className="inline-block px-2 py-0 font-bold bg-[#90e0ef] dark:bg-[#003566] dark:text-white  mx-1">
-                    Wordpress Specialist.
-                  </span>
-                  <span className="inline-block px-2 py-0 font-bold bg-[#90e0ef] dark:bg-[#003566] dark:text-white  mx-1">
-                    Tech Enthusiast.
-                  </span>
-                </TextLoop>
-                Developing intuitive, high-performance web applications with
-                innovation, efficiency, and seamless user interfaces
+        <div className="flex flex-col md:flex-row gap-12 md:gap-8 items-start relative">
+          {/* Left Content */}
+          <div className="w-full md:w-1/2 lg:w-5/12 pt-4 md:pt-8 z-10">
+            <div className="mb-6">
+              <h2 className="font-bebas text-2xl md:text-3xl tracking-[0.2em] text-black dark:text-white mb-6">
+                BASED IN <span className="text-orange-accent">BANGLADESH</span>
+              </h2>
+              <p className="font-sans text-lg md:text-xl leading-relaxed text-gray-800 dark:text-gray-300 mb-6 max-w-xl">
+                I'm Arif — a front-end developer passionate about building
+                websites that not only look great but also feel engaging
+                through smooth animations and interactive design.
               </p>
-
-              {/* <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-                Developing intuitive, high-performance web applications with
-                innovation, efficiency, and seamless user interfaces
-              </p> */}
-
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
-                <Link href="/projects">
-                  <ShinyButton type="button">View Projects</ShinyButton>
-                </Link>
-                <Link href="#contacts">
-                  <ShinyButton type="button">Contact Me</ShinyButton>
-                </Link>
-              </div>
+              <p className="font-sans text-lg md:text-xl leading-relaxed text-gray-800 dark:text-gray-300 mb-12 max-w-xl">
+                My goal is to bring your ideas to life and deliver
+                a unique online presence.
+              </p>
             </div>
-            {/* Right Image Section */}
-            <div className="md:w-1/2 flex justify-center relative">
-              <ClipPathImage />
+
+            <div className="inline-flex items-center gap-3 bg-gray-200 dark:bg-neutral-800 px-6 py-3">
+              <span className="w-4 h-4 rounded-full bg-lime-accent animate-pulse"></span>
+              <span className="font-bebas text-xl tracking-widest text-black dark:text-white">
+                AVAILABLE FOR WORK
+              </span>
+            </div>
+          </div>
+
+          {/* Right Image - Positioned to overlap/align with text as per design */}
+          <div className="w-full md:w-1/2 lg:w-7/12 relative mt-8 md:-mt-24 lg:-mt-48 flex justify-end">
+             {/* Gray background box behind image */}
+            <div className="relative w-full max-w-md lg:max-w-lg aspect-[3/4]">
+                <div className="absolute inset-0 bg-gray-500/20 translate-x-4 translate-y-4 z-0"></div>
+                <div className="relative w-full h-full bg-gray-400 overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
+                  {/* Placeholder for the portrait image */}
+                   <Image 
+                    src="/images/arifurrahman_black&white.webp" 
+                    alt="Arif Rahman"
+                    fill
+                    className="object-cover object-center"
+                   />
+                </div>
             </div>
           </div>
         </div>
-        <InteractiveGridPattern
-          className={cn(
-            "[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]",
-            "opacity-15"
-          )}
-          squaresClassName="hover:fill-blue-500/20"
-        />
       </div>
     </section>
   );

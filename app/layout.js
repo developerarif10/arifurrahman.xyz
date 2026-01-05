@@ -1,5 +1,4 @@
 import Footer from "@/components/footer";
-import Header from "@/components/header/header";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ReactLenis } from "lenis/react";
 import { Source_Sans_3 } from "next/font/google";
@@ -8,6 +7,15 @@ import "./globals.css";
 const sourceSansPro = Source_Sans_3({
   subsets: ["latin"],
   weight: ["200", "300", "400", "500", "600", "700", "900"],
+  variable: "--font-source-sans",
+});
+
+import { Bebas_Neue } from "next/font/google";
+
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-bebas-neue",
 });
 
 export const metadata = {
@@ -24,15 +32,16 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="BC_JK1EkbjpDyqeFZY2W_J72-JACHfgQSI0ECviJz8I"
         />
-        <body className={`${sourceSansPro.className} antialiased`}>
+        <body className={`${sourceSansPro.variable} ${bebasNeue.variable} font-sans antialiased`}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
-            enableSystem
+            defaultTheme="light"
+            forcedTheme="light"
+            enableSystem={false}
             disableTransitionOnChange
           >
             <section>
-              <Header />
+              {/* <Header /> */}
               <main>{children}</main>
               <Footer />
             </section>
