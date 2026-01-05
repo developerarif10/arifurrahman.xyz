@@ -58,16 +58,16 @@ export default function Footer() {
               Social :
             </h3>
             <div className="flex gap-6 lg:justify-end">
-              <Link href="#" className="hover:opacity-80 transition-opacity">
+              <Link href="https://www.facebook.com/arifurrahamanrafi" className="hover:opacity-80 transition-opacity">
                 <Facebook className="w-8 h-8 fill-white" />
               </Link>
-              <Link href="#" className="hover:opacity-80 transition-opacity">
+              <Link href="https://www.instagram.com/arifurrahman_rafi/" className="hover:opacity-80 transition-opacity">
                 <Instagram className="w-8 h-8" />
               </Link>
-               <Link href="#" className="hover:opacity-80 transition-opacity">
+               <Link href="www.linkedin.com/in/arifurrahmanrafi" className="hover:opacity-80 transition-opacity">
                 <Linkedin className="w-8 h-8" />
               </Link>
-                <Link href="#" className="hover:opacity-80 transition-opacity">
+                <Link href="https://x.com/iamarifurrahman" className="hover:opacity-80 transition-opacity">
                 <Twitter   className="w-8 h-8" />
               </Link>
             </div>
