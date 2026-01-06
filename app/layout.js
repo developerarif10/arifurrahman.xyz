@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="BC_JK1EkbjpDyqeFZY2W_J72-JACHfgQSI0ECviJz8I"
         />
-        <body className={`${sourceSansPro.variable} ${bebasNeue.variable} font-sans antialiased`}>
+        <body className={`${sourceSansPro.variable} ${bebasNeue.variable} font-sans antialiased overflow-x-hidden`}>
           <ThemeProvider
             attribute="class"
             defaultTheme="light"
