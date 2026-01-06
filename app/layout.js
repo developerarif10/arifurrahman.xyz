@@ -23,6 +23,7 @@ export const metadata = {
   description: "Developed by @developerarif",
 };
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
