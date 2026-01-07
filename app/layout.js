@@ -10,6 +10,7 @@ const sourceSansPro = Source_Sans_3({
   variable: "--font-source-sans",
 });
 
+import NewHeader from "@/components/new-header";
 import { Bebas_Neue } from "next/font/google";
 
 const bebasNeue = Bebas_Neue({
@@ -42,7 +43,7 @@ export default function RootLayout({ children }) {
             disableTransitionOnChange
           >
             <section>
-              {/* <Header /> */}
+              {/* <Header /> */} <NewHeader />
               <main>{children}</main>
               <Footer />
             </section>

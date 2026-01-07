@@ -1,7 +1,6 @@
 "use client";
 
 import ContactCard from "@/components/cards/contact-card";
-import NewHeader from "@/components/new-header";
 import NewHero from "@/components/new-hero";
 
 import FaqSection from "@/components/faq/faq-section";
@@ -14,7 +13,7 @@ export default function Home() {
   return (
     <>
       {/* <ReactLenis root> */}
-      <NewHeader />
+     
       <NewHero />
       <TaglineSection />
 
