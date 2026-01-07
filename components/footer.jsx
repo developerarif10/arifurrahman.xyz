@@ -74,25 +74,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
-        <div className="w-full h-px bg-white/30 mb-8" />
-
-        {/* Bottom Section: Copyright & Credits */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm font-medium text-white/90">
-          <p>
-            © Copyright {currentYear}. All Rights Reserved by <span className="underline decoration-white/50 underline-offset-4">Arifur Rahman</span>
-          </p>
-
-          <Link href="https://github.com/developerarif" className="flex items-center gap-3">
-             <span className="opacity-80">Created by</span>
-             <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
-                <div className="w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center text-[10px] font-bold text-black border border-white/20">
-                    AR
-                </div>
-                <span>Arifur Rahman</span>
-             </div>
-          </Link>
-        </div>
+  <div className="w-full h-px bg-white/30 mb-8" />
+    <div className="text-center text-white/90 text-sm font-medium">  <p>
+            © Copyright {currentYear}. All Rights Reserved by <span className="underline decoration-white/50 underline-offset-4"><Link href="https://github.com/developerarif">Arifur Rahman</Link></span>
+          </p></div>
       </div>
     </footer>
   );
