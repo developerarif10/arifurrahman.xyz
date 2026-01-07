@@ -1,25 +1,25 @@
 "use client";
 
-import { Button } from "@/components/ui/button"; // Assuming shadcn or similar button exists, otherwise standard button
-import { cn } from "@/lib/utils"; // Assuming cn utility exists, usually does in shadcn setup
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function NewHeader() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const [hoveredPath, setHoveredPath] = useState(null);
+  const pathname = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  const navItems = [
+    { name: "Home", href: "/" },
+    { name: "Work", href: "/work" },
+    { name: "About", href: "/about" },
+  ];
 
   const menuVariants = {
     closed: {
@@ -27,7 +27,7 @@ export default function NewHeader() {
       y: "-100%",
       transition: {
         duration: 0.5,
-        ease: [0.76, 0, 0.24, 1], // Custom bezier for "nice floating" feel
+        ease: [0.76, 0, 0.24, 1],
       },
     },
     open: {
@@ -41,48 +41,75 @@ export default function NewHeader() {
   };
 
   return (
-    <header 
-        className={cn(
-            "fixed top-0 left-0 right-0 z-50 flex justify-center transition-all duration-300 pointer-events-none",
-            scrolled ? "bg-white/80 backdrop-blur-md shadow-sm py-3" : "bg-transparent py-5"
-        )}
-    >
-      <div className="w-full max-w-7xl px-6 md:px-12 flex items-center justify-between">
-      
-        {/* Logo */}
-        <div className="z-50 pointer-events-auto flex-shrink-0">
-          <Link href="/" className="text-2xl font-bold tracking-tighter text-black">
-            ARIFUR RAHMAN
-          </Link>
-        </div>
+    <>
+      <header className="fixed top-6 inset-x-0 z-50 flex items-center justify-center px-6 md:px-12 pointer-events-none">
+        {/* Central Floating Navbar (Pill) */}
+        <div className="pointer-events-auto hidden md:flex items-center gap-1.5 p-1 rounded-full border border-black/5 bg-white/80 backdrop-blur-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+          
+          {/* Logo Icon inside Pill (Optional uniqueness) Or just Start links */}
+          <div className="pl-4 pr-1">
+             <Link href="/" className="font-bold text-lg tracking-tight hover:opacity-70 transition-opacity">AR</Link>
+          </div>
+          
+          <div className="h-4 w-px bg-neutral-200 mx-1" />
 
-        {/* Desktop Nav - Hidden on Mobile */}
-        <nav className="hidden md:flex items-center gap-8 pointer-events-auto text-black">
-          <Link href="/work" className="text-sm font-medium hover:opacity-70 transition-opacity">Work</Link>
-          <Link href="/about" className="text-sm font-medium hover:opacity-70 transition-opacity">About</Link>
-          <Link href="/contact" className="text-sm font-medium hover:opacity-70 transition-opacity">Contact</Link>
-        </nav>
-
-        {/* Right Side Button */}
-        <div className="hidden md:block z-50 pointer-events-auto flex-shrink-0">
-          <Button 
-              variant="default" 
-              className="rounded-full bg-black text-white hover:bg-neutral-800 px-6 font-medium"
-              asChild
-          >
-              <Link href="/schedule">
-                  Use For Free
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  "relative px-4 py-1.5 text-sm font-medium transition-colors duration-300 rounded-full z-10",
+                  isActive ? "text-black" : "text-neutral-500 hover:text-black"
+                )}
+                onMouseEnter={() => setHoveredPath(item.href)}
+                onMouseLeave={() => setHoveredPath(null)}
+              >
+                {item.name}
+                {/* Active/Hover Background Pill */}
+                {(hoveredPath === item.href || (isActive && hoveredPath === null)) && (
+                  <motion.div
+                    layoutId="nav-pill"
+                    className="absolute inset-0 bg-neutral-100 rounded-full -z-10"
+                    transition={{ type: "spring", bounce: 0.15, duration: 0.5 }}
+                  />
+                )}
               </Link>
-          </Button>
+            );
+          })}
+          
+          <div className="h-4 w-px bg-neutral-200 mx-1" />
+
+          <div className="pr-1 pl-1">
+            <Button
+              variant="ghost"
+              className="rounded-full bg-transparent hover:bg-neutral-100 text-neutral-900 px-5 py-1.5 h-auto text-sm font-medium transition-all"
+              asChild
+            >
+              <Link href="/contact">
+                Contact
+              </Link>
+            </Button>
+          </div>
         </div>
 
-        {/* Mobile Hamburger */}
-        <div className="md:hidden z-50 pointer-events-auto text-black flex-shrink-0">
-          <button onClick={toggleMenu} className="p-2">
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+        {/* Right - Empty to balance flex */}
+        <div className="hidden md:block pointer-events-none opacity-0"></div>
+
+        {/* Mobile Header Elements */}
+        <div className="flex md:hidden w-full items-center justify-between pointer-events-auto top-0 relative bg-white/5 backdrop-blur-0">
+             <Link href="/" className="text-lg font-bold text-black bg-white/80 px-4 py-2 rounded-full backdrop-blur-md border border-black/5 shadow-sm">
+                AR
+             </Link>
+             <button 
+                onClick={toggleMenu} 
+                className="p-3 bg-white/80 rounded-full backdrop-blur-md border border-black/5 shadow-sm active:scale-95 transition-transform"
+            >
+                {isOpen ? <X size={20} /> : <Menu size={20} />}
+             </button>
         </div>
-      </div>
+      </header>
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
@@ -92,21 +119,28 @@ export default function NewHeader() {
             initial="closed"
             animate="open"
             exit="closed"
-            className="fixed inset-0 bg-white text-black z-40 flex flex-col items-center justify-center pointer-events-auto"
+            className="fixed inset-0 bg-white z-40 flex flex-col items-center justify-center pointer-events-auto"
           >
-             <nav className="flex flex-col items-center gap-8 text-2xl font-light">
-                <Link href="/work" onClick={toggleMenu}>Work</Link>
-                <Link href="/about" onClick={toggleMenu}>About</Link>
-                <Link href="/contact" onClick={toggleMenu}>Contact</Link>
-                <div className="mt-8">
-                    <Button className="rounded-full text-lg px-8 py-6" onClick={toggleMenu}>
-                        Schedule a call
-                    </Button>
-                </div>
-             </nav>
+            <nav className="flex flex-col items-center gap-8">
+              {navItems.map((item) => (
+                 <Link 
+                    key={item.href} 
+                    href={item.href} 
+                    onClick={toggleMenu}
+                    className="text-3xl font-light text-black tracking-tight"
+                 >
+                    {item.name}
+                 </Link>
+              ))}
+              <div className="mt-8">
+                <Button className="rounded-full text-lg px-8 py-6 bg-black text-white" onClick={toggleMenu} asChild>
+                    <Link href="/contact">Schedule a call</Link>
+                </Button>
+              </div>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
