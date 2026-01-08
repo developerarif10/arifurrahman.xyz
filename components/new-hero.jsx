@@ -47,13 +47,13 @@ export default function NewHero() {
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.2 }}
+                    transition={{ delay: 0.3 }}
                     viewport={{ once: true }}
                     className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-3 py-1.5 w-fit mb-6"
                 >
                     <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
                     <span className="text-xs font-medium text-neutral-500 tracking-wide uppercase">
-                        2 projects left in April
+                     Available for Immediate Hire
                     </span>
                 </motion.div>
 
@@ -64,7 +64,7 @@ export default function NewHero() {
                     viewport={{ once: true }}
                     className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter text-neutral-900 leading-[1.05]"
                 >
-                    Arif is solving problems through strategic design and compelling visuals
+                    I don't just build websites. I build high-performance business assets.
                 </motion.h1>
             </div>
 
@@ -78,9 +78,9 @@ export default function NewHero() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-base md:text-lg text-neutral-500 leading-relaxed mb-8 max-w-md"
+                    className=" md:text-md text-neutral-900  mb-4 max-w-md"
                 >
-                    As a digital product designer with a strong focus on visual design and Framer websites, he collaborates closely with teams to craft seamless, user-centered experiences. A reliable partner in bringing ideas to life.
+                  Code without business logic is useless. My role is to bridge the gap between technical complexity and market needs. By combining Next.js with strategic architecture, I develop web applications that handle traffic, improve SEO rankings, and keep customers safe—not just look good.
                 </motion.p>
 
                 <motion.div
@@ -96,7 +96,7 @@ export default function NewHero() {
                         asChild
                     >
                         <Link href="/contact">
-                            Email Me
+                          Discuss Your Project
                         </Link>
                     </Button>
                 </motion.div>
