@@ -107,7 +107,7 @@ export default function FaqSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-4xl md:text-5xl lg:text-[3.5rem] font-medium text-neutral-900 mb-8 leading-[1.1] tracking-tight"
+                className="text-2xl md:text-3xl lg:text-[2.5rem] font-medium text-neutral-900 mb-8 leading-[1.1] tracking-tight"
                 >
                 Answers to common questions to help you understand <span className="text-neutral-400">the process and how we can work together</span>
                 </motion.h2>
@@ -119,7 +119,7 @@ export default function FaqSection() {
                     transition={{ delay: 0.2 }}
                 >
                     <Link
-                    href="mailto:hello@arifurrahman.xyz"
+                    href="mailto:arifurrahman@std.cu.ac.bd"
                     className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 duration-300"
                     >
                     Email Me
@@ -129,9 +129,9 @@ export default function FaqSection() {
           </div>
 
           {/* Right Column - Accordion */}
-          <div className="col-span-12 lg:col-span-7 relative">
+          <div className="col-span-10 md:col-span-12 lg:col-span-7 relative">
             {/* Gray Container */}
-            <div className="bg-gray-50 rounded-[2.5rem] p-6 sm:p-8 md:p-10 relative mt-8 lg:mt-0">
+            <div className="bg-[#f7f7f7] rounded-[2rem] p-2 sm:p-4 md:p-4 relative mt-8 lg:mt-0">
                 {/* Floating Badge */}
                 <motion.div
                 initial={{ opacity: 0, scale: 0.9, y: 10 }}
