@@ -19,7 +19,7 @@ export default function Home() {
 
       <section
         id="recent_work"
-        className="min-h-screen px-6 sm:px-12 lg:px-14 py-24 bg-white"
+        className="min-h-screen px-6 sm:px-12 lg:px-14 py-12"
       >
         <div className="max-w-7xl mx-auto">
           <RecentWorkCard />

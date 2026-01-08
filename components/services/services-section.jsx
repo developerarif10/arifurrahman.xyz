@@ -187,8 +187,8 @@ export default function ServicesSection() {
             <span className="text-neutral-500 uppercase tracking-wider text-sm md:text-base font-medium font-sans">
                 Services
             </span>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl leading-[1.1] font-medium max-w-4xl text-neutral-400 font-sans">
-                Design solutions that elevate brands and create seamless user experiences. <span className="text-neutral-900">I help bring ideas to life with strategy and creativity</span>
+            <h2 className="text-3xl md:text-5xl lg:text-4xl leading-[1.1] tracking-tight font-medium max-w-2xl text-neutral-400 ">
+                As a web architect, I deliver end-to-end web architecture that scales,  <span className="text-neutral-900">from high-fidelity user interfaces to MERN stack integration.</span>
             </h2>
         </div>
 

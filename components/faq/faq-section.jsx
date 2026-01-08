@@ -109,7 +109,7 @@ export default function FaqSection() {
                 transition={{ delay: 0.1 }}
                 className="text-2xl md:text-3xl lg:text-[2.5rem] font-medium text-neutral-900 mb-8 leading-[1.1] tracking-tight"
                 >
-                Answers to common questions to help you understand <span className="text-neutral-400">the process and how we can work together</span>
+                Frequently asked questions to help you  <span className="text-neutral-400">understand the process</span>
                 </motion.h2>
 
                 <motion.div

@@ -95,8 +95,7 @@ export default function ContactCard() {
             LET'S WORK TOGETHER
           </h2>
           <p className="text-lg text-neutral-500 mb-12 max-w-lg">
-            Let's build something impactful together—whether it's your brand, your
-            website, or your next big idea.
+            We'll build something awesome together, whether it's your brand, your website or your next big idea.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-8">
@@ -146,7 +145,6 @@ export default function ContactCard() {
                   <option value="Web Design">Web Design</option>
                   <option value="Web Development">Web Development</option>
                   <option value="UI/UX Design">UI/UX Design</option>
-                  <option value="App Development">App Development</option>
                   <option value="Other">Other</option>
                 </select>
                 <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none">

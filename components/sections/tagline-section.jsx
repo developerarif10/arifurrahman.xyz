@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function TaglineSection() {
   return (
-    <section className="min-h-[50vh] relative overflow-hidden bg-white">
+    <section className="min-h-[45vh] relative overflow-hidden bg-white">
       {/* Background pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.1)_1px,transparent_1px)] bg-[size:24px_24px] opacity-20" />
 
@@ -14,7 +14,7 @@ export default function TaglineSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
-          className="text-3xl md:text-4xl lg:text-[52px] text-black font-laygrotesk leading-[1.2] tracking-tight max-w-4xl ml-auto"
+          className="text-3xl md:text-4xl lg:text-[52px] text-black tracking-normal max-w-4xl ml-auto"
         >
           Turning complex web challenges into seamless, high-impact
           solutions—whether you're launching a startup's first site or scaling
