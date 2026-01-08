@@ -77,7 +77,7 @@ export default function ContactCard() {
             </div>
 
             <Link
-              href="https://wa.me/8801685366704" // WhatsApp link from previous code
+              href="https://wa.me/8801685366704"
               target="_blank"
               className="group flex items-center justify-center gap-3 w-full py-4 bg-white hover:bg-neutral-50 border border-neutral-200 rounded-2xl transition-all shadow-sm hover:shadow-md"
             >

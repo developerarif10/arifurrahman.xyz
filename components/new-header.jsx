@@ -17,7 +17,7 @@ export default function NewHeader() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Work", href: "/work" },
+    { name: "Work", href: "/projects" },
     { name: "About", href: "/about" },
   ];
 
