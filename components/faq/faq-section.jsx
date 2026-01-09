@@ -90,10 +90,10 @@ export default function FaqSection() {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-14">
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
           {/* Left Column - Content */}
-          <div className="col-span-12 lg:col-span-5 relative">
-             <div className="sticky top-24">
+          <div className="col-span-1 lg:col-span-5 relative">
+             <div className="static lg:sticky top-24">
                 <motion.span
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -129,9 +129,9 @@ export default function FaqSection() {
           </div>
 
           {/* Right Column - Accordion */}
-          <div className="col-span-10 md:col-span-12 lg:col-span-7 relative">
+          <div className="col-span-1 lg:col-span-7 relative">
             {/* Gray Container */}
-            <div className="bg-[#f7f7f7] rounded-[2rem] p-2 sm:p-4 md:p-4 relative mt-8 lg:mt-0">
+            <div className="bg-[#f7f7f7] rounded-[2rem] p-6 sm:p-8 relative mt-12 lg:mt-0">
                 {/* Floating Badge */}
                 <motion.div
                 initial={{ opacity: 0, scale: 0.9, y: 10 }}

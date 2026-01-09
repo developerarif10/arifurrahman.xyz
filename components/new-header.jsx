@@ -41,7 +41,7 @@ export default function NewHeader() {
 
   return (
     <>
-      <header className="fixed top-6 inset-x-0 z-50 flex items-center justify-center px-6 md:px-12 pointer-events-none">
+      <header className="fixed top-4 md:top-6 inset-x-0 z-50 flex items-center justify-center px-4 md:px-12 pointer-events-none">
         {/* Central Floating Navbar (Pill) */}
         <div className="pointer-events-auto hidden md:flex items-center gap-1.5 p-1 rounded-full border border-black/5 bg-white/80 backdrop-blur-xl shadow-sm hover:shadow-md transition-shadow duration-300">
           
@@ -96,16 +96,16 @@ export default function NewHeader() {
         {/* Right - Empty to balance flex */}
         <div className="hidden md:block pointer-events-none opacity-0"></div>
 
-        {/* Mobile Header Elements */}
-        <div className="flex md:hidden w-full items-center justify-between pointer-events-auto top-0 relative bg-white/5 backdrop-blur-0">
-             <Link href="/" className="text-lg font-bold text-black bg-white/80 px-4 py-2 rounded-full backdrop-blur-md border border-black/5 shadow-sm">
+        {/* Mobile Header Elements - Unified Pill */}
+        <div className="flex md:hidden w-full items-center justify-between pointer-events-auto top-0 relative bg-white/80 backdrop-blur-xl border border-black/5 shadow-sm rounded-full p-2">
+             <Link href="/" className="text-lg font-bold text-black px-4 tracking-tight">
                 AR
              </Link>
              <button 
                 onClick={toggleMenu} 
-                className="p-3 bg-white/80 rounded-full backdrop-blur-md border border-black/5 shadow-sm active:scale-95 transition-transform"
+                className="p-2 rounded-full hover:bg-black/5 active:scale-95 transition-all"
             >
-                {isOpen ? <XIcon size={20} /> : <AlignCenterIcon size={20} />}
+                {isOpen ? <XIcon size={22} /> : <AlignCenterIcon size={22} />}
              </button>
         </div>
       </header>
