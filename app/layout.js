@@ -1,4 +1,5 @@
 import Footer from "@/components/footer";
+import PageLoader from "@/components/page-loader";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { ReactLenis } from "lenis/react";
 import { Source_Sans_3 } from "next/font/google";
@@ -35,6 +36,7 @@ export default function RootLayout({ children }) {
           content="BC_JK1EkbjpDyqeFZY2W_J72-JACHfgQSI0ECviJz8I"
         />
         <body className={`${sourceSansPro.variable} ${bebasNeue.variable} font-sans antialiased overflow-x-hidden`}>
+          <PageLoader />
           <ThemeProvider
             attribute="class"
             defaultTheme="light"
