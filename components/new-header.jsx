@@ -1,12 +1,11 @@
 "use client";
-
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { AlignCenterIcon, XIcon } from "./animatedIcons/animatedicons";
 
 export default function NewHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -106,7 +105,7 @@ export default function NewHeader() {
                 onClick={toggleMenu} 
                 className="p-3 bg-white/80 rounded-full backdrop-blur-md border border-black/5 shadow-sm active:scale-95 transition-transform"
             >
-                {isOpen ? <X size={20} /> : <Menu size={20} />}
+                {isOpen ? <XIcon size={20} /> : <AlignCenterIcon size={20} />}
              </button>
         </div>
       </header>
