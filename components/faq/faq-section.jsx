@@ -49,9 +49,9 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
     >
       <button
         onClick={onClick}
-        className="flex items-center justify-between w-full p-6 text-left bg-white"
+        className="flex items-center justify-between w-full p-6 text-left bg-white hover:bg-neutral-50 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-neutral-900 focus-visible:outline-offset-2 rounded-2xl"
       >
-        <span className="text-lg font-medium text-neutral-900">
+        <span className="text-lg md:text-xl font-medium text-neutral-900">
           {item.question}
         </span>
         <div
@@ -88,7 +88,7 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <section className="py-24 bg-white">
+    <section className="py-12 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-12 lg:px-14">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
           {/* Left Column - Content */}
@@ -107,7 +107,7 @@ export default function FaqSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-2xl md:text-3xl lg:text-[2.5rem] font-medium text-neutral-900 mb-8 leading-[1.1] tracking-tight"
+                className="text-2xl md:text-3xl lg:text-4xl font-medium text-neutral-900 mb-8 leading-[1.1] tracking-tight"
                 >
                 Frequently asked questions to help you  <span className="text-neutral-400">understand the process</span>
                 </motion.h2>
@@ -131,14 +131,14 @@ export default function FaqSection() {
           {/* Right Column - Accordion */}
           <div className="col-span-1 lg:col-span-7 relative">
             {/* Gray Container */}
-            <div className="bg-[#f7f7f7] rounded-[2rem] p-6 sm:p-8 relative mt-12 lg:mt-0">
+            <div className="bg-[#f7f7f7] rounded-[2rem] p-6 sm:p-8 relative mt-12 lg:mt-0 min-h-[400px]">
                 {/* Floating Badge */}
                 <motion.div
                 initial={{ opacity: 0, scale: 0.9, y: 10 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="absolute -top-6 left-1/2 -translate-x-1/2 z-10"
+                className="absolute -top-4 md:-top-6 left-1/2 -translate-x-1/2 z-10"
                 >
                 <div className="bg-neutral-900 text-white px-6 py-3 rounded-full shadow-2xl text-sm font-medium relative whitespace-nowrap">
                     I'm here to help you

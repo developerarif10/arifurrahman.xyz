@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function NewHero() {
   return (
-    <section className="relative min-h-screen w-full bg-white flex flex-col pt-24 pb-8 overflow-hidden">
+    <section className="relative min-h-screen w-full bg-white flex flex-col pt-20 md:pt-24 pb-12 md:pb-16 overflow-hidden">
       
       {/* Background/Gradient */}
       <div className="absolute inset-0 bg-white z-0 pointer-events-none" />
@@ -62,7 +62,7 @@ export default function NewHero() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.8 }}
                     viewport={{ once: true }}
-                    className="text-4xl md:text-5xl lg:text-6xl font-medium tracking-tighter text-neutral-900 leading-[1.05]"
+                    className="text-4xl md:text-5xl lg:text-5xl font-medium tracking-tighter text-neutral-900 leading-[1.05]"
                 >
                     I don't just build websites. I build high-performance business assets.
                 </motion.h1>
@@ -78,7 +78,7 @@ export default function NewHero() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.8 }}
                     viewport={{ once: true }}
-                    className=" md:text-md text-neutral-900  mb-4 max-w-md"
+                    className="text-base md:text-lg font-normal text-neutral-900 mb-4 max-w-md"
                 >
                   Code without business logic is useless. My role is to bridge the gap between technical complexity and market needs. By combining Next.js with strategic architecture, I develop web applications that handle traffic, improve SEO rankings, and keep customers safe—not just look good.
                 </motion.p>
@@ -92,7 +92,7 @@ export default function NewHero() {
                 >
                      <Button 
                         size="lg"
-                        className="rounded-full bg-neutral-900 text-white hover:bg-neutral-800 px-8 py-6 text-base shadow-lg shadow-neutral-200/50"
+                        className="rounded-full bg-neutral-900 text-white hover:bg-neutral-800 px-8 py-6 text-base shadow-xl shadow-neutral-900/10"
                         asChild
                     >
                         <Link href="/contact">

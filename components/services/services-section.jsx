@@ -97,7 +97,7 @@ const ServiceItem = ({ item, isOpen, onClick }) => {
     >
       <div 
         onClick={onClick}
-        className="w-full py-10 flex items-center justify-between group cursor-pointer transition-colors hover:bg-neutral-50"
+        className="w-full py-12 md:py-16 flex items-center justify-between group cursor-pointer transition-colors hover:bg-neutral-50/50"
       >
         <div className="flex items-center gap-6 md:gap-12 relative z-10">
            <span className={`text-4xl md:text-6xl font-bebas transition-colors duration-300 ${isOpen ? 'text-neutral-900' : 'text-neutral-400 group-hover:text-neutral-600'}`}>
@@ -160,7 +160,7 @@ const ServiceItem = ({ item, isOpen, onClick }) => {
                                 className="flex items-center gap-4 text-lg md:text-2xl"
                              >
                                 <FilledCheckedIcon className="w-6 h-6 md:w-8 md:h-8 flex-shrink-0" strokeWidth={1.5} />
-                                <span>{feature}</span>
+                                <span className="text-base md:text-lg">{feature}</span>
                              </motion.li>
                         ))}
                      </ul>
@@ -180,7 +180,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="bg-white py-24 min-h-screen flex flex-col justify-center">
+    <section className="bg-white py-12 md:py-20 min-h-screen flex flex-col justify-center">
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
         
         {/* Section Header */}
@@ -188,7 +188,7 @@ export default function ServicesSection() {
             <span className="text-neutral-500 uppercase tracking-wider text-sm md:text-base font-medium font-sans">
                 Services
             </span>
-            <h2 className="text-3xl md:text-5xl lg:text-4xl leading-[1.1] tracking-tight font-medium max-w-2xl text-neutral-400 ">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-tight font-medium max-w-2xl text-neutral-400 ">
                 As a web architect, I deliver end-to-end web architecture that scales,  <span className="text-neutral-900">from high-fidelity user interfaces to MERN stack integration.</span>
             </h2>
         </div>

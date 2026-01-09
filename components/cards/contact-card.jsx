@@ -47,7 +47,7 @@ export default function ContactCard() {
   };
 
   return (
-    <div className="w-full bg-white rounded-[3rem] p-4 md:p-8" id="contacts">
+    <div className="w-full bg-white rounded-[3rem] p-6 md:p-10 lg:p-12" id="contacts">
       <div className="grid lg:grid-cols-12 gap-12 items-start">
         {/* Left Column - Book a Call Card */}
         <div className="lg:col-span-5 relative">
@@ -79,7 +79,7 @@ export default function ContactCard() {
             <Link
               href="https://wa.me/8801685366704"
               target="_blank"
-              className="group flex items-center justify-center gap-3 w-full py-4 bg-white hover:bg-neutral-50 border border-neutral-200 rounded-2xl transition-all shadow-sm hover:shadow-md"
+              className="group flex items-center justify-center gap-3 w-full py-4 bg-white hover:bg-neutral-50 border border-neutral-200 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.02]"
             >
               <span className="text-neutral-900 font-medium text-lg">Book a Call</span>
               <div className="p-1.5 bg-[#25D366] rounded-full text-white">
@@ -101,7 +101,7 @@ export default function ContactCard() {
           <form onSubmit={handleSubmit} className="space-y-8">
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label htmlFor="name" className="text-sm font-medium text-blue-500">
+                <label htmlFor="name" className="text-sm font-medium text-neutral-600">
                   Name
                 </label>
                 <input
@@ -110,11 +110,11 @@ export default function ContactCard() {
                   name="name"
                   placeholder="John Smith"
                   required
-                  className="w-full px-6 py-4 bg-[#F5F5F7] rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500/20 text-neutral-900 placeholder:text-neutral-400 transition-all font-medium"
+                  className="w-full px-6 py-4 bg-[#F5F5F7] rounded-2xl border-none outline-none focus:ring-2 focus:ring-neutral-900/10 text-neutral-900 placeholder:text-neutral-400 transition-all font-medium"
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium text-blue-500">
+                <label htmlFor="email" className="text-sm font-medium text-neutral-600">
                   Email
                 </label>
                 <input
@@ -123,20 +123,20 @@ export default function ContactCard() {
                   name="email"
                   placeholder="johnsmith@gmail.com"
                   required
-                  className="w-full px-6 py-4 bg-[#F5F5F7] rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500/20 text-neutral-900 placeholder:text-neutral-400 transition-all font-medium"
+                  className="w-full px-6 py-4 bg-[#F5F5F7] rounded-2xl border-none outline-none focus:ring-2 focus:ring-neutral-900/10 text-neutral-900 placeholder:text-neutral-400 transition-all font-medium"
                 />
               </div>
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="service" className="text-sm font-medium text-blue-500">
+              <label htmlFor="service" className="text-sm font-medium text-neutral-600">
                 Service Needed?
               </label>
               <div className="relative">
                 <select
                   id="service"
                   name="service"
-                  className="w-full px-6 py-4 bg-[#F5F5F7] rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500/20 text-neutral-900 appearance-none cursor-pointer font-medium"
+                  className="w-full px-6 py-4 bg-[#F5F5F7] rounded-2xl border-none outline-none focus:ring-2 focus:ring-neutral-900/10 text-neutral-900 appearance-none cursor-pointer font-medium"
                   required
                 >
                   <option value="" disabled selected className="text-neutral-400">
@@ -156,7 +156,7 @@ export default function ContactCard() {
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium text-blue-500">
+              <label htmlFor="message" className="text-sm font-medium text-neutral-600">
                 What Can I Help You...
               </label>
               <textarea
@@ -165,14 +165,14 @@ export default function ContactCard() {
                 placeholder="Hello, I'd like to enquire about..."
                 rows={6}
                 required
-                className="w-full px-6 py-4 bg-[#F5F5F7] rounded-2xl border-none outline-none focus:ring-2 focus:ring-blue-500/20 text-neutral-900 placeholder:text-neutral-400 resize-none transition-all font-medium"
+                className="w-full px-6 py-4 bg-[#F5F5F7] rounded-2xl border-none outline-none focus:ring-2 focus:ring-neutral-900/10 text-neutral-900 placeholder:text-neutral-400 resize-none transition-all font-medium"
               />
             </div>
 
             <button
               type="submit"
               disabled={isLoading}
-              className="px-10 py-4 bg-transparent border-2 border-blue-500 text-blue-600 font-bold rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 uppercase tracking-wide text-sm md:text-base disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-10 py-4 bg-transparent border-2 border-neutral-900 text-neutral-900 font-bold rounded-full hover:bg-neutral-900 hover:text-white transition-all duration-300 uppercase tracking-wide text-sm md:text-base disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? "Sending..." : "SUBMIT"}
             </button>

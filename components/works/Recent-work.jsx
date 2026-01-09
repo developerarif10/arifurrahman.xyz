@@ -78,13 +78,13 @@ export default function RecentWorkCard() {
   return (
     <section className="w-full">
       {/* Header */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-12 gap-4">
-        <h2 className="text-4xl md:text-6xl font-medium text-neutral-900 tracking-tight">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-16 gap-4">
+        <h2 className="text-4xl md:text-5xl font-medium text-neutral-900 tracking-tight">
           Featured works
         </h2>
         <Link
           href="/works"
-          className="group inline-flex items-center gap-2 px-6 py-3 bg-gray-100 hover:bg-gray-200 text-neutral-900 rounded-full transition-colors text-sm font-medium"
+          className="group inline-flex items-center gap-2 px-8 py-4 bg-neutral-900 hover:bg-neutral-800 text-white rounded-full transition-all duration-300 text-sm font-medium shadow-lg shadow-neutral-900/10"
         >
           All Works
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

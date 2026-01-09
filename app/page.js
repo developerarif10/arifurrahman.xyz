@@ -19,7 +19,7 @@ export default function Home() {
 
       <section
         id="recent_work"
-        className="min-h-screen px-6 sm:px-12 lg:px-14 py-12"
+        className="py-12 md:py-20 px-6 sm:px-12 lg:px-14"
       >
         <div className="max-w-7xl mx-auto">
           <RecentWorkCard />
@@ -30,7 +30,7 @@ export default function Home() {
 
       <FaqSection />
 
-      <div className="min-h-screen p-6 bg-white">
+      <div className="py-12 md:py-20 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <ContactCard />
         </div>
