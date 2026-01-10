@@ -66,8 +66,7 @@ export default function ContactCard() {
               <h3 className="text-2xl font-medium text-neutral-900 leading-tight">
                 Prefer a quick chat?{" "}
                 <span className="text-neutral-500">
-                  Let's hop on a call and explore the best way to bring your
-                  ideas to life
+                  Let's hope on a call and explore the best way to bring your ideas to life
                 </span>
               </h3>
               
@@ -81,7 +80,7 @@ export default function ContactCard() {
               target="_blank"
               className="group flex items-center justify-center gap-3 w-full py-4 bg-white hover:bg-neutral-50 border border-neutral-200 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.02]"
             >
-              <span className="text-neutral-900 font-medium text-lg">Book a Call</span>
+              <span className="text-neutral-900 font-medium text-lg">Send message</span>
               <div className="p-1.5 bg-[#25D366] rounded-full text-white">
                  <Phone className="w-4 h-4 fill-current" />
               </div>

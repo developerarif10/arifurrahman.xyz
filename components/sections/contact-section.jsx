@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 const socialLinks = [
-  { name: "LinkedIn", url: "https://linkedin.com/in/yourusername" },
-  { name: "Instagram", url: "https://instagram.com/yourusername" },
-  { name: "Facebook", url: "https://facebook.com/yourusername" },
-  { name: "Twitter / X", url: "https://twitter.com/yourusername" },
-  { name: "Email", url: "mailto:your.email@example.com" },
+  { name: "Facebook", url: "https://www.facebook.com/arifurrahamanrafi" },
+  { name: "Instagram", url: "https://www.instagram.com/arifurrahman_rafi/" },
+  { name: "Twitter / X", url: "https://x.com/iamarifurrahman" },
+  {name: "Linkedin", url: "https://www.linkedin.com/in/arifurrahmanrafi/"},
+  { name: "Email", url: "mailto:arifurrahman@std.cu.ac.bd" },
 ];
 
 export default function ContactSection() {
