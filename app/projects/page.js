@@ -83,8 +83,8 @@ export default function ProjectPage() {
         <div className="my-5">
           <div>
             <h1 className="text-2xl font-semibold">Full Stack Projects</h1>
-            <div className="container py-12 flex flex-wrap justify-center items-center">
-              <div className="flex flex-wrap -m-4 gap-y-8">
+            <div className="container py-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 {projectData?.map((content) => (
                   <ProjectCard key={content?.thumbnail} content={content} />
                 ))}

@@ -167,6 +167,54 @@ html {
       transform: translateY(-100%);
     }
   }
+
+  /* Project Card Animations */
+  @keyframes gradient-xy {
+    0%, 100% {
+      background-position: 0% 50%;
+      background-size: 400% 400%;
+    }
+    50% {
+      background-position: 100% 50%;
+      background-size: 400% 400%;
+    }
+  }
+
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.3) translateY(20px);
+    }
+    50% {
+      transform: scale(1.05) translateY(-5px);
+    }
+    70% {
+      transform: scale(0.95) translateY(2px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .animate-gradient-xy {
+    animation: gradient-xy 3s ease infinite;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
 }
 /* Theme toggle effect
 using view transitions api */
