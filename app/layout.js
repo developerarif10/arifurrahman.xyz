@@ -22,8 +22,67 @@ const bebasNeue = Bebas_Neue({
 });
 
 export const metadata = {
-  title: "Arifur Rahman - React Front-end Web Developer | Tech Enthusiast",
-  description: "Developed by @developerarif",
+  metadataBase: new URL("https://arifurrahman.site"),
+  title: {
+    default: "Arifur Rahman - Full-Stack Developer & Tech Enthusiast",
+    template: "%s | Arifur Rahman",
+  },
+  description:
+    "Portfolio of Arifur Rahman, a Full-Stack Developer specializing in Next.js, React, and modern web solutions. Explore my projects and articles.",
+  keywords: [
+    "Arifur Rahman",
+    "Full-Stack Developer",
+    "Next.js Developer",
+    "React Developer",
+    "Web Development",
+    "JavaScript",
+    "Portfolio",
+    "Software Engineer",
+  ],
+  authors: [{ name: "Arifur Rahman", url: "https://arifurrahman.site" }],
+  creator: "Arifur Rahman",
+  publisher: "Arifur Rahman",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: "Arifur Rahman - Full-Stack Developer",
+    description:
+      "Building modern, scalable, and user-centric web applications with Next.js and React.",
+    url: "https://arifurrahman.site",
+    siteName: "Arifur Rahman Portfolio",
+    images: [
+      {
+        url: "/og-image.png", // Ensure you have an og-image.png in public folder
+        width: 1200,
+        height: 630,
+        alt: "Arifur Rahman Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Arifur Rahman - Full-Stack Developer",
+    description:
+      "Full-Stack Developer specializing in Next.js and React. Check out my latest work.",
+    creator: "@developerarif", // Update with actual handle if different
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
+  verification: {
+    google: "BC_JK1EkbjpDyqeFZY2W_J72-JACHfgQSI0ECviJz8I",
+  },
+  alternates: {
+    canonical: "/",
+  },
 };
 
 

@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const ProjectCard = ({ content }) => {
   return (
-    <Link href={content.projectUrl || "#"} className="block group">
-      <div className="relative h-[400px] md:h-[500px] w-full overflow-hidden rounded-[2rem]">
+    <Link href={content.projectUrl || "#"} className="block group w-full">
+      <div className="relative h-[300px] md:h-[400px] w-full overflow-hidden rounded-[2rem]">
         <Image
           src={content.thumbnaiUrl}
           alt={content.title}
