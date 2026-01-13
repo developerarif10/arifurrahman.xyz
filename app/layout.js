@@ -55,7 +55,7 @@ export const metadata = {
     siteName: "Arifur Rahman Portfolio",
     images: [
       {
-        url: "/og-image.png", // Ensure you have an og-image.png in public folder
+        url: "/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Arifur Rahman Portfolio",
@@ -69,8 +69,8 @@ export const metadata = {
     title: "Arifur Rahman - Full-Stack Developer",
     description:
       "Full-Stack Developer specializing in Next.js and React. Check out my latest work.",
-    creator: "@developerarif", // Update with actual handle if different
-    images: ["/og-image.png"],
+    creator: "@developerarif",
+    images: ["/og-image.webp"],
   },
   icons: {
     icon: "/favicon.ico",
