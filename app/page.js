@@ -1,20 +1,15 @@
-"use client";
 
 import ContactCard from "@/components/cards/contact-card";
-import NewHero from "@/components/new-hero";
-
 import FaqSection from "@/components/faq/faq-section";
+import HeroSection from "@/components/hero-section";
 import TaglineSection from "@/components/sections/tagline-section";
 import ServicesSection from "@/components/services/services-section";
 import RecentWorkCard from "@/components/works/Recent-work";
-// import { ReactLenis } from "lenis/react";
 
 export default function Home() {
   return (
     <>
-      {/* <ReactLenis root> */}
-     
-      <NewHero />
+      <HeroSection />
       <TaglineSection />
 
       <section
@@ -35,7 +30,6 @@ export default function Home() {
           <ContactCard />
         </div>
       </div>
-      {/* </ReactLenis> */}
     </>
   );
 }

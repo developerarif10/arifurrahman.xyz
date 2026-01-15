@@ -1,62 +1,107 @@
 "use client";
+
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 import Image from "next/image";
-import HeroHeader from "./hero-header";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen w-full bg-white dark:bg-neutral-950 overflow-hidden flex flex-col">
-      <HeroHeader />
+    <section className="relative min-h-screen w-full bg-white flex flex-col pt-20 md:pt-24 pb-12 md:pb-16 overflow-hidden">
       
-      <div className="flex-1 flex flex-col justify-center px-6 md:px-12 pt-24 pb-12">
-        {/* Large Text */}
-        <div className="w-full mb-8 md:mb-12">
-          <h1 className="font-bebas text-[18vw] md:text-[14vw] leading-[0.8] text-black dark:text-white text-center md:text-left tracking-tighter">
-            WEBSITE DEVELOPER
-          </h1>
-        </div>
+      {/* Background/Gradient */}
+      <div className="absolute inset-0 bg-white z-0 pointer-events-none" />
 
-        <div className="flex flex-col md:flex-row gap-12 md:gap-8 items-start relative">
-          {/* Left Content */}
-          <div className="w-full md:w-1/2 lg:w-5/12 pt-4 md:pt-8 z-10">
-            <div className="mb-6">
-              <h2 className="font-bebas text-2xl md:text-3xl tracking-[0.2em] text-black dark:text-white mb-6">
-                BASED IN <span className="text-orange-accent">BANGLADESH</span>
-              </h2>
-              <p className="font-sans text-lg md:text-xl leading-relaxed text-gray-800 dark:text-gray-300 mb-6 max-w-xl">
-                I'm Arif — a front-end developer passionate about building
-                websites that not only look great but also feel engaging
-                through smooth animations and interactive design.
-              </p>
-              <p className="font-sans text-lg md:text-xl leading-relaxed text-gray-800 dark:text-gray-300 mb-12 max-w-xl">
-                My goal is to bring your ideas to life and deliver
-                a unique online presence.
-              </p>
-            </div>
-
-            <div className="inline-flex items-center gap-3 bg-gray-200 dark:bg-neutral-800 px-6 py-3">
-              <span className="w-4 h-4 rounded-full bg-lime-accent animate-pulse"></span>
-              <span className="font-bebas text-xl tracking-widest text-black dark:text-white">
-                AVAILABLE FOR WORK
-              </span>
-            </div>
-          </div>
-
-          {/* Right Image - Positioned to overlap/align with text as per design */}
-          <div className="w-full md:w-1/2 lg:w-7/12 relative mt-8 md:-mt-24 lg:-mt-48 flex justify-end">
-             {/* Gray background box behind image */}
-            <div className="relative w-full max-w-md lg:max-w-lg aspect-[3/4]">
-                <div className="absolute inset-0 bg-gray-500/20 translate-x-4 translate-y-4 z-0"></div>
-                <div className="relative w-full h-full bg-gray-400 overflow-hidden grayscale hover:grayscale-0 transition-all duration-500">
-                  {/* Placeholder for the portrait image */}
-                   <Image 
-                    src="/images/arifurrahman_black&white.webp" 
-                    alt="Arif Rahman"
-                    fill
-                    className="object-cover object-center"
-                   />
+      {/* Main Grid Container */}
+      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-6 md:px-12 lg:px-20 flex-1 flex flex-col justify-end">
+        
+        {/* Upper Setup: Image & Layout */}
+        <div className="flex-1 relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:items-end lg:content-end h-full">
+            
+            {/* The Image - Stacked at bottom on mobile, Absolute behind on Desktop */}
+            <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
+                className="relative h-[45vh] w-full order-3 lg:absolute lg:inset-x-0 lg:bottom-0 flex justify-center items-end pointer-events-none z-10 lg:-z-10 lg:h-[90%] lg:order-none mt-auto lg:mt-0"
+            >
+                <div className="relative w-full max-w-sm md:max-w-lg lg:max-w-2xl h-full mx-auto">
+                    {/* The Image Itself */}
+                    <div className="relative w-full h-full [mask-image:linear-gradient(to_bottom,black_60%,transparent_98%)] lg:[mask-image:linear-gradient(to_bottom,black_50%,transparent_95%)]">
+                         <Image 
+                          src="/images/arifurrahman_black&white.webp" 
+                            alt="Arifur Rahman"
+                            fill
+                            className="object-contain object-bottom"
+                            priority
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                    </div>
                 </div>
+            </motion.div>
+
+
+            {/* Left Content: Headline */}
+            <div className="lg:col-span-5 relative z-10 flex flex-col justify-end pb-4 lg:pb-12 order-1 lg:order-none pt-4 lg:pt-0">
+                {/* Status Pill */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-3 py-1.5 w-fit mb-6"
+                >
+                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                    <span className="text-xs font-medium text-neutral-500 tracking-wide uppercase">
+                     Available for Immediate Hire
+                    </span>
+                </motion.div>
+
+                <motion.h1 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3, duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="text-4xl md:text-5xl lg:text-5xl font-medium tracking-tighter text-neutral-900 leading-[1.05]"
+                >
+                    I don't just build websites. I build high-performance business assets.
+                </motion.h1>
             </div>
-          </div>
+
+            {/* Spacer */}
+            <div className="hidden lg:block lg:col-span-2"></div>
+
+            {/* Right Content: Description & Button */}
+            <div className="lg:col-span-5 relative z-10 flex flex-col justify-end items-start lg:pl-14 pb-8 lg:pb-12 order-2 lg:order-none">
+                 <motion.p 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.4, duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="text-base md:text-lg font-normal text-neutral-900 mb-4 max-w-md"
+                >
+                  Code without business logic is useless. My role is to bridge the gap between technical complexity and market needs. By combining Next.js with strategic architecture, I develop web applications that handle traffic, improve SEO rankings, and keep customers safe—not just look good.
+                </motion.p>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 }}
+                    viewport={{ once: true }}
+                    className="flex items-center gap-4"
+                >
+                     <Button 
+                        size="lg"
+                        className="rounded-full bg-neutral-900 text-white hover:bg-neutral-800 px-8 py-6 text-base shadow-xl shadow-neutral-900/10"
+                        asChild
+                    >
+                        <Link href="/contact">
+                          Discuss Your Project
+                        </Link>
+                    </Button>
+                </motion.div>
+            </div>
+
         </div>
       </div>
     </section>
