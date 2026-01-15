@@ -21,11 +21,11 @@ const desktopTransformStyles = [
 ];
 
 const mobileTransformStyles = [
-  "rotate(10deg) translate(-110px)",
-  "rotate(5deg) translate(-55px)",
+  "rotate(10deg) translate(-60px)",
+  "rotate(5deg) translate(-30px)",
   "rotate(0deg)",
-  "rotate(-5deg) translate(55px)",
-  "rotate(-10deg) translate(110px)"
+  "rotate(-5deg) translate(30px)",
+  "rotate(-10deg) translate(60px)"
 ];
 
 

@@ -63,7 +63,7 @@ export default function BounceCards({
     if (!enableHover || !containerRef.current) return;
 
     const isMobile = window.innerWidth < 768;
-    const pushDistance = isMobile ? 60 : 160; // Responsive push distance
+    const pushDistance = isMobile ? 40 : 160; // Responsive push distance
 
     const q = gsap.utils.selector(containerRef);
     images.forEach((_, i) => {
