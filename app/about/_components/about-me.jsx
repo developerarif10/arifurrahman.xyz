@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from 'react';
 import BounceCards from "./bounce-cards";
 
 const images = [
@@ -11,7 +12,7 @@ const images = [
   "/about/arifurrahman-about5.webp",
 ];
 
-const transformStyles = [
+const desktopTransformStyles = [
   "rotate(10deg) translate(-260px)",
   "rotate(5deg) translate(-130px)",
   "rotate(0deg)",
@@ -19,11 +20,35 @@ const transformStyles = [
   "rotate(-10deg) translate(260px)"
 ];
 
+const mobileTransformStyles = [
+  "rotate(10deg) translate(-110px)",
+  "rotate(5deg) translate(-55px)",
+  "rotate(0deg)",
+  "rotate(-5deg) translate(55px)",
+  "rotate(-10deg) translate(110px)"
+];
+
 export default function AboutMe() {
+  const [transformStyles, setTransformStyles] = useState(desktopTransformStyles);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setTransformStyles(mobileTransformStyles);
+      } else {
+        setTransformStyles(desktopTransformStyles);
+      }
+    };
+
+    handleResize(); // Initial call
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section className="w-full py-6 lg:py-6">
       <div className="container px-4 md:px-6 mx-auto">
-        <div className="flex flex-col items-center gap-8 lg:gap-10">
+        <div className="flex flex-col items-center gap-2 lg:gap-10">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

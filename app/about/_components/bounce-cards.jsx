@@ -62,6 +62,9 @@ export default function BounceCards({
   const pushSiblings = hoveredIdx => {
     if (!enableHover || !containerRef.current) return;
 
+    const isMobile = window.innerWidth < 768;
+    const pushDistance = isMobile ? 60 : 160; // Responsive push distance
+
     const q = gsap.utils.selector(containerRef);
     images.forEach((_, i) => {
       const selector = q(`.card-${i}`);
@@ -78,7 +81,7 @@ export default function BounceCards({
           overwrite: 'auto'
         });
       } else {
-        const offsetX = i < hoveredIdx ? -160 : 160;
+        const offsetX = i < hoveredIdx ? -pushDistance : pushDistance;
         const pushedTransform = getPushedTransform(baseTransform, offsetX);
 
         const distance = Math.abs(hoveredIdx - i);
@@ -124,7 +127,7 @@ export default function BounceCards({
       {images.map((src, idx) => (
         <div
           key={idx}
-          className={`card card-${idx} absolute w-[200px] aspect-square border-[6px] border-white rounded-[30px] overflow-hidden`}
+          className={`card card-${idx} absolute w-[100px] md:w-[200px] aspect-square border-4 md:border-[6px] border-white rounded-[20px] md:rounded-[30px] overflow-hidden`}
           style={{
             boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
             transform: transformStyles[idx] || 'none'
