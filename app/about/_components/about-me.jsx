@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import BounceCards from "./bounce-cards";
 
 const images = [
-  "https://picsum.photos/400/400?grayscale",
-  "https://picsum.photos/500/500?grayscale",
-  "https://picsum.photos/600/600?grayscale",
-  "https://picsum.photos/700/700?grayscale",
-  "https://picsum.photos/300/300?grayscale"
+  "/about/arifurrahman-about1.webp",
+  "/about/arifurrahman-about2.webp",
+  "/about/arifurrahman-about3.webp",
+  "/about/arifurrahman-about4.webp",
+  "/about/arifurrahman-about5.webp",
 ];
 
 const transformStyles = [

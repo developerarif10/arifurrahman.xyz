@@ -1,4 +1,5 @@
 import { gsap } from 'gsap';
+import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
 export default function BounceCards({
@@ -123,7 +124,7 @@ export default function BounceCards({
       {images.map((src, idx) => (
         <div
           key={idx}
-          className={`card card-${idx} absolute w-[200px] aspect-square border-8 border-white rounded-[30px] overflow-hidden`}
+          className={`card card-${idx} absolute w-[200px] aspect-square border-[6px] border-white rounded-[30px] overflow-hidden`}
           style={{
             boxShadow: '0 4px 10px rgba(0, 0, 0, 0.2)',
             transform: transformStyles[idx] || 'none'
@@ -131,7 +132,7 @@ export default function BounceCards({
           onMouseEnter={() => pushSiblings(idx)}
           onMouseLeave={resetSiblings}
         >
-          <img className="w-full h-full object-cover" src={src} alt={`card-${idx}`} />
+          <Image className="w-full h-full object-cover" src={src} alt={`card-${idx}`}  fill />
         </div>
       ))}
     </div>
