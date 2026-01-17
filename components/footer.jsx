@@ -1,6 +1,4 @@
-"use client";
-
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react"; // Added Icons
+import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,7 +7,7 @@ export default function Footer() {
 
   return (
     <footer className="relative w-full text-white overflow-hidden">
-      {/* Background Image & Overlay */}
+
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/footer_bg.avif"
