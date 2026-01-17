@@ -3,9 +3,9 @@ import ContactCard from "@/components/cards/contact-card";
 
 export const metadata = {
   title:
-    "Contact Arifur Rahman | Hire Freelance Website Developer in Bangladesh",
+    "Contact Arifur Rahman | Let's Collaborate",
   description:
-    "Contact Arifur Rahman, a freelance website developer in Bangladesh specializing in Next.js, React, and modern SEO-friendly websites for businesses and startups.",
+    "Get in touch for web development projects, design collaborations, or general inquiries.",
 };
 
 export default function ContactPage() {
