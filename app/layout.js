@@ -1,9 +1,10 @@
 import Footer from "@/components/footer";
+import NewHeader from "@/components/new-header";
 import PageLoader from "@/components/page-loader";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { Analytics } from "@vercel/analytics/next";
 import { ReactLenis } from "lenis/react";
-import { Source_Sans_3 } from "next/font/google";
+import { Bebas_Neue, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
 const sourceSansPro = Source_Sans_3({
@@ -11,9 +12,6 @@ const sourceSansPro = Source_Sans_3({
   weight: ["200", "300", "400", "500", "600", "700", "900"],
   variable: "--font-source-sans",
 });
-
-import NewHeader from "@/components/new-header";
-import { Bebas_Neue } from "next/font/google";
 
 const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
@@ -24,33 +22,52 @@ const bebasNeue = Bebas_Neue({
 export const metadata = {
   metadataBase: new URL("https://arifurrahman.site"),
   title: {
-    default: "Arifur Rahman - Full-Stack Developer & Tech Enthusiast",
+    default: "Arifur Rahman | Expert Web Developer in Bangladesh | Next.js Specialist",
     template: "%s | Arifur Rahman",
   },
   description:
-    "Portfolio of Arifur Rahman, a Full-Stack Developer specializing in Next.js, React, and modern web solutions. Explore my projects and articles.",
+    "Hire Arifur Rahman, a professional Web Developer in Bangladesh. Specializing in high-performance Next.js websites, React apps, and SEO-friendly web solutions for startups and businesses. ",
   keywords: [
+    "Web Developer in Bangladesh",
+    "Best Web Developer Chittagong", 
+    "Next.js Developer Bangladesh",
+    "React.js Expert for Hire",
+    "Front-end Developer Bangladesh",
+    "Custom Website Design Dhaka",
+    "Headless CMS Developer",
+    "Arifur Rahman Portfolio",
     "Arifur Rahman",
-    "Full-Stack Developer",
+    "Website Developer in Bangladesh",
+    "Freelance Web Developer",
     "Next.js Developer",
     "React Developer",
-    "Web Development",
-    "JavaScript",
-    "Portfolio",
-    "Software Engineer",
+    "Frontend Developer",
+    "Hire Website Developer",
+    "Remote Web Developer",
+    "Business Website Developer",
+    "SEO Friendly Website Developer",
+    "Landing Page Developer",
+    "Modern Website Development",
+    "Custom Website Development",
   ],
   authors: [{ name: "Arifur Rahman", url: "https://arifurrahman.site" }],
   creator: "Arifur Rahman",
   publisher: "Arifur Rahman",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
   openGraph: {
-    title: "Arifur Rahman - Full-Stack Developer",
+    title: "Arifur Rahman | Professional Web Developer in Bangladesh",
     description:
-      "Building modern, scalable, and user-centric web applications with Next.js and React.",
+      "Need a modern, fast website? I build scalable Next.js and React applications for local and global businesses.",
     url: "https://arifurrahman.site",
     siteName: "Arifur Rahman Portfolio",
     images: [
@@ -58,7 +75,7 @@ export const metadata = {
         url: "/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Arifur Rahman Portfolio",
+        alt: "Arifur Rahman - Web Developer in Bangladesh",
       },
     ],
     locale: "en_US",
@@ -66,37 +83,56 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Arifur Rahman - Full-Stack Developer",
+    title: "Arifur Rahman | Next.js & React Specialist",
     description:
-      "Full-Stack Developer specializing in Next.js and React. Check out my latest work.",
+      "Professional Web Developer based in Bangladesh. Expert in React, Next.js, and Headless CMS.",
     creator: "@developerarif",
     images: ["/og-image.webp"],
-  },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/apple-icon.png",
   },
   verification: {
     google: "BC_JK1EkbjpDyqeFZY2W_J72-JACHfgQSI0ECviJz8I",
   },
   alternates: {
-    canonical: "/",
+    canonical: "https://arifurrahman.site",
   },
 };
 
-
 export default function RootLayout({ children }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Arifur Rahman",
+    url: "https://arifurrahman.site",
+    image: "https://arifurrahman.site/og-image.webp",
+    sameAs: [
+      "https://twitter.com/developerarif",
+      "https://linkedin.com/in/arifurrahmanrafi", 
+      "https://github.com/developerarif10"       
+    ],
+    jobTitle: "Web Developer",
+    worksFor: {
+      "@type": "Organization",
+      name: "Freelance",
+    },
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Chittagong",
+      addressCountry: "BD",
+    },
+    description: "Arifur Rahman is a Web Developer in Bangladesh specializing in Next.js and modern web technologies.",
+  };
+
   return (
     <html lang="en">
-      <ReactLenis root>
-        <meta name="apple-mobile-web-app-title" content="fdsf" />
-        <meta
-          name="google-site-verification"
-          content="BC_JK1EkbjpDyqeFZY2W_J72-JACHfgQSI0ECviJz8I"
+      <body className={`${sourceSansPro.variable} ${bebasNeue.variable} font-sans antialiased overflow-x-hidden`}>
+        {/* Inject Schema for Search Engines */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <body className={`${sourceSansPro.variable} ${bebasNeue.variable} font-sans antialiased overflow-x-hidden`}>
-          <PageLoader />
+        
+        <PageLoader />
+        <ReactLenis root>
           <ThemeProvider
             attribute="class"
             defaultTheme="light"
@@ -105,13 +141,15 @@ export default function RootLayout({ children }) {
             disableTransitionOnChange
           >
             <section>
-              {/* <Header /> */} <NewHeader />
-              <main>{children} <Analytics /></main>
+              <NewHeader />
+              <main>
+                {children} <Analytics />
+              </main>
               <Footer />
             </section>
           </ThemeProvider>
-        </body>
-      </ReactLenis>
+        </ReactLenis>
+      </body>
     </html>
   );
 }
