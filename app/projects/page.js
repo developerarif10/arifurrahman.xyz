@@ -2,6 +2,12 @@ import Link from "next/link";
 import ProjectButton from "./_components/project-btn";
 import ProjectCard from "./_components/project-card";
 
+export const metadata = {
+  title: "Projects | Arifur Rahman",
+  description:
+    "Explore my portfolio of web development projects, showcasing my skills in Next.js, React, and modern design.",
+};
+
 export default function ProjectPage() {
   const projectData = [
     {
