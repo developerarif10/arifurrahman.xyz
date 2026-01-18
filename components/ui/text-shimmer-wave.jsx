@@ -1,6 +1,6 @@
-'use client';;
-import { motion } from 'motion/react';
+'use client';
 import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
 
 export function TextShimmerWave({
   children,
@@ -13,26 +13,29 @@ export function TextShimmerWave({
   spread = 1,
   scaleDistance = 1.1,
   rotateYDistance = 10,
-  transition
+  transition,
 }) {
-  const MotionComponent = motion.create(Component);
+  const MotionComponent = motion(Component);
 
   return (
-    (<MotionComponent
+    <MotionComponent
       className={cn(
         'relative inline-block [perspective:500px]',
         '[--base-color:#a1a1aa] [--base-gradient-color:#000]',
         'dark:[--base-color:#71717a] dark:[--base-gradient-color:#ffffff]',
         className
       )}
-      style={{ color: 'var(--base-color)' }}>
+      style={{ color: 'var(--base-color)' }}
+    >
       {children.split('').map((char, i) => {
         const delay = (i * duration * (1 / spread)) / children.length;
 
         return (
-          (<motion.span
+          <motion.span
             key={i}
-            className={cn('inline-block whitespace-pre [transform-style:preserve-3d]')}
+            className={cn(
+              'inline-block whitespace-pre [transform-style:preserve-3d]'
+            )}
             initial={{
               translateZ: 0,
               scale: 1,
@@ -58,11 +61,12 @@ export function TextShimmerWave({
               delay,
               ease: 'easeInOut',
               ...transition,
-            }}>
+            }}
+          >
             {char}
-          </motion.span>)
+          </motion.span>
         );
       })}
-    </MotionComponent>)
+    </MotionComponent>
   );
 }

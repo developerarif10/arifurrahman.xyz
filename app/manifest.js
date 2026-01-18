@@ -2,7 +2,7 @@ export default function manifest() {
   return {
     name: 'Arifur Rahman Portfolio',
     short_name: 'Arifur Rahman',
-    description: 'Full-Stack Developer Portfolio',
+    description: 'Web Developer Portfolio',
     start_url: '/',
     display: 'standalone',
     background_color: '#fff',
