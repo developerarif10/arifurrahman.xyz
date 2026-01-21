@@ -1,7 +1,6 @@
 import AboutMe from "./_components/about-me";
-import EducationSection from "./_components/education-section";
 import Recommendation from "./_components/recommendation";
-import WorkExperience from "./_components/work-experience";
+import TechStack from "./_components/tech-stack";
 
 export const metadata = {
   title: "About Arifur Rahman | Freelance Website Developer in Bangladesh",
@@ -11,18 +10,13 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <section className="min-h-screen px-6 pt-20">
-      <div className="max-w-4xl mx-auto">
-        <AboutMe />
+    <section className="min-h-screen pt-20">
+      <div className="max-w-4xl mx-auto px-6">
+        <AboutMe />   
+      </div>
+      <TechStack />
 
-        <section aria-label="Work Experience">
-          <WorkExperience />
-        </section>
-
-        <section aria-label="Education Background">
-          <EducationSection />
-        </section>
-
+      <div className="max-w-4xl mx-auto px-6">
         <section aria-label="Client Recommendations">
           <Recommendation />
         </section>
