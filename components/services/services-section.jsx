@@ -9,48 +9,41 @@ import FilledCheckedIcon from "../animatedIcons/animatedicons";
 const services = [
   {
     id: "01",
-    title: "UI/UX DESIGN",
+    title: "Brand Roadmap",
     image: "/services/Coding at Workspace.png",
     features: [
-      "User Research & Personas",
-      "Wireframing & Prototyping",
-      "Interactive Interface Design",
-      "Usability Testing & Iteration"
+      "Audience Research",
+      "Competitor & Market Analysis",
+      "Brand Positioning",
+      "Brand Naming & Messaging",
+      "Brand Strategy",
     ]
   },
-  {
+    {
     id: "02",
-    title: "GRAPHIC DESIGN",
+    title: "WEB DEVELOPMENT",
     image: "/services/Modern Office Workspace.png",
     features: [
-      "Brand Identity & Logo Design",
-      "Marketing Materials (Flyers, Brochures)",
-      "Social Media Graphics",
-      "Vector Illustrations"
+       "Frontend Development",
+       "CMS & API Integration",
+       "SEO",
+       "Motion & Animations",
+      "Landing page design and optimization",
     ]
   },
   {
     id: "03",
-    title: "WEB DESIGN",
+    title: "Digital Design",
     image: "/services/Colorful Code Display.png",
     features: [
-      "Responsive website design",
-      "Landing page design and optimization",
-      "Webflow development and customization",
-      "Website maintenance and updates"
+      "Web design",
+      "UI/UX Design",
+      "Visual Branding",
+      "Responsive Design",
+      "Product Design",
     ]
   },
-  {
-    id: "04",
-    title: "BRANDING",
-    image: "/services/Coding at Workspace.png",
-    features: [
-      "Brand Strategy & Positioning",
-      "Visual Identity Systems",
-      "Brand Guidelines",
-      "Rebranding Services"
-    ]
-  },
+
 ];
 
 const ServiceItem = ({ item, isOpen, onClick }) => {
@@ -185,11 +178,11 @@ export default function ServicesSection() {
         
         {/* Section Header */}
         <div className="flex flex-col md:flex-row justify-between items-start mb-20 gap-8">
-            <span className="text-neutral-500 uppercase tracking-wider text-sm md:text-base font-medium font-sans">
+            <h2 className="text-4xl md:text-5xl font-medium text-neutral-900 tracking-tight">
                 Services
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl leading-[1.1] tracking-tight font-medium max-w-2xl text-neutral-400 ">
-                As a web architect, I deliver end-to-end web architecture that scales,  <span className="text-neutral-900">from high-fidelity user interfaces to MERN stack integration.</span>
+            </h2>
+            <h2 className="text-3xl md:text-3xl lg:text-4xl leading-[1.1] tracking-tight font-medium max-w-2xl text-neutral-400 ">
+                I turn complicated concepts into clear design. No fluff,  <span className="text-neutral-900">just solutions that engage your customers and grow your brand. </span>
             </h2>
         </div>
 
