@@ -10,7 +10,7 @@ const services = [
   {
     id: "01",
     title: "Brand Roadmap",
-    image: "/services/Coding at Workspace.png",
+    image: "/services/service-brand_design.webp",
     features: [
       "Audience Research",
       "Competitor & Market Analysis",
@@ -22,7 +22,7 @@ const services = [
     {
     id: "02",
     title: "WEB DEVELOPMENT",
-    image: "/services/Modern Office Workspace.png",
+    image: "/services/service-web_developement.webp",
     features: [
        "Frontend Development",
        "CMS & API Integration",
@@ -34,7 +34,7 @@ const services = [
   {
     id: "03",
     title: "Digital Design",
-    image: "/services/Colorful Code Display.png",
+    image: "/services/service-web_design.webp",
     features: [
       "Web design",
       "UI/UX Design",
@@ -43,7 +43,6 @@ const services = [
       "Product Design",
     ]
   },
-
 ];
 
 const ServiceItem = ({ item, isOpen, onClick }) => {
