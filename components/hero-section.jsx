@@ -1,9 +1,9 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import MyButton from "./my-button";
 
 export default function HeroSection() {
   return (
@@ -49,11 +49,11 @@ export default function HeroSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
                     viewport={{ once: true }}
-                    className="inline-flex items-center gap-2 bg-neutral-100 rounded-full px-3 py-1.5 w-fit mb-6"
+                    className="inline-flex items-center gap-2 bg-neutral-100 rounded-sm px-3 py-1.5 w-fit mb-6"
                 >
-                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                    <div className="w-1.5 h-1.5 rounded-sm bg-green-500 animate-pulse" />
                     <span className="text-xs font-medium text-neutral-500 tracking-wide uppercase">
-                     Available for Immediate Hire
+                     Bangladesh Based  Working Globally
                     </span>
                 </motion.div>
 
@@ -90,15 +90,11 @@ export default function HeroSection() {
                     viewport={{ once: true }}
                     className="flex items-center gap-4"
                 >
-                     <Button 
-                        size="lg"
-                        className="rounded-full bg-neutral-900 text-white hover:bg-neutral-800 px-8 py-6 text-base shadow-xl shadow-neutral-900/10"
-                        asChild
-                    >
+                     <MyButton>
                         <Link href="/contact">
                           Discuss Your Project
                         </Link>
-                    </Button>
+                    </MyButton>
                 </motion.div>
             </div>
 

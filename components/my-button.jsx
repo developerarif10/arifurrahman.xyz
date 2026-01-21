@@ -1,40 +1,13 @@
-const Button = ({ children }) => {
-  return (
-    <button className="group relative flex flex-row items-center bg-[#212121] justify-center gap-2 rounded-2xl px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#8fdfff1f] transition-shadow duration-500 ease-out hover:shadow-[inset_0_-5px_10px_#8fdfff3f]">
-      <div className="absolute inset-0 block h-full w-full animate-gradient bg-gradient-to-r from-[#ffaa40]/50 via-[#9c40ff]/50 to-[#ffaa40]/50 bg-[length:var(--bg-size)_100%] [border-radius:inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-[1px] ![mask-composite:subtract]" />
 
-      <div
-        className="shrink-0 bg-border w-[1px] h-4"
-        role="none"
-        data-orientation="vertical"
-      />
-      <span className="inline animate-gradient whitespace-pre bg-gradient-to-r from-[#ffaa40] via-[#9c40ff] to-[#ffaa40] bg-[length:var(--bg-size)_100%] bg-clip-text text-transparent [--bg-size:300%] text-center">
-        {children}
-      </span>
-      <svg
-        strokeLinecap="round"
-        className="text-[#9c40ff]"
-        strokeWidth="1.5"
-        aria-hidden="true"
-        viewBox="0 0 10 10"
-        height={11}
-        width={11}
-        stroke="currentColor"
-        fill="none"
-      >
-        <path
-          strokeLinecap="round"
-          d="M0 5h7"
-          className="opacity-0 transition group-hover:opacity-100"
-        />
-        <path
-          strokeLinecap="round"
-          d="M1 1l4 4-4 4"
-          className="transition group-hover:translate-x-[3px]"
-        />
+const MyButton = ({children}) => {
+  return (
+    <button type="submit" className="flex justify-center gap-2 items-center mx-auto border border-gray-100 shadow-xl text-lg bg-gray-50 backdrop-blur-md lg:font-semibold isolation-auto border-gray-100 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-sm before:bg-emerald-500 hover:text-gray-50 before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 px-4 py-2 overflow-hidden border-2 rounded-sm group">
+      {children}
+      <svg className="w-8 h-8 justify-end group-hover:rotate-90 group-hover:bg-gray-50 text-gray-50 ease-linear duration-300 rounded-full border border-gray-700 group-hover:border-none p-2 rotate-45" viewBox="0 0 16 19" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z" className="fill-gray-800 group-hover:fill-gray-800" />
       </svg>
     </button>
   );
-};
+}
 
-export default Button;
+export default MyButton;

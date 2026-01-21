@@ -11,7 +11,7 @@ const projects = [
     title: "LumeX",
     category: "SaaS",
     tags: ["SaaS", "Dashboard Design"],
-    image: "/projects/project_1.jpeg", // Keeping existing paths
+    image: "/projects/project_1.jpeg", 
     link: "/projects/lumex",
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     title: "NeuroSync",
     category: "Healthcare",
     tags: ["Healthcare", "Mobile App"],
-    image: "/projects/project_1.jpeg", // Reuse or add new image if available
+    image: "/projects/project_1.jpeg", 
     link: "/projects/neurosync",
   },
 ];
@@ -43,7 +43,7 @@ const projects = [
 const ProjectCard = ({ project }) => {
   return (
     <Link href={project.link} className="block group">
-      <div className="relative h-[400px] md:h-[500px] w-full overflow-hidden rounded-[2rem]">
+      <div className="relative h-[400px] md:h-[500px] w-full overflow-hidden rounded-sm">
         <Image
           src={project.image}
           alt={project.title}
@@ -80,11 +80,11 @@ export default function RecentWorkCard() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-16 gap-4">
         <h2 className="text-4xl md:text-5xl font-medium text-neutral-900 tracking-tight">
-          Featured works
+          Selected works
         </h2>
         <Link
-          href="/works"
-          className="group inline-flex items-center gap-2 px-8 py-4 bg-neutral-900 hover:bg-neutral-800 text-white rounded-full transition-all duration-300 text-sm font-medium shadow-lg shadow-neutral-900/10"
+          href="/projects"
+          className="group inline-flex items-center gap-2 px-8 py-2 bg-neutral-900 hover:bg-neutral-800 text-white rounded-sm transition-all duration-300 text-sm font-medium shadow-lg shadow-neutral-900/10"
         >
           All Works
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

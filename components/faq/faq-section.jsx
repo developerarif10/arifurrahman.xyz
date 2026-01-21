@@ -45,11 +45,11 @@ const AccordionItem = ({ item, isOpen, onClick, index }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="mb-4 overflow-hidden bg-white hover:shadow-sm transition-shadow duration-300 first:rounded-t-3xl last:rounded-b-3xl rounded-2xl" // Rounded styling
+      className="mb-4 overflow-hidden bg-white hover:shadow-sm transition-shadow duration-300 " 
     >
       <button
         onClick={onClick}
-        className="flex items-center justify-between w-full p-6 text-left bg-white hover:bg-neutral-50 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-neutral-900 focus-visible:outline-offset-2 rounded-2xl"
+        className="flex items-center justify-between w-full p-6 text-left bg-white hover:bg-neutral-50 transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-neutral-900 focus-visible:outline-offset-2 rounded-sm"
       >
         <span className="text-lg md:text-xl font-medium text-neutral-900">
           {item.question}
@@ -120,7 +120,7 @@ export default function FaqSection() {
                 >
                     <Link
                     href="mailto:arifurrahman@std.cu.ac.bd"
-                    className="inline-flex items-center justify-center px-8 py-4 text-base font-medium text-white bg-neutral-900 rounded-full hover:bg-neutral-800 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 duration-300"
+                    className="inline-flex items-center justify-center px-8 py-2 text-base font-medium text-white bg-neutral-900 rounded-sm hover:bg-neutral-800 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 duration-300"
                     >
                     Email Me
                     </Link>
@@ -131,7 +131,7 @@ export default function FaqSection() {
           {/* Right Column - Accordion */}
           <div className="col-span-1 lg:col-span-7 relative">
             {/* Gray Container */}
-            <div className="bg-[#f7f7f7] rounded-[2rem] p-6 sm:p-8 relative mt-12 lg:mt-0 min-h-[400px]">
+            <div className="bg-[#f7f7f7] rounded-sm p-6 sm:p-8 relative mt-12 lg:mt-0 min-h-[400px]">
                 {/* Floating Badge */}
                 <motion.div
                 initial={{ opacity: 0, scale: 0.9, y: 10 }}
@@ -140,7 +140,7 @@ export default function FaqSection() {
                 transition={{ delay: 0.3 }}
                 className="absolute -top-4 md:-top-6 left-1/2 -translate-x-1/2 z-10"
                 >
-                <div className="bg-neutral-900 text-white px-6 py-3 rounded-full shadow-2xl text-sm font-medium relative whitespace-nowrap">
+                <div className="bg-neutral-900 text-white px-6 py-3 rounded-sm shadow-2xl text-sm font-medium relative whitespace-nowrap">
                     I'm here to help you
                     {/* Triangle pointer */}
                     <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-[1px] w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[8px] border-t-neutral-900"></div>

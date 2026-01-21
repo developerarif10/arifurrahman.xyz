@@ -25,7 +25,7 @@ export default function Home() {
 
       <FaqSection />
 
-      <div className="py-12 md:py-20 px-6 bg-white">
+      <div className="py-8 md:py-8 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <ContactCard />
         </div>

@@ -47,12 +47,12 @@ export default function ContactCard() {
   };
 
   return (
-    <div className="w-full bg-white rounded-[3rem] p-6 md:p-10 lg:p-12" id="contacts">
+    <div className="w-full bg-white rounded-sm p-6" id="contacts">
       <div className="grid lg:grid-cols-12 gap-12 items-start">
         {/* Left Column - Book a Call Card */}
         <div className="lg:col-span-5 relative">
-          <div className="bg-[#F5F5F7] rounded-[2.5rem] p-8 md:p-10 text-center space-y-8 sticky top-24">
-            <div className="relative w-24 h-24 mx-auto rounded-3xl overflow-hidden shadow-lg">
+          <div className="bg-[#F5F5F7] rounded-sm p-8 md:p-10 text-center space-y-8 sticky top-24">
+            <div className="relative w-24 h-24 mx-auto rounded-sm overflow-hidden shadow-lg">
                {/* Placeholder or user's image if available. Using a generic path or the one found previously */}
               <Image
                 src="/images/arifurrahman_black&white.webp"
@@ -70,7 +70,7 @@ export default function ContactCard() {
                 </span>
               </h3>
               
-               <div className="inline-block px-4 py-2 bg-white rounded-full text-sm text-neutral-500 shadow-sm border border-neutral-100">
+               <div className="inline-block px-4 py-2 bg-white rounded-sm text-sm text-neutral-500 shadow-sm border border-neutral-100">
                   approximately 15 minutes
                </div>
             </div>
@@ -81,7 +81,7 @@ export default function ContactCard() {
               className="group flex items-center justify-center gap-3 w-full py-4 bg-white hover:bg-neutral-50 border border-neutral-200 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.02]"
             >
               <span className="text-neutral-900 font-medium text-lg">Send message</span>
-              <div className="p-1.5 bg-[#25D366] rounded-full text-white">
+              <div className="p-1.5 bg-[#25D366] rounded-sm text-white">
                  <Phone className="w-4 h-4 fill-current" />
               </div>
             </Link>
@@ -109,7 +109,7 @@ export default function ContactCard() {
                   name="name"
                   placeholder="John Smith"
                   required
-                  className="w-full px-6 py-4 bg-[#F5F5F7] rounded-2xl border-none outline-none focus:ring-2 focus:ring-neutral-900/10 text-neutral-900 placeholder:text-neutral-400 transition-all font-medium"
+                  className="w-full px-6 py-4 bg-[#F5F5F7] rounded-sm border-none outline-none focus:ring-2 focus:ring-neutral-900/10 text-neutral-900 placeholder:text-neutral-400 transition-all font-medium"
                 />
               </div>
               <div className="space-y-2">
@@ -122,7 +122,7 @@ export default function ContactCard() {
                   name="email"
                   placeholder="johnsmith@gmail.com"
                   required
-                  className="w-full px-6 py-4 bg-[#F5F5F7] rounded-2xl border-none outline-none focus:ring-2 focus:ring-neutral-900/10 text-neutral-900 placeholder:text-neutral-400 transition-all font-medium"
+                  className="w-full px-6 py-4 bg-[#F5F5F7] rounded-sm border-none outline-none focus:ring-2 focus:ring-neutral-900/10 text-neutral-900 placeholder:text-neutral-400 transition-all font-medium"
                 />
               </div>
             </div>
@@ -135,15 +135,15 @@ export default function ContactCard() {
                 <select
                   id="service"
                   name="service"
-                  className="w-full px-6 py-4 bg-[#F5F5F7] rounded-2xl border-none outline-none focus:ring-2 focus:ring-neutral-900/10 text-neutral-900 appearance-none cursor-pointer font-medium"
+                  className="w-full px-6 py-4 bg-[#F5F5F7] rounded-sm border-none outline-none focus:ring-2 focus:ring-neutral-900/10 text-neutral-900 appearance-none cursor-pointer font-medium"
                   required
                 >
                   <option value="" disabled selected className="text-neutral-400">
                     Select...
                   </option>
-                  <option value="Web Design">Web Design</option>
-                  <option value="Web Development">Web Development</option>
-                  <option value="UI/UX Design">UI/UX Design</option>
+                   <option value="Web Development">Web Development</option><option value="Web Design">Web Design</option>
+                 
+                  <option value="Brand Roadmap">Brand Roadmap</option>
                   <option value="Other">Other</option>
                 </select>
                 <div className="absolute right-6 top-1/2 -translate-y-1/2 pointer-events-none">
@@ -162,16 +162,16 @@ export default function ContactCard() {
                 id="message"
                 name="message"
                 placeholder="Hello, I'd like to enquire about..."
-                rows={6}
+                rows={4}
                 required
-                className="w-full px-6 py-4 bg-[#F5F5F7] rounded-2xl border-none outline-none focus:ring-2 focus:ring-neutral-900/10 text-neutral-900 placeholder:text-neutral-400 resize-none transition-all font-medium"
+                className="w-full px-6 py-4 bg-[#F5F5F7] rounded-sm border-none outline-none focus:ring-2 focus:ring-neutral-900/10 text-neutral-900 placeholder:text-neutral-400 resize-none transition-all font-medium"
               />
             </div>
 
             <button
               type="submit"
               disabled={isLoading}
-              className="px-10 py-4 bg-transparent border-2 border-neutral-900 text-neutral-900 font-bold rounded-full hover:bg-neutral-900 hover:text-white transition-all duration-300 uppercase tracking-wide text-sm md:text-base disabled:opacity-50 disabled:cursor-not-allowed"
+              className="px-16 py-2 bg-transparent border-2 border-neutral-900 text-neutral-900 font-bold rounded-sm hover:bg-neutral-900 hover:text-white transition-all duration-300 uppercase tracking-wide text-sm md:text-base disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isLoading ? "Sending..." : "SUBMIT"}
             </button>
