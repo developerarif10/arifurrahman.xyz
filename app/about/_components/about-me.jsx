@@ -17,9 +17,9 @@ export default function AboutMe() {
 
               <div className="space-y-4 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
                 <p>
-                I'm a Digital Designer & Full-Stack Developer passionate about crafting meaningful, user-centered experiences. My passion is bringing ideas to life through thoughtful design, smooth animations, and responsive layouts.
+              I help brands build digital products that feel great to use. Through thoughtful design and clean code, I create experiences that look good, move smoothly, and actually work the way they should.
                 </p>
-                <p>When I'm not coding, you'll find me exploring new destinations, chasing sunsets, and finding inspiration in the beauty of nature.</p>
+                <p>When I step away from the screen, you'll find me exploring new places and chasing sunsets. Nature keeps me inspired and reminds me why beautiful experiences matter.</p>
               </div>
             </div>
           </div>
