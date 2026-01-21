@@ -43,7 +43,7 @@ export default function NewHeader() {
     <>
       <header className="fixed top-4 md:top-6 inset-x-0 z-50 flex items-center justify-center px-4 md:px-12 pointer-events-none">
         {/* Central Floating Navbar (Pill) */}
-        <div className="pointer-events-auto hidden md:flex items-center gap-1.5 p-1 rounded-full border border-black/5 bg-white/80 backdrop-blur-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+        <div className="pointer-events-auto hidden md:flex items-center gap-1.5 p-1 rounded-sm border border-black/5 bg-white/80 backdrop-blur-xl shadow-sm hover:shadow-md transition-shadow duration-300">
           
           {/* Logo Icon inside Pill (Optional uniqueness) Or just Start links */}
           <div className="pl-4 pr-1">
@@ -70,7 +70,7 @@ export default function NewHeader() {
                 {(hoveredPath === item.href || (isActive && hoveredPath === null)) && (
                   <motion.div
                     layoutId="nav-pill"
-                    className="absolute inset-0 bg-neutral-100 rounded-full -z-10"
+                    className="absolute inset-0 bg-neutral-100 rounded-sm -z-10"
                     transition={{ type: "spring", bounce: 0.15, duration: 0.5 }}
                   />
                 )}
@@ -83,7 +83,7 @@ export default function NewHeader() {
           <div className="pr-1 pl-1">
             <Button
               variant="ghost"
-              className="rounded-full bg-transparent hover:bg-neutral-100 text-neutral-900 px-5 py-1.5 h-auto text-sm font-medium transition-all"
+              className="rounded-sm bg-transparent hover:bg-neutral-100 text-neutral-900 px-5 py-1.5 h-auto text-sm font-medium transition-all"
               asChild
             >
               <Link href="/contact">
@@ -97,13 +97,13 @@ export default function NewHeader() {
         <div className="hidden md:block pointer-events-none opacity-0"></div>
 
         {/* Mobile Header Elements - Unified Pill */}
-        <div className="flex md:hidden w-full items-center justify-between pointer-events-auto top-0 relative bg-white/80 backdrop-blur-xl border border-black/5 shadow-sm rounded-full p-2">
+        <div className="flex md:hidden w-full items-center justify-between pointer-events-auto top-0 relative bg-white/80 backdrop-blur-xl border border-black/5 shadow-sm rounded-sm p-2">
              <Link href="/" className="text-lg font-bold text-black px-4 tracking-tight">
                 AR
              </Link>
              <button 
                 onClick={toggleMenu} 
-                className="p-2 rounded-full hover:bg-black/5 active:scale-95 transition-all"
+                className="p-2 rounded-sm hover:bg-black/5 active:scale-95 transition-all"
             >
                 {isOpen ? <XIcon size={22} /> : <AlignCenterIcon size={22} />}
              </button>
@@ -132,7 +132,7 @@ export default function NewHeader() {
                  </Link>
               ))}
               <div className="mt-8">
-                <Button className="rounded-full text-lg px-8 py-6 bg-black text-white" onClick={toggleMenu} asChild>
+                <Button className="rounded-sm text-lg px-8 py-6 bg-black text-white" onClick={toggleMenu} asChild>
                     <Link href="/contact">Schedule a call</Link>
                 </Button>
               </div>
