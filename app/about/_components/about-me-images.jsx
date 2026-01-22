@@ -33,13 +33,16 @@ export default function AboutMeImages(){
 
 
     const [transformStyles, setTransformStyles] = useState(desktopTransformStyles);
+    const [containerWidth, setContainerWidth] = useState(1200);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setTransformStyles(mobileTransformStyles);
+        setContainerWidth(350);
       } else {
         setTransformStyles(desktopTransformStyles);
+        setContainerWidth(1200);
       }
     };
 
@@ -63,7 +66,7 @@ export default function AboutMeImages(){
               animationDelay={0.3}
               animationStagger={0.03}
               className="custom-bounceCards relative"
-              containerWidth={1200}
+              containerWidth={containerWidth}
               containerHeight={250}
             />
           </motion.div>

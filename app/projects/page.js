@@ -96,7 +96,7 @@ export default function ProjectPage() {
                 ))}
               </div>
             </div>
-            <div className="flex justify-center items-center text-center">
+            <div className="flex justify-center items-center text-center pb-0 lg:pb-10">
               <Link href="https://github.com/developerarif10" target="__blank">
                 <ProjectButton>
                   More projects on
