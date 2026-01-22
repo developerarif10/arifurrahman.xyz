@@ -35,7 +35,10 @@ export default function AboutMeImages(){
     const [transformStyles, setTransformStyles] = useState(desktopTransformStyles);
     const [containerWidth, setContainerWidth] = useState(1200);
 
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
+    setMounted(true);
     const handleResize = () => {
       if (window.innerWidth < 768) {
         setTransformStyles(mobileTransformStyles);
@@ -50,6 +53,8 @@ export default function AboutMeImages(){
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  if (!mounted) return null;
 
 
     return (
