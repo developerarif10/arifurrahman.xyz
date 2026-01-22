@@ -15,12 +15,9 @@ export default function AboutPage() {
         <AboutMe />   
       </div>
       <TechStack />
-
-      <div className="max-w-4xl mx-auto px-6">
-        <section aria-label="Client Recommendations">
-          <Recommendation />
-        </section>
-      </div>
+      <section aria-label="Client Recommendations">
+        <Recommendation />
+      </section>
     </section>
   );
 }
