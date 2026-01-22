@@ -51,7 +51,7 @@ export default function HeroSection() {
                     viewport={{ once: true }}
                     className="inline-flex items-center gap-2 bg-neutral-100 rounded-sm px-3 py-1.5 w-fit mb-6"
                 >
-                    <div className="w-1.5 h-1.5 rounded-sm bg-green-500 animate-pulse" />
+                    <div className="w-1.5 h-1.5 rounded-sm bg-[#d3d3ff] animate-ping" />
                     <span className="text-xs font-medium text-neutral-500 tracking-wide uppercase">
                      Bangladesh Based  Working Globally
                     </span>
