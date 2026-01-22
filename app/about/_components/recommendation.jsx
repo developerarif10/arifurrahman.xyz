@@ -53,7 +53,7 @@ const Recommendation = () => {
                 </div>
 
                 <div className="space-y-6">
-                  <p className="text-neutral-600 text-[1.15rem] leading-[1.8] font-light">
+                  <p className="text-[1.15rem] font-normal">
                     {rec.text}
                   </p>
                   

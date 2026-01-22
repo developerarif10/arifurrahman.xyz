@@ -14,6 +14,11 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto px-6">
         <AboutMe />   
       </div>
+       <div className="flex items-center justify-center pt-6 lg:pt-16">
+        <h2 className="font-bebas text-center text-6xl md:text-7xl lg:text-8xl tracking-wider">
+                MODERN <br/>TECH STACK
+              </h2>
+      </div>
       <TechStack />
       <section aria-label="Client Recommendations">
         <Recommendation />
