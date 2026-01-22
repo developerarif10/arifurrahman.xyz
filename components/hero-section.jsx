@@ -1,9 +1,9 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import MyButton from "./my-button";
 
 export default function HeroSection() {
   return (
@@ -90,11 +90,11 @@ export default function HeroSection() {
                     viewport={{ once: true }}
                     className="flex items-center gap-4"
                 >
-                     <MyButton>
+                     <Button className="rounded-full px-8 py-6 text-base bg-neutral-900 hover:bg-neutral-800 text-white" asChild>
                         <Link href="/contact">
                           Discuss Your Project
                         </Link>
-                    </MyButton>
+                    </Button>
                 </motion.div>
             </div>
 

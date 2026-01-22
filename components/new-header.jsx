@@ -2,10 +2,10 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import { AlignJustify, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { AlignCenterIcon, XIcon } from "./animatedIcons/animatedicons";
 
 export default function NewHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,7 +105,7 @@ export default function NewHeader() {
                 onClick={toggleMenu} 
                 className="p-2 rounded-sm hover:bg-black/5 active:scale-95 transition-all"
             >
-                {isOpen ? <XIcon size={22} /> : <AlignCenterIcon size={22} />}
+                {isOpen ? <X size={22} /> : <AlignJustify size={22} />}
              </button>
         </div>
       </header>

@@ -1,10 +1,9 @@
 "use client";
 
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { CheckCircle2, ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import FilledCheckedIcon from "../animatedIcons/animatedicons";
 
 const services = [
   {
@@ -151,7 +150,7 @@ const ServiceItem = ({ item, isOpen, onClick }) => {
                                 transition={{ delay: idx * 0.1, duration: 0.3 }}
                                 className="flex items-center gap-4 text-lg md:text-2xl"
                              >
-                                <FilledCheckedIcon className="w-6 h-6 md:w-8 md:h-8 flex-shrink-0" strokeWidth={1.5} />
+                                <CheckCircle2 className="w-6 h-6 md:w-8 md:h-8 flex-shrink-0 text-neutral-900" strokeWidth={1.5} />
                                 <span className="text-base md:text-lg">{feature}</span>
                              </motion.li>
                         ))}
