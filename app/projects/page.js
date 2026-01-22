@@ -1,6 +1,6 @@
+import ProjectCard from "@/components/works/ProjectCard";
 import Link from "next/link";
 import ProjectButton from "./_components/project-btn";
-import ProjectCard from "./_components/project-card";
 
 export const metadata = {
   title: "Projects | Arifur Rahman",
@@ -78,7 +78,7 @@ export default function ProjectPage() {
   ];
   return (
     <div className="min-h-screen px-6 pt-20">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         <div className="flex gap-3 flex-col">
           <h1 className="text-4xl font-bold tracking-tight">Project</h1>
           <p className="text-lg text-muted-foreground">
@@ -92,7 +92,7 @@ export default function ProjectPage() {
             <div className="container py-12">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {projectData?.map((content) => (
-                  <ProjectCard key={content?.thumbnail} content={content} />
+                  <ProjectCard key={content?.thumbnail} project={content} />
                 ))}
               </div>
             </div>

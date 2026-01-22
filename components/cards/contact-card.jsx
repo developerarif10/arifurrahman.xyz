@@ -47,7 +47,7 @@ export default function ContactCard() {
   };
 
   return (
-    <div className="w-full bg-white rounded-sm p-6" id="contacts">
+    <div className="w-full bg-white rounded-sm p-0 lg:p-6" id="contacts">
       <div className="grid lg:grid-cols-12 gap-12 items-start">
         {/* Left Column - Book a Call Card */}
         <div className="lg:col-span-5 relative">
