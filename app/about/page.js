@@ -1,4 +1,5 @@
 import AboutMe from "./_components/about-me";
+import CtaSection from "./_components/cta-section";
 import Recommendation from "./_components/recommendation";
 import TechStack from "./_components/tech-stack";
 
@@ -23,6 +24,7 @@ export default function AboutPage() {
       <section aria-label="Client Recommendations">
         <Recommendation />
       </section>
+      <CtaSection />
     </section>
   );
 }
