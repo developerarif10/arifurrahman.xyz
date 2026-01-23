@@ -1,3 +1,4 @@
+import { projects } from "@/app/data/projects";
 import ProjectCard from "@/components/works/ProjectCard";
 import Link from "next/link";
 import ProjectButton from "./_components/project-btn";
@@ -9,73 +10,19 @@ export const metadata = {
 };
 
 export default function ProjectPage() {
-  const projectData = [
-    {
-      thumbnail: 1,
-      title: "TutorConnect",
-      subTitle:
-        "A modern e-learning platform that connects students with quality courses, offering an interactive and seamless learning experience.",
-      avatars: [
-        "/logo/nextjs.svg",
-        "/logo/reactjs.svg",
-        "/logo/nodejs.svg",
-        "/logo/tailwindcss.svg",
-      ],
-      thumbnaiUrl: "/projects/project_1.jpeg",
-      techStack: ["Next.js", "React.js", "Node.js", "Framer", "MongoDB"],
-      githubUrl: "https://github.com/developerarif10/tutorconnect",
-      projectUrl: "https://tutorconnects.vercel.app/",
-    },
-    {
-      thumbnail: 2,
-      title: "RedComrade",
-      subTitle:
-        "A blood donation management system that helps users find the nearest blood donors across Bangladesh with ease.",
-      avatars: [
-        "/logo/nextjs.svg",
-        "/logo/reactjs.svg",
-        "/logo/nodejs.svg",
-        "/logo/tailwindcss.svg",
-      ],
-      thumbnaiUrl: "/projects/project_2.jpeg",
-      techStack: ["Next.js", "React.js", "Node.js", "MongoDB"],
-      githubUrl: "https://github.com/developerarif10/redcomrade",
-      projectUrl: "https://redcomrade.vercel.app/",
-    },
+  // Add internal link to project objects based on slug
+  const projectList = projects.map(p => ({
+    ...p,
+    link: `/projects/${p.slug}`
+  }));
 
-    {
-      thumbnail: 3,
-      title: "Resource Vault",
-      subTitle:
-        "A platform to discover and organize useful websites by tags and search, with detailed insights for each resource.",
-      avatars: [
-        "/logo/nextjs.svg",
-        "/logo/reactjs.svg",
-        "/logo/nodejs.svg",
-        "/logo/tailwindcss.svg",
-      ],
-      thumbnaiUrl: "/projects/project_3.jpeg",
-      techStack: ["Next.js", "React.js", "Node.js", "TailwindCSS"],
-      githubUrl: "https://github.com/developerarif10/resourcevault",
-      projectUrl: "https://resourcevault.vercel.app/",
-    },
-    {
-      thumbnail: 4,
-      title: "BanglaBazaar",
-      subTitle:
-        "BanglaBazaar is a platform for buying and selling products in Bangladesh. BanglaBazaar – Your Ultimate Online Shopping Experience! Browse, Cart & Checkout with Ease",
-      avatars: [
-        "/logo/nextjs.svg",
-        "/logo/reactjs.svg",
-        "/logo/nodejs.svg",
-        "/logo/tailwindcss.svg",
-      ],
-      thumbnaiUrl: "/projects/project_4.png",
-      techStack: ["Next.js", "React.js", "Node.js", "TailwindCSS"],
-      githubUrl: "https://github.com/developerarif10/banglabazaar",
-      projectUrl: "https://banglabazaar.vercel.app/",
-    },
-  ];
+  const fullStackProjects = projectList.filter(p => !p.category || p.category !== "Art Direction"); // Approximate filter, or just show all.
+  // Actually, let's just show all for now or filter if needed. The original had "Full Stack Projects".
+  // Let's assume all main projects are full stack unless specified otherwise.
+  // For "Coral Spiral", it's "Art Direction".
+  // The user might want to separate them.
+  // Let's just render all of them for now to be safe and visible.
+  
   return (
     <div className="min-h-screen px-6 pt-20">
       <div className="max-w-7xl mx-auto">
@@ -88,11 +35,11 @@ export default function ProjectPage() {
         </div>
         <div className="my-5">
           <div>
-            <h1 className="text-2xl font-semibold">Full Stack Projects</h1>
+            <h1 className="text-2xl font-semibold">All Projects</h1>
             <div className="container py-12">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {projectData?.map((content) => (
-                  <ProjectCard key={content?.thumbnail} project={content} />
+                {projectList?.map((content) => (
+                  <ProjectCard key={content?.slug} project={content} />
                 ))}
               </div>
             </div>
