@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { AlignJustify, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -47,7 +48,7 @@ export default function NewHeader() {
           
           {/* Logo Icon inside Pill (Optional uniqueness) Or just Start links */}
           <div className="pl-4 pr-1">
-             <Link href="/" className="font-bold text-lg tracking-tight hover:opacity-70 transition-opacity">AR</Link>
+             <Link href="/" className="font-bold text-lg tracking-tight hover:opacity-70 transition-opacity"><Image src="/images/arifurrahmansite-logo.svg" alt="Logo" width={35} height={35} /></Link>
           </div>
           
           <div className="h-4 w-px bg-neutral-200 mx-1" />
@@ -98,9 +99,7 @@ export default function NewHeader() {
 
         {/* Mobile Header Elements - Unified Pill */}
         <div className="flex md:hidden w-full items-center justify-between pointer-events-auto top-0 relative bg-white/80 backdrop-blur-xl border border-black/5 shadow-sm rounded-sm p-2">
-             <Link href="/" className="text-lg font-bold text-black px-4 tracking-tight">
-                AR
-             </Link>
+              <Link href="/" className="font-bold text-lg tracking-tight hover:opacity-70 transition-opacity"><Image src="/images/arifurrahmansite-logo.svg" alt="Logo" width={30} height={30} /></Link>
              <button 
                 onClick={toggleMenu} 
                 className="p-2 rounded-sm hover:bg-black/5 active:scale-95 transition-all"
