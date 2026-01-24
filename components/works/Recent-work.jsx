@@ -25,12 +25,12 @@ const projects = [
   },
   {
     id: 3,
-    title: "Horizon Atlas",
-    category: "Travel",
-    tags: ["Travel", "Web Design"],
-    image: "/projects/project_3.jpeg",
-    link: "/projects/horizon-atlas",
-    description: "Immersive travel experience platform helping users discover and plan their next adventure with ease."
+    title: "Agenxa",
+    category: "Web",
+    tags: ["SaaS", "Web Design"],
+    image: "/projects/agenxa/agenxa-hero.webp",
+    link: "/projects/agenxa",
+    description: "A premium dark-mode interface designed to establish brand authority for a digital innovation agency."
   },
   {
     id: 4,

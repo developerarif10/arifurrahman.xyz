@@ -1,54 +1,31 @@
 export const projects = [
   {
-    slug: "coral-spiral",
-    thumbnail: 5,
-    title: "Coral Spiral Abstract",
-    subTitle: "A separate exploration of organic forms and soft, tactile textures created within a digital 3D space.",
-    category: "Art Direction",
-    role: "Art Direction",
-    date: "May 20, 2023",
+    slug: "agenxa",
+    thumbnail: 1,
+    title: "Agenxa",
+    subTitle: "A premium dark-mode interface designed to establish brand authority for a digital innovation agency.",
+    category: "Digital Agency",
+    role: "Digital Agency",
+    date: "December 2024",
     context: "Personal Project",
-    tools: "Blender, Octane",
+    tools: "Framer, Figma, Nextjs",
     avatars: [],
-    thumbnaiUrl: "/projects/coral-spiral/hero.png", // Assuming this path exists from the previous file
-    techStack: ["Design", "3D", "Art Direction"],
+    thumbnaiUrl: "/projects/agenxa/agenxa-hero.webp", 
+    techStack: ["Design", "Web Design"],
     githubUrl: "#",
     projectUrl: "#",
     images: {
-      hero: "/projects/coral-spiral/hero.png",
-      purpose: "/projects/coral-spiral/purpose.png",
-      solution1: "/projects/coral-spiral/solution1.png",
-      solution2: "/projects/coral-spiral/solution2.png",
-      summary: "/projects/coral-spiral/summary.png",
+      hero: "/projects/agenxa/agenxa-hero.webp",
+      fullLanding: "/projects/agenxa/agenxa.webp",
     },
     sections: {
       purpose: {
-        title: "Purpose",
+        title: "Project Overview",
         content: [
-          "The Coral Spiral Abstract project was an exploration of organic forms and soft, tactile textures created within a digital 3D space. The goal was to mimic the natural mathematical perfection of nautilus shells while introducing a surreal, matte coral aesthetic that feels soft to the touch.",
-          "This visual study focuses on the interplay of light and shadow on curved surfaces, aiming to create a sense of calm and satisfy the viewer's desire for perfect geometry."
+          "For this project, I wanted to break away from the standard corporate 'white and blue' look that every digital agency seems to have. The goal for Agenxa was to build a platform that felt immediate and premium. I went with a dark-mode aesthetic not just for the style points, but to create high contrast for the portfolio pieces—making the clients work pop against the background. The real challenge was balancing the abstract visual elements (like the 3D fluid shapes) with actual usability.",
+          "I used a strict grid system to keep the typography clean and readable, ensuring that while the site feels artistic, the user flow toward the 'Let's Talk' CTA remains intuitive. Its designed to be a high-performance, scalable solution that positions the agency as a modern leader in tech."
         ]
       },
-      solution: {
-        title: "Solution",
-        content: [
-          "To achieve the desired look, I utilized procedural generation techniques to create the spiral geometry, ensuring a perfect mathematical curve. The material shading was key; a subsurface scattering effect was applied to the coral material to give it a translucent, waxy appearance similar to real marine life or high-end plastic art.",
-          "The lighting setup mimicked a high-end studio environment, using softboxes to create smooth gradients across the ridges of the spiral."
-        ]
-      },
-      challenge: {
-        title: "Challenge",
-        content: [
-          "One of the main challenges was balancing the color palette. The coral pink needed to be vibrant but not overwhelming. Achieving the correct balance of saturation and brightness required multiple iterations and test renders under different lighting conditions.",
-          "Additionally, optimizing the high-poly geometry for faster rendering without losing the smooth curvature was a technical obstacle that required careful retopology."
-        ]
-      },
-      summary: {
-        title: "Summary",
-        content: [
-          "The final result is a cohesive set of abstract 3D visuals that evoke a sense of organic tranquility. The \"Coral Spiral\" stands as a testament to the beauty of mathematical forms in nature, translated through a modern digital lens. This project advanced my skills in procedural modeling and material design."
-        ]
-      }
     }
   },
   {
