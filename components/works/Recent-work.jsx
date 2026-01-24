@@ -34,12 +34,12 @@ const projects = [
   },
   {
     id: 4,
-    title: "NeuroSync",
-    category: "Healthcare",
-    tags: ["Healthcare", "Mobile App"],
-    image: "/projects/project_1.jpeg", 
-    link: "/projects/neurosync",
-    description: "Advanced healthcare application connecting patients with specialists through secure, real-time consultation."
+    title: "Fintech Trading Platform",
+    category: "Fintech",
+    tags: ["Fintech", "Trading Platform"],
+    image: "/projects/liquidbroker/liquidbroker-video.mp4", 
+    link: "/projects/liquid-broker",
+    description: "A modern trading platform interface combining dark-mode aesthetics with glassmorphism to simplify complex market data."
   },
 ];
 

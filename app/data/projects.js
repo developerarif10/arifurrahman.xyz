@@ -5,7 +5,7 @@ export const projects = [
     title: "Agenxa",
     subTitle: "A premium dark-mode interface designed to establish brand authority for a digital innovation agency.",
     category: "Digital Agency",
-    role: "Digital Agency",
+    role: "Design & Developer",
     date: "December 2024",
     context: "Personal Project",
     tools: "Framer, Figma, Nextjs",
@@ -24,6 +24,35 @@ export const projects = [
         content: [
           "For this project, I wanted to break away from the standard corporate 'white and blue' look that every digital agency seems to have. The goal for Agenxa was to build a platform that felt immediate and premium. I went with a dark-mode aesthetic not just for the style points, but to create high contrast for the portfolio pieces—making the clients work pop against the background. The real challenge was balancing the abstract visual elements (like the 3D fluid shapes) with actual usability.",
           "I used a strict grid system to keep the typography clean and readable, ensuring that while the site feels artistic, the user flow toward the 'Let's Talk' CTA remains intuitive. Its designed to be a high-performance, scalable solution that positions the agency as a modern leader in tech."
+        ]
+      },
+    }
+  },
+   {
+    slug: "liquid-broker",
+    thumbnail: 1,
+    title: "Liquid Broker Trading Landing Page",
+    subTitle: "A modern trading platform interface combining dark-mode aesthetics with glassmorphism to simplify complex market data.",
+    category: "Fintech",
+    role: "Design & Developer",
+    date: "December 2025",
+    context: "Fintech",
+    tools: "Framer, Figma",
+    avatars: [],
+    thumbnaiUrl:"/projects/liquidbroker/liquidbroker-video.mp4", 
+    techStack: ["Framer", "Tailwindcss"],
+    githubUrl: "#",
+    projectUrl: "#",
+    images: {
+      'hero': "/projects/liquidbroker/liquid-broker-hero.webp",
+      'fullLanding': "/projects/liquidbroker/liquid-broker-hero.webp",
+    },
+    sections: {
+      purpose: {
+        title: "Project Overview",
+        content: [
+          "The goal was to establish Liquid Brokers as a secure, high-end environment for modern traders (Purpose). The challenge was presenting complex financial data without overwhelming the user or looking like a dated spreadsheet (Challenge). .",
+          "The solution is a sleek, dark-themed interface featuring glassmorphism elements and abstract fluid visuals to represent market liquidity, creating an atmosphere of focus and premium technology (Solution)."
         ]
       },
     }
@@ -81,32 +110,7 @@ export const projects = [
     },
     sections: {}
   },
-  {
-    slug: "resource-vault",
-    thumbnail: 3,
-    title: "Resource Vault",
-    subTitle:
-      "A platform to discover and organize useful websites by tags and search, with detailed insights for each resource.",
-    avatars: [
-      "/logo/nextjs.svg",
-      "/logo/reactjs.svg",
-      "/logo/nodejs.svg",
-      "/logo/tailwindcss.svg",
-    ],
-    thumbnaiUrl: "/projects/project_3.jpeg",
-    techStack: ["Next.js", "React.js", "Node.js", "TailwindCSS"],
-    githubUrl: "https://github.com/developerarif10/resourcevault",
-    projectUrl: "https://resourcevault.vercel.app/",
-    description: "A curated collection of developer resources.",
-    role: "Frontend Developer",
-    date: "2023",
-    context: "Personal Tool",
-    tools: "Next.js, Tailwind",
-    images: {
-        hero: "/projects/project_3.jpeg"
-    },
-    sections: {}
-  },
+  
   {
     slug: "banglabazaar",
     thumbnail: 4,

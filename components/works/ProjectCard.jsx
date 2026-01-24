@@ -1,19 +1,31 @@
-"use client";
-
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 const ProjectCard = ({ project }) => {
+  const mediaUrl = project.image || project.thumbnaiUrl;
+  const isVideo = mediaUrl?.toLowerCase().endsWith(".mp4") || mediaUrl?.toLowerCase().endsWith(".webm");
+
   return (
     <Link href={project.link || project.projectUrl || "#"} className="block group w-full" target={project.target || "_self"}>
-      <div className="relative aspect-[16/12] w-full overflow-hidden rounded-sm bg-neutral-900">
-        <Image
-          src={project.image || project.thumbnaiUrl}
-          alt={project.title}
-          fill
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
-        />
+      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-sm bg-neutral-900">
+        {isVideo ? (
+          <video
+            src={mediaUrl}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        ) : (
+          <Image
+            src={mediaUrl}
+            alt={project.title}
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        )}
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none" />
 

@@ -61,14 +61,25 @@ export default function ProjectDetailPage({ params }) {
           </div>
 
           {/* Hero Image */}
-          <div className="relative w-full h-[50vh] md:h-[80vh] bg-gray-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-24">
-            <Image
-              src={project.thumbnaiUrl}
-              alt={`${project.title} Hero`}
-              fill
-              className="object-cover object-center"
-              priority
-            />
+          <div className="relative w-full h-[50vh] md:h-[100vh] bg-gray-100 dark:bg-zinc-900 rounded-3xl overflow-hidden mb-24">
+            {(project.thumbnaiUrl?.toLowerCase().endsWith(".mp4") || project.thumbnaiUrl?.toLowerCase().endsWith(".webm")) ? (
+              <video
+                src={project.thumbnaiUrl}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover object-center"
+              />
+            ) : (
+              <Image
+                src={project.thumbnaiUrl}
+                alt={`${project.title} Hero`}
+                fill
+                className="object-cover object-center"
+                priority
+              />
+            )}
           </div>
         </div>
       </section>
