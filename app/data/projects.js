@@ -112,48 +112,67 @@ export const projects = [
   },
   
   {
-    slug: "banglabazaar",
-    thumbnail: 4,
-    title: "BanglaBazaar",
+    slug: "oyster",
+    thumbnail: 1,
+    title: "Oyster",
     subTitle:
-      "BanglaBazaar is a platform for buying and selling products in Bangladesh. Your Ultimate Online Shopping Experience!",
-    avatars: [
-      "/logo/nextjs.svg",
-      "/logo/reactjs.svg",
-      "/logo/nodejs.svg",
-      "/logo/tailwindcss.svg",
-    ],
-    thumbnaiUrl: "/projects/project_4.png",
-    techStack: ["Next.js", "React.js", "Node.js", "TailwindCSS"],
-    githubUrl: "https://github.com/developerarif10/banglabazaar",
-    projectUrl: "https://banglabazaar.vercel.app/",
-    description: "E-commerce platform for local market.",
-    role: "Full Stack Developer",
-    date: "2024",
-    context: "Startup",
-    tools: "Next.js, Node.js",
+      "A clean, responsive mega-menu designed to simplify complex information architecture for a global HR platform.",
+   
+    thumbnaiUrl: "/projects/Oyster-Drop Down-Menu-Link-on-Hover.mp4",
+    techStack: ["Next.js", "Figma", "Framer", "TailwindCSS"],
+    githubUrl: "",
+    category: "UI Components",
+    projectUrl: "",
+    description: "",
+    role: "UI/UX Designer & Developer",
+    date: "2026",
+    context: "SaaS, HR Tech",
+    tools: "Next.js, Framer, Figma",
     images: {
-        hero: "/projects/project_4.png"
+        hero: "/projects/Oyster-Drop Down-Menu-Link-on-Hover.mp4"
     },
-    sections: {}
+    sections: {
+      purpose: {
+        title: "Project Overview",
+        content: [
+          "This project was all about Information Architecture. When a product has as many features as Oyster—from 'Multi-country Payroll' to 'Contractor Conversion'—a standard dropdown just doesn't cut it. Users get lost in the text.",
+          "I built this mega-menu to act almost like a map. I separated the operational tools (HR Solutions) from the technical tools (API, Integrations) so different user personas can find what they need instantly. The hover states are intentional; they highlight the active selection clearly while keeping the rest of the options visible but secondary. It's a strict, utility-first design meant to work seamlessly for a B2B audience that values speed over flash."
+        ]
+      },
+    }
   },
-   {
-      slug: "glossy-geometric",
-      thumbnail: 10,
-      title: "Glossy Geometric",
-      subTitle: "A collection of 3D geometric shapes with glossy finishes.",
-      avatars: [],
-      thumbnaiUrl: "/projects/project_1.jpeg", // Placeholder
-      techStack: ["Design", "3D", "Art Direction"],
-      githubUrl: "#",
-      projectUrl: "#",
-      role: "Art Director",
-      date: "2023",
-      context: "Art",
-      tools: "Blender",
-      images: { hero: "/projects/project_1.jpeg" },
-      sections: {}
+
+    {
+    slug: "amazecard",
+    thumbnail: 1,
+    title: "Amazecard",
+    subTitle:
+      "A vibrant, conversion-focused landing page for a digital gift card platform using modern gradients and 3D assets",
+   
+    thumbnaiUrl: "/projects/amazecard.webp",
+    techStack: ["Next.js", "Figma", "Framer", "TailwindCSS"],
+    githubUrl: "",
+    category: "Web Design",
+    projectUrl: "",
+    description: "",
+    role: "UI/UX Designer & Developer",
+    date: "2026",
+    context: "E-commerce , Fintech",
+    tools: "Next.js, Framer, Figma",
+    images: {
+        hero: "/projects/amazecard.webp"
     },
+    sections: {
+      purpose: {
+        title: "Project Overview",
+        content: [
+          "For this project, I wanted to flip the script on fintech design. Usually, money apps are blue, gray, and boring. For Amazecard, I wanted it to feel like opening a present.",
+          "I used a warm, mesh-gradient background to create a welcoming, energetic vibe right from the hero section. The main focus is the 3D card stack—it adds depth and immediately shows the user what they are buying (Amazon, Apple, etc.) without them having to read a wall of text. The 'Buy a card' button uses a glassmorphism glow to draw the eye, making the primary call-to-action impossible to miss. It's simple, secure, but visually loud in a good way."
+        ]
+      },
+    }
+  },
+   
     {
       slug: "fighting-gravity",
       thumbnail: 11,
