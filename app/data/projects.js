@@ -186,7 +186,7 @@ export const projects = [
       role: "Designer & Developer",
       date: "2025",
       context: "Modern ",
-      tools: "Redshift",
+      tools: "Nextjs, Framer Motion, Figma",
       images: { hero: "/projects/agero.webp" },
       sections: {
         purpose: {
