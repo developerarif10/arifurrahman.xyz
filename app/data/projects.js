@@ -28,6 +28,37 @@ export const projects = [
       },
     }
   },
+
+   {
+    slug: "chandee-shop",
+    thumbnail: 1,
+    title: "Chandee",
+    subTitle: "A premium dark-mode interface designed to establish brand authority for a digital innovation agency.",
+    category: "Sleep Salon",
+    role: "Design & Developer",
+    date: "December 2025",
+    context: "Business",
+    tools: "WordPress, MySQL, PHP",
+    avatars: [],
+    thumbnaiUrl: "/projects/Chandee.webp", 
+    techStack: ["Design", "Web Design"],
+    githubUrl: "#",
+    projectUrl: "https://chandee.shop/",
+    images: {
+      hero: "/projects/Chandee.webp",
+      fullLanding: "/projects/Chandee.webp",
+    },
+    sections: {
+      purpose: {
+        title: "Project Overview",
+        content: [
+          "The project scope involved a complete website build designed to transition the business from a traditional massage shop to a premium wellness brand. The goal was to create a high-performance, conversion-focused website that harmonizes the founders' unique story with a seamless user experience.",
+        ]
+      },
+    }
+  },
+
+
    {
     slug: "liquid-broker",
     thumbnail: 1,
@@ -194,6 +225,31 @@ export const projects = [
           content: [
             "For this project, I wanted to flip the script on fintech design. Usually, money apps are blue, gray, and boring. For Amazecard, I wanted it to feel like opening a present.",
             "I used a warm, mesh-gradient background to create a welcoming, energetic vibe right from the hero section. The main focus is the 3D card stack—it adds depth and immediately shows the user what they are buying (Amazon, Apple, etc.) without them having to read a wall of text. The 'Buy a card' button uses a glassmorphism glow to draw the eye, making the primary call-to-action impossible to miss. It's simple, secure, but visually loud in a good way."
+          ]
+        },
+      }
+    },
+
+      {
+      slug: "#",
+      thumbnail: 1,
+      title: "Grow",
+      subTitle: "A motion design project for a digital marketing company.",
+      avatars: [],
+      thumbnaiUrl: "/projects/grow.webp",
+       techStack: ["Motion", "Nextjs", "Figma", "Framer", "TailwindCSS"],
+      githubUrl: "#",
+      projectUrl: "#",
+      role: "Designer & Developer",
+      date: "2025",
+      context: "Modern ",
+      tools: "Nextjs, Framer Motion, Figma",
+      images: { hero: "/projects/grow.webp" },
+      sections: {
+        purpose: {
+          title: "",
+          content: [
+            
           ]
         },
       }

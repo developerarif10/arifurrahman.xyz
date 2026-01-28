@@ -16,12 +16,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "Planza",
+    title: "Chandee Shop",
     category: "Framer Website",
-    tags: ["Framer Website", "Development"],
-    image: "/projects/project_2.jpeg",
-    link: "/projects/plantza",
-    description: "High-performance marketing site built with Framer, focused on conversion optimization and smooth animations."
+    tags: [ "Development", "UI/UX Design"],
+    image: "/projects/Chandee.webp",
+    link: "/projects/chandee-shop",
+    description: "The objective was to redesign the About Us page to transition the brand from a generic spa to a unique 'Sleep Salon' concept."
   },
   {
     id: 3,
