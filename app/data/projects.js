@@ -174,20 +174,28 @@ export const projects = [
   },
    
     {
-      slug: "fighting-gravity",
-      thumbnail: 11,
-      title: "Fighting Gravity",
-      subTitle: "Abstract visual exploration of anti-gravity concepts.",
+      slug: "agero",
+      thumbnail: 1,
+      title: "Agero",
+      subTitle: "A motion design project for a car insurance company.",
       avatars: [],
-      thumbnaiUrl: "/projects/project_2.jpeg",
-       techStack: ["Motion", "CGI"],
+      thumbnaiUrl: "/projects/agero.webp",
+       techStack: ["Motion", "Nextjs", "Figma", "Framer", "TailwindCSS"],
       githubUrl: "#",
       projectUrl: "#",
-      role: "Motion Designer",
-      date: "2023",
-      context: "Art",
+      role: "Designer & Developer",
+      date: "2025",
+      context: "Modern ",
       tools: "Redshift",
-      images: { hero: "/projects/project_2.jpeg" },
-      sections: {}
+      images: { hero: "/projects/agero.webp" },
+      sections: {
+        purpose: {
+          title: "Project Overview",
+          content: [
+            "For this project, I wanted to flip the script on fintech design. Usually, money apps are blue, gray, and boring. For Amazecard, I wanted it to feel like opening a present.",
+            "I used a warm, mesh-gradient background to create a welcoming, energetic vibe right from the hero section. The main focus is the 3D card stack—it adds depth and immediately shows the user what they are buying (Amazon, Apple, etc.) without them having to read a wall of text. The 'Buy a card' button uses a glassmorphism glow to draw the eye, making the primary call-to-action impossible to miss. It's simple, secure, but visually loud in a good way."
+          ]
+        },
+      }
     },
 ];
