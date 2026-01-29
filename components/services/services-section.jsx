@@ -6,20 +6,9 @@ import Image from "next/image";
 import { useRef, useState } from "react";
 
 const services = [
-  {
-    id: "01",
-    title: "Brand Roadmap",
-    image: "/services/service-brand_design.webp",
-    features: [
-      "Audience Research",
-      "Competitor & Market Analysis",
-      "Brand Positioning",
-      "Brand Naming & Messaging",
-      "Brand Strategy",
-    ]
-  },
+ 
     {
-    id: "02",
+    id: "01",
     title: "WEB DEVELOPMENT",
     image: "/services/service-web_developement.webp",
     features: [
@@ -31,8 +20,8 @@ const services = [
     ]
   },
   {
-    id: "03",
-    title: "Digital Design",
+    id: "02",
+    title: "Web Design",
     image: "/services/service-web_design.webp",
     features: [
       "Web design",
@@ -40,6 +29,30 @@ const services = [
       "Visual Branding",
       "Responsive Design",
       "Product Design",
+    ]
+  },
+  {
+    id: "03",
+    title: "No Code Development",
+    image: "/services/no-code.jpg",
+    features: [
+      "Build fast websites Framer",
+      "Webflow helping you launch quickly",
+      "Perfect for startups",
+      "Easy to edit and maintain",
+      "Modern & Scalable",
+    ]
+  },
+   {
+    id: "04",
+    title: "Brand Roadmap",
+    image: "/services/service-brand_design.webp",
+    features: [
+      "Audience Research",
+      "Competitor & Market Analysis",
+      "Brand Positioning",
+      "Brand Naming & Messaging",
+      "Brand Strategy",
     ]
   },
 ];
