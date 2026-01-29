@@ -71,7 +71,7 @@ export default function NewHeader() {
                 {(hoveredPath === item.href || (isActive && hoveredPath === null)) && (
                   <motion.div
                     layoutId="nav-pill"
-                    className="absolute inset-0 bg-[#d3d3ff] rounded-sm -z-10"
+                    className="absolute inset-0 bg-neutral-100 rounded-sm -z-10"
                     transition={{ type: "spring", bounce: 0.15, duration: 0.5 }}
                   />
                 )}
@@ -84,7 +84,7 @@ export default function NewHeader() {
           <div className="pr-1 pl-1">
             <Button
               variant="ghost"
-              className="rounded-sm bg-transparent hover:bg-[#d3d3ff] text-neutral-900 px-5 py-1.5 h-auto text-sm font-medium transition-all"
+              className="rounded-sm bg-black text-white hover:bg-black/80 hover:text-white px-5 py-1.5 h-auto text-sm font-medium transition-all"
               asChild
             >
               <Link href="/contact">
@@ -131,7 +131,7 @@ export default function NewHeader() {
                  </Link>
               ))}
               <div className="mt-8">
-                <Button className="rounded-sm text-lg px-8 py-6 bg-black text-white" onClick={toggleMenu} asChild>
+                <Button className="rounded-sm text-lg px-8 py-6 bg-[#d1beff] text-black hover:bg-[#d1beff]/80" onClick={toggleMenu} asChild>
                     <Link href="/contact">Schedule a call</Link>
                 </Button>
               </div>
