@@ -90,9 +90,9 @@ export default function HeroSection() {
                     viewport={{ once: true }}
                     className="flex items-center gap-4"
                 >
-                     <Button className="rounded-sm px-8 py-6 text-base bg-[#d1beff] hover:bg-[#d1beff]/80 text-black active:scale-95" asChild>
-                        <Link href="/contact">
-                          Discuss Your Project
+                     <Button className="rounded-sm px-6 py-[1.35rem] text-base bg-[#d1beff] hover:bg-[#d1beff]/80 text-black active:scale-95" asChild>
+                        <Link href="https://cal.com/arifur-rahman/discovery-call">
+                          Book an intro call     <Image src="/images/cal-com.webp" alt="cal arifur rahman" width={20} height={20} />
                         </Link>
                     </Button>
                 </motion.div>
