@@ -30,10 +30,10 @@ export default function Footer() {
               Email :
             </h3>
             <a
-              href="mailto:arifurrahman@std.cu.ac.bd"
+              href="mailto:arifur.rahman@std.cu.ac.bd"
               className="block text-2xl md:text-3xl font-bold tracking-tight hover:opacity-80 transition-opacity"
             >
-              arifurrahman@std.cu.ac.bd
+              arifur.rahman@std.cu.ac.bd
             </a>
           </div>
 
@@ -62,7 +62,7 @@ export default function Footer() {
               <Link href="https://www.instagram.com/arifurrahman_rafi/" className="hover:opacity-80 transition-opacity">
                 <Instagram className="w-8 h-8" />
               </Link>
-               <Link href="www.linkedin.com/in/arifurrahmanrafi" className="hover:opacity-80 transition-opacity">
+               <Link href="https://www.linkedin.com/in/arifurrahmanrafi" className="hover:opacity-80 transition-opacity">
                 <Linkedin className="w-8 h-8" />
               </Link>
                 <Link href="https://x.com/iamarifurrahman" className="hover:opacity-80 transition-opacity">

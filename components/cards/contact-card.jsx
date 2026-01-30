@@ -1,7 +1,6 @@
 "use client";
 
 import emailjs from "emailjs-com";
-import { Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -64,7 +63,7 @@ export default function ContactCard() {
 
             <div className="space-y-4">
               <h3 className="text-2xl font-medium text-neutral-900 leading-tight">
-                Prefer a quick chat?{" "}
+                Prefer a quick video chat?{" "}
                 <span className="text-neutral-500">
                   Let's hope on a call and explore the best way to bring your ideas to life
                 </span>
@@ -76,14 +75,12 @@ export default function ContactCard() {
             </div>
 
             <Link
-              href="https://wa.me/8801685366704"
+              href="https://cal.com/arifur-rahman/discovery-call"
               target="_blank"
               className="group flex items-center justify-center gap-3 w-full py-4 bg-white hover:bg-neutral-50 border border-neutral-200 rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md hover:scale-[1.02]"
             >
-              <span className="text-neutral-900 font-medium text-lg">Send message</span>
-              <div className="p-1.5 bg-[#25D366] rounded-sm text-white">
-                 <Phone className="w-4 h-4 fill-current" />
-              </div>
+              <span className="text-neutral-900 font-medium text-lg">Send message</span>         
+    <Image src="/images/cal-com.webp" alt="cal arifur rahman" width={20} height={20} className="rounded-full"/>
             </Link>
           </div>
         </div>

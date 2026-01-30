@@ -119,7 +119,7 @@ export default function FaqSection() {
                     transition={{ delay: 0.2 }}
                 >
                     <Link
-                    href="mailto:arifurrahman@std.cu.ac.bd"
+                    href="mailto:arifur.rahman@std.cu.ac.bd"
                     className="inline-flex items-center justify-center px-8 py-2 text-base font-medium text-white bg-neutral-900 rounded-sm hover:bg-neutral-800 transition-colors shadow-lg hover:shadow-xl hover:-translate-y-0.5 duration-300"
                     >
                     Email Me
