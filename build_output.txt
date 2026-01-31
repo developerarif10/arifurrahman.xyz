@@ -1,0 +1,28 @@
+
+> arifurrahman.xyz@0.1.0 build
+> next build
+
+   ▲ Next.js 15.1.11
+   - Environments: .env
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+ ⨯ ESLint: Cannot serialize key "parse" in "parser": Function values are not supported.
+   Collecting page data ...
+   Generating static pages (0/21) ...
+   Generating static pages (5/21) 
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+ReferenceError: ProcessSection is not defined
+    at c (C:\Users\ThinkPad\Desktop\Personal Portfolio\arifurrahman.xyz\.next\server\app\page.js:1:32491)
+    at ex (C:\Users\ThinkPad\Desktop\Personal Portfolio\arifurrahman.xyz\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:84:13458)
+    at e (C:\Users\ThinkPad\Desktop\Personal Portfolio\arifurrahman.xyz\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:84:17356)
+    at eI (C:\Users\ThinkPad\Desktop\Personal Portfolio\arifurrahman.xyz\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:84:17818)
+    at Array.toJSON (C:\Users\ThinkPad\Desktop\Personal Portfolio\arifurrahman.xyz\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:84:14964)
+    at stringify (<anonymous>)
+    at eH (C:\Users\ThinkPad\Desktop\Personal Portfolio\arifurrahman.xyz\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:84:26321)
+    at eq (C:\Users\ThinkPad\Desktop\Personal Portfolio\arifurrahman.xyz\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:84:26551)
+    at ez (C:\Users\ThinkPad\Desktop\Personal Portfolio\arifurrahman.xyz\node_modules\next\dist\compiled\next-server\app-page.runtime.prod.js:84:27106)
+    at AsyncLocalStorage.run (node:internal/async_local_storage/async_context_frame:63:14)
+Export encountered an error on /page: /, exiting the build.
+ ⨯ Next.js build worker exited with code: 1 and signal: null

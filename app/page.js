@@ -2,6 +2,7 @@
 import ContactCard from "@/components/cards/contact-card";
 import FaqSection from "@/components/faq/faq-section";
 import HeroSection from "@/components/hero-section";
+import ProcessSection from "@/components/sections/process-section";
 import TaglineSection from "@/components/sections/tagline-section";
 import ServicesSection from "@/components/services/services-section";
 import RecentWorkCard from "@/components/works/Recent-work";
@@ -22,6 +23,8 @@ export default function Home() {
       </section>
 
       <ServicesSection />
+      
+      <ProcessSection />
 
       <FaqSection />
 
