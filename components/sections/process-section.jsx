@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MessageSquare, MonitorSmartphone, Rocket } from "lucide-react";
+import Image from "next/image";
 
 const steps = [
   {
@@ -9,7 +9,7 @@ const steps = [
     title: "Discovery",
     timeline: "1-2 DAYS",
     description: "We dive deep into your goals, audience, and vision to build a solid foundation for success.",
-    icon: <MessageSquare strokeWidth={1.5} className="w-10 h-10 text-orange-500" />,
+    image: "/features/discoverycall.webp",
     color: "text-orange-500",
   },
   {
@@ -17,7 +17,7 @@ const steps = [
     title: "Design & Build",
     timeline: "2-3 WEEKS",
     description: "I craft a stunning, high-converting website tailored to your brand and optimized for performance.",
-    icon: <MonitorSmartphone strokeWidth={1.5} className="w-10 h-10 text-blue-500" />,
+    image: "/features/design-and-development.webp",
     color: "text-blue-500",
   },
   {
@@ -25,7 +25,7 @@ const steps = [
     title: "Launch & Scale",
     timeline: "1-2 DAYS",
     description: "We go live with a flawless launch, ensuring your business is ready to grow and succeed.",
-    icon: <Rocket strokeWidth={1.5} className="w-10 h-10 text-purple-500" />,
+    image: "/features/deployment-and-live.webp",
     color: "text-purple-500",
   },
 ];
@@ -59,19 +59,22 @@ export default function ProcessSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2, duration: 0.5 }}
-              className="relative z-10 bg-white p-8 rounded-3xl border border-neutral-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full"
+              className="relative z-10 bg-white p-8 rounded-sm border border-neutral-100 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col h-full"
             >
-              <div className="mb-8 flex justify-between items-start">
-                  <span className={`text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full bg-neutral-100 ${step.color?.replace('text-', 'text-') || 'text-neutral-600'}`}>
+              <div className="mb-6 flex justify-between items-start">
+                  <span className={`text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-sm bg-neutral-100 ${step.color?.replace('text-', 'text-') || 'text-neutral-600'}`}>
                     {step.timeline}
                   </span>
               </div>
 
-               {/* Icon / Graphic Placeholder - keeping it minimal as requested */}
-              <div className="mb-8 p-6 bg-neutral-50 rounded-2xl flex items-center justify-center aspect-video w-full group overflow-hidden">
-                 <div className="transform transition-transform duration-500 group-hover:scale-110">
-                    {step.icon}
-                 </div>
+               {/* Process Image */}
+              <div className="mb-8 bg-neutral-50 rounded-sm relative aspect-video w-full overflow-hidden shadow-inner">
+                 <Image
+                    src={step.image}
+                    alt={step.title}
+                    fill
+                    className="object-cover transform transition-transform duration-700 hover:scale-105"
+                 />
               </div>
 
               <div className="mt-auto">
