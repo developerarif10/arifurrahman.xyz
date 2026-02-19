@@ -1,4 +1,35 @@
 export const projects = [
+
+  {
+    slug: "odommodigital",
+    thumbnail: 1,
+    title: "odommo digital",
+    subTitle: "A premium dark-mode interface designed to establish brand authority for a digital innovation agency.",
+    category: "Digital Agency",
+    role: "Design & Developer",
+    date: "December 2024",
+    context: "Personal Project",
+    tools: "Framer, Figma, Nextjs",
+    avatars: [],
+    thumbnaiUrl: "/projects/odommodigital/odommo.webp", 
+    techStack: ["Design", "Web Design"],
+    githubUrl: "#",
+    projectUrl: "#",
+    images: {
+      hero: "/projects/odommodigital/odommo.webp",
+      fullLanding: "/projects/odommodigital/odommo-full.webp",
+    },
+    sections: {
+      purpose: {
+        title: "Project Overview",
+        content: [
+          "For this project, I wanted to break away from the standard corporate 'white and blue' look that every digital agency seems to have. The goal for Agenxa was to build a platform that felt immediate and premium. I went with a dark-mode aesthetic not just for the style points, but to create high contrast for the portfolio pieces—making the clients work pop against the background. The real challenge was balancing the abstract visual elements (like the 3D fluid shapes) with actual usability.",
+          "I used a strict grid system to keep the typography clean and readable, ensuring that while the site feels artistic, the user flow toward the 'Let's Talk' CTA remains intuitive. Its designed to be a high-performance, scalable solution that positions the agency as a modern leader in tech."
+        ]
+      },
+    }
+  },
+
   {
     slug: "agenxa",
     thumbnail: 1,

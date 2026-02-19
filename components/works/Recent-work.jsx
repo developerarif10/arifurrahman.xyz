@@ -7,11 +7,11 @@ import Link from "next/link";
 const projects = [
   {
     id: 1,
-    title: "LumeX",
+    title: "Odommo Digital",
     category: "SaaS",
     tags: ["SaaS", "Dashboard Design"],
-    image: "/projects/project_1.jpeg", 
-    link: "/projects/lumex",
+    image: "/projects/odommodigital/odommo.webp", 
+    link: "/projects/odommodigital",
     description: "A comprehensive dashboard solution for modern SaaS platforms, featuring real-time analytics and intuitive user management."
   },
   {
