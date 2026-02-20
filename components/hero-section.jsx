@@ -64,7 +64,7 @@ export default function HeroSection() {
                     viewport={{ once: true }}
                     className="text-4xl md:text-5xl lg:text-5xl font-medium tracking-tighter text-neutral-900 leading-[1.05]"
                 >
-                    I don't just build websites. I build high-performance business assets.
+                  Your Business Deserves a Website That Actually Wins Customers
                 </motion.h1>
             </div>
 
@@ -80,7 +80,7 @@ export default function HeroSection() {
                     viewport={{ once: true }}
                     className="text-base text-justify md:text-lg font-normal text-neutral-900 mb-4 max-w-md"
                 >
-                  Code without business logic is useless. My role is to bridge the gap between technical complexity and market needs. By combining Next.js with strategic architecture, I develop web applications that handle traffic, improve SEO rankings, and keep customers safe—not just look good.
+                 Most great businesses are losing sales to a weak online presence. I build websites that fix that.
                 </motion.p>
 
                 <motion.div
@@ -92,7 +92,7 @@ export default function HeroSection() {
                 >
                      <Button className="rounded-sm px-6 py-[1.35rem] text-base bg-[#d1beff] hover:bg-[#d1beff]/80 text-black active:scale-95" asChild>
                         <Link href="https://cal.com/arifur-rahman/discovery-call">
-                          Book an intro call     <Image src="/images/cal-com.webp" alt="cal arifur rahman" width={20} height={20} />
+                         Book a Free Call  <Image src="/images/cal-com.webp" alt="cal arifur rahman" width={20} height={20} />
                         </Link>
                     </Button>
                 </motion.div>

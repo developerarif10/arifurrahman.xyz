@@ -6,25 +6,25 @@ import Image from "next/image";
 const steps = [
   {
     id: 1,
-    title: "Discovery",
+    title: "Tell Me About Your Business",
     timeline: "1-2 DAYS",
-    description: "We dive deep into your goals, audience, and vision to build a solid foundation for success.",
+    description: "We get on a free strategy call. I learn your goals, your audience, and what's not working right now.",
     image: "/features/discoverycall.webp",
     color: "text-orange-500",
   },
   {
     id: 2,
-    title: "Design & Build",
+    title: " I Build Your Dream Website",
     timeline: "2-3 WEEKS",
-    description: "I craft a stunning, high-converting website tailored to your brand and optimized for performance.",
+    description: "You get a custom-designed, fast, and professional website built to turn visitors into paying customers.",
     image: "/features/design-and-development.webp",
     color: "text-blue-500",
   },
   {
     id: 3,
-    title: "Launch & Scale",
+    title: "Launch Confidently & Grow",
     timeline: "1-2 DAYS",
-    description: "We go live with a flawless launch, ensuring your business is ready to grow and succeed.",
+    description: "Live your site with the confidence of knowing you have ongoing support. Watch your leads, bookings, and sales follow.",
     image: "/features/deployment-and-live.webp",
     color: "text-purple-500",
   },
@@ -32,15 +32,15 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="py-20 md:py-32 bg-neutral-50">
+    <section className="py-12 md:py-16 bg-neutral-50">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-16 md:mb-24"
+            className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-medium tracking-tight text-neutral-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-medium tracking-tight text-neutral-900 mb-6">
             3 Simple Steps. <span className="text-neutral-400">Big Impact.</span>
           </h2>
           <p className="text-xl text-neutral-500 max-w-2xl mx-auto leading-relaxed">
@@ -80,7 +80,7 @@ export default function ProcessSection() {
               <div className="mt-auto">
                  <div className="text-5xl font-bebas text-neutral-200 mb-2">0{step.id}.</div>
                  <h3 className="text-2xl font-medium text-neutral-900 mb-3">{step.title}</h3>
-                 <p className="text-neutral-500 leading-relaxed text-balance">
+                 <p className="text-neutral-500 leading-relaxed">
                     {step.description}
                  </p>
               </div>

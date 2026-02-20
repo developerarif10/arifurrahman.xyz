@@ -4,7 +4,7 @@ export const projects = [
     slug: "odommodigital",
     thumbnail: 1,
     title: "odommo digital",
-    subTitle: "A premium dark-mode interface designed to establish brand authority for a digital innovation agency.",
+    subTitle: "A modern digital agency website",
     category: "Digital Agency",
     role: "Design & Developer",
     date: "December 2024",

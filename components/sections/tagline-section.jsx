@@ -32,14 +32,17 @@ export default function TaglineSection() {
   });
 
   const words = [
-    "Turning",
-    "complex",
-    "web",
-    "challenges",
-    "into",
-    "seamless,",
-    "high-impact",
-    "solutions.",
+    "I've",
+    "helped",
+    "founders",
+    "stop",
+    "losing",
+    "customers",
+    "to",
+    "competitors",
+    "with",
+    "better-looking",
+    "websites.",
   ];
 
   return (
@@ -83,17 +86,17 @@ export default function TaglineSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="max-w-4xl text-left pl-4 md:pl-20 mt-auto md:mt-0"
+            className="max-w-4xl text-left pl-4 md:pl-40 mt-auto md:mt-0"
           >
              
              {/* Content */}
              <div className="relative pt-12 md:pt-0">
 
                 {/* Main Statement */}
-                <h2 className="text-3xl md:text-5xl lg:text-6xl xl:text-[4.5rem] font-bold tracking-tight text-neutral-950 leading-[1.1] md:leading-[1.05] -ml-0.5">
+                <h2 className="text-4xl md:text-5xl lg:text-5xl font-medium tracking-tighter text-neutral-900 leading-[1.05]">
                     {words.map((word, i) => (
                         <span key={i} className="inline-block mr-[0.25em]">
-                             {word === "high-impact" ? (
+                             {word === "better-looking" ? (
                                  <span className="relative inline-block text-white px-2 mx-1">
                                     {/* Abstract minimalist highlight shape */}
                                     <span className="absolute inset-0 bg-neutral-950 -rotate-2 rounded-sm -z-10" />
@@ -106,11 +109,8 @@ export default function TaglineSection() {
                     ))}
                 </h2>
 
-                <p className="mt-6 md:mt-8 text-base md:text-xl lg:text-2xl text-neutral-600 max-w-2xl leading-relaxed">
-                  Whether you&apos;re launching a startup&apos;s first site or scaling
-                  global platforms, I make your vision feel not just possible, but
-                  inevitable.
-                </p>
+                <p className="mt-6 md:mt-8 text-base md:text-xl text-neutral-800 max-w-2xl">
+I'm Ariful Rahman, a web developer who works with business owners and startups that are serious about growth. Since I've helped dozens of founders, I know how it feels to have a great product that nobody sees. I don't just write code. I build digital experiences that earn trust, convert visitors, and scale with your business.</p>
              </div>
 
           </motion.div>
