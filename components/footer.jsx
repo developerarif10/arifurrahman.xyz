@@ -30,10 +30,10 @@ export default function Footer() {
               Email :
             </h3>
             <a
-              href="mailto:arifur.rahman@std.cu.ac.bd"
+              href="mailto:arifur@std.cu.ac.bd"
               className="block text-2xl md:text-3xl font-bold tracking-tight hover:opacity-80 transition-opacity"
             >
-              arifur.rahman@std.cu.ac.bd
+              arifur@std.cu.ac.bd
             </a>
           </div>
 
