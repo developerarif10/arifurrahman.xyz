@@ -18,6 +18,12 @@ const techStacks = [
     url: "https://nextjs.org",
   },
   {
+    name: "Framer",
+    icon: "/svg/framer.svg",
+    className: "h-14 w-14",
+    url: "https://www.framer.com",
+  },
+  {
     name: "TypeScript",
     icon: "/svg/typescript-logo.svg",
     className: "h-14 w-14",
@@ -82,7 +88,7 @@ const techStacks = [
 
 const row1 = techStacks.slice(0, 3);
 const row2 = techStacks.slice(3, 9);
-const row3 = techStacks.slice(9, 12);
+const row3 = techStacks.slice(9, 13);
 
 export default function TechStack() {
   return (
@@ -108,7 +114,7 @@ export default function TechStack() {
           </div>
 
            {/* Row 3 - 3 items */}
-           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-zinc-200">
+           <div className="grid grid-cols-1 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-zinc-200">
             {row3.map((tech, index) => (
               <TechCard key={tech.name} tech={tech} />
             ))}
