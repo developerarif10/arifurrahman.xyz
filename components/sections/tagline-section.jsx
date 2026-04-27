@@ -110,7 +110,7 @@ export default function TaglineSection() {
                 </h2>
 
                 <p className="mt-6 md:mt-8 text-base md:text-xl text-neutral-800 max-w-2xl">
-I'm Ariful Rahman, a web developer who works with business owners and startups that are serious about growth. Since I've helped dozens of founders, I know how it feels to have a great product that nobody sees. I don't just write code. I build digital experiences that earn trust, convert visitors, and scale with your business.</p>
+I'm Arifur Rahman, a web developer who works with business owners and startups that are serious about growth. Since I've helped dozens of founders, I know how it feels to have a great product that nobody sees. I don't just write code. I build digital experiences that earn trust, convert visitors, and scale with your business.</p>
              </div>
 
           </motion.div>
